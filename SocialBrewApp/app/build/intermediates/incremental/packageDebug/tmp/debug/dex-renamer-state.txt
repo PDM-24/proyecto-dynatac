@@ -1,4 +1,4 @@
-#Tue Jun 11 20:30:56 CST 2024
+#Tue Jun 11 21:01:03 CST 2024
 base.0=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.2=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
