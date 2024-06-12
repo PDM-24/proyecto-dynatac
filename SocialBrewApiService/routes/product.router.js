@@ -7,10 +7,28 @@ const { createProductValidator, idInParamsValidator } = require('../validators/p
 const productController = require('../controllers/Product.controller');
 
 
+//Find all products
 router.get('/', productController.findAll);
 
-router.post('/', createProductValidator, validateFields, productController.create);
+//Create a new product
+router.post(['/', '/:identifier'], 
+   createProductValidator,
+   validateFields, 
+   productController.save
+);
 
-router.get('/:identifier', idInParamsValidator, validateFields, productController.findOneById);
+//Find a product by id
+router.get('/:identifier', 
+   idInParamsValidator, 
+   validateFields, 
+   productController.findOneById
+);
+
+//Delete a product by id
+router.delete('/:identifier',
+   idInParamsValidator,
+   validateFields,
+   productController.deleteByID
+);
 
 module.exports = router;

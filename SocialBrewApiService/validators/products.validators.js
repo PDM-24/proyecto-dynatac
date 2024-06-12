@@ -2,9 +2,16 @@ const { body, param } = require('express-validator')
 const validators = {}
 
 validators.createProductValidator = [
-   body('name').notEmpty().withMessage('name is required'),
 
-   body('price').notEmpty().withMessage('price is required')
+   param('identifier')
+   .optional()
+   .isMongoId().withMessage('id is not valid'),
+
+   body('name')
+   .notEmpty().withMessage('name is required'),
+
+   body('price')
+      .notEmpty().withMessage('price is required')
       .isDecimal().withMessage('price must be a number')
       .custom(value => {
          if (value < 0) {
@@ -18,7 +25,8 @@ validators.createProductValidator = [
       .isString().withMessage('category must be a string')
       .isIn(['Alimento', 'Bebida']).withMessage('category must be either Alimento or Bebida'),
    
-   body('image').notEmpty().withMessage('Image is required')
+   body('image')
+      .notEmpty().withMessage('Image is required')
       .isURL().withMessage('image must be a URL'),
 
    //Comentarios
