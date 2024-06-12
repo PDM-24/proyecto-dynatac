@@ -1,0 +1,4 @@
+mongodb user: 00156022
+mongodb pass: uTos3Exgddwb3b69
+
+mongouri: mongodb+srv://00156022:uTos3Exgddwb3b69@cluster0.xhaoexp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
