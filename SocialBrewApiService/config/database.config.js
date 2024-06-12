@@ -19,6 +19,7 @@ const connect = async () => {
    } catch (error){
       console.error(error);
       debug("Cannot access database. Exiting...")
+      debug("Recuerda poner el DBURI en archivo .env")
       process.exit(1);
    }
 }
