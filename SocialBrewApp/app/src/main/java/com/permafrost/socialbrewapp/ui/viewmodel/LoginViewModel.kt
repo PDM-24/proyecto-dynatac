@@ -8,7 +8,7 @@ import androidx.compose.runtime.State
 import androidx.navigation.NavHostController
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 import android.content.Context
-import com.permafrost.socialbrewapp.ui.util.ToastHelper
+import com.permafrost.socialbrewapp.util.ToastHelper
 
 class LoginViewModel : ViewModel() {
 

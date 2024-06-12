@@ -54,6 +54,12 @@ dependencies {
     val room_version = "2.6.1"
     val nav_version = "2.7.7"
     val lifecycle_version = "2.8.1"
+    val retrofit_version = "2.11.0"
+
+    //Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
+    implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
+
     ksp("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-runtime:$room_version")
     implementation("androidx.room:room-ktx:$room_version")

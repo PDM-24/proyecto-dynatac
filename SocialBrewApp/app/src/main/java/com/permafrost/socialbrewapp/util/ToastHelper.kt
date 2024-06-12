@@ -1,4 +1,4 @@
-package com.permafrost.socialbrewapp.ui.util
+package com.permafrost.socialbrewapp.util
 
 import android.content.Context
 import android.widget.Toast
