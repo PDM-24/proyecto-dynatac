@@ -2,6 +2,7 @@ const Mongoose = require('mongoose');
 const Schema = Mongoose.Schema;
 
 const crypto = require('crypto');
+const { type } = require('os');
 const debug = require('debug')('app:models:user');
 
 const UserSchema = new Schema({
@@ -28,6 +29,10 @@ const UserSchema = new Schema({
    tokens: {
       type: [String],
       default: []
+   },
+   roles: {
+      type: [String],
+      default: [],
    }
 }, { timestamps: true });
 

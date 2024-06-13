@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+const ROLES = require('../data/roles.constants.json');
+
 const validateFields = require('../validators/index.middleware');
 const { createProductValidator, idInParamsValidator } = require('../validators/products.validators');
+
+const { authentication, authorization } = require('../middlewares/auth.middleware')
 
 const productController = require('../controllers/Product.controller');
 
@@ -11,7 +15,9 @@ const productController = require('../controllers/Product.controller');
 router.get('/', productController.findAll);
 
 //Create a new product
-router.post(['/', '/:identifier'], 
+router.post(['/', '/:identifier'],
+   authentication,
+   authorization(ROLES.BAR),
    createProductValidator,
    validateFields, 
    productController.save
@@ -26,6 +32,8 @@ router.get('/:identifier',
 
 //Delete a product by id
 router.delete('/:identifier',
+   authentication,
+   authorization(ROLES.BAR),
    idInParamsValidator,
    validateFields,
    productController.deleteByID

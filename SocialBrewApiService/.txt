@@ -2,3 +2,5 @@ mongodb user: 00156022
 mongodb pass: DjpB0FWSkBgxVCsA
 
 mongouri: mongodb+srv://00156022:DjpB0FWSkBgxVCsA@socialbrewcluster.qmqpire.mongodb.net/?retryWrites=true&w=majority&appName=SocialBrewCluster
+
+debug = app:*

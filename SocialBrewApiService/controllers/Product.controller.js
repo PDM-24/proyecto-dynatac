@@ -1,13 +1,16 @@
 const Product = require('../models/Product.model');
+const debug = require('debug')('app:Product.controller');
 
 const controller = {};
 
 // Create a new product
 controller.save = async (req, res, next) => {
-   const { name, price, category, image } = req.body;
-   const { identifier } = req.params;
-
    try {
+
+      const { name, price, category, image } = req.body;
+      const { identifier } = req.params;
+      const { user } = req;
+      // debug("User: ", user)
 
       // const product = new Product({
       //    name,
@@ -26,7 +29,7 @@ controller.save = async (req, res, next) => {
       product['price'] = price;
       product['category'] = category;
       product['image'] = image;
-      
+
 
       const productSaved = await product.save();
       if (!productSaved) {
@@ -34,7 +37,7 @@ controller.save = async (req, res, next) => {
       }
 
       res.status(201).json(productSaved);
-      
+
    } catch (error) {
       console.log(error);
       return res.status(500).json({ error: "Internal Server Error" });
@@ -78,7 +81,7 @@ controller.deleteByID = async (req, res, next) => {
       const { identifier } = req.params;
 
       const product = await Product.findByIdAndDelete(identifier);
-      
+
       if (!product) {
          return res.status(404).json({ error: "Product not found" });
       }
