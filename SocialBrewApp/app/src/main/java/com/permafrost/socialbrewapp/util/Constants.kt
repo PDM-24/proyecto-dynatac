@@ -12,7 +12,6 @@ object Constants {
 
     //Products
     const val PRODUCTS_PATH="/products"
-    const val PRODUCT_ID="_id"
     const val PRODUCT_NAME="name"
     const val PRODUCT_PRICE="price"
     const val PRODUCT_CATEGORY="category"
