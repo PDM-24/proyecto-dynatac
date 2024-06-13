@@ -57,13 +57,13 @@ middleware.authentication = async (req, res, next) => {
    }
 }
 
-middleware.authorization = (role = ROLES.ADMIN) => {
+middleware.authorization = (roleRequired = ROLES.ADMIN) => {
    return (req, res, next) => {
       try {
          const { roles } = req.user
          debug("Roles", roles)
 
-         if (!roles.includes(roles)) {
+         if (!roles.includes(roleRequired)) {
             return res.status(403).json({ message: 'Forbidden' })
          }
          // if (roles.includes(ROLES.ADMIN)) {

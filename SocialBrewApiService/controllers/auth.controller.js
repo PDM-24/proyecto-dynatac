@@ -20,7 +20,7 @@ controller.register = async (req, res, next) => {
          username: username, 
          email: email, 
          password: password, 
-         role: [ROLES.USUARIO]
+         roles: [ROLES.USUARIO]
       });
       await newUser.save();
 

@@ -10,25 +10,25 @@ controller.save = async (req, res, next) => {
       const { name, price, category, image } = req.body;
       const { identifier } = req.params;
       const { user } = req;
-      // debug("User: ", user)
+      
 
-      // const product = new Product({
-      //    name,
-      //    price,
-      //    category,
-      //    image
-      // });
 
       let product = await Product.findById(identifier);
 
       if (!product) {
          product = new Product();
+         product['user'] = user._id;
+      } else {
+         if (product['user'].toString() !== user._id.toString()) {
+            return res.status(403).json({ error: "Forbidden, Not your product" });
+         }
       }
 
       product['name'] = name;
       product['price'] = price;
       product['category'] = category;
       product['image'] = image;
+      
 
 
       const productSaved = await product.save();
@@ -48,7 +48,8 @@ controller.save = async (req, res, next) => {
 controller.findAll = async (req, res, next) => {
    try {
       // debug('Finding all products')
-      const products = await Product.find(/* Parametros de busqueda. Hidden: False */);
+      const products = await Product.find(/* Parametros de busqueda. Hidden: False */)
+         .populate('user', 'username email');
       if (!products) {
          return res.status(404).json({ error: "Products not found" });
       }
@@ -64,7 +65,8 @@ controller.findAll = async (req, res, next) => {
 controller.findOneById = async (req, res, next) => {
    const { identifier } = req.params;
    try {
-      const product = await Product.findById(identifier);
+      const product = await Product.findOne({ _id: identifier })
+         .populate('user', 'username email');
       if (!product) {
          return res.status(404).json({ error: "Product not found" });
       }
@@ -79,8 +81,9 @@ controller.findOneById = async (req, res, next) => {
 controller.deleteByID = async (req, res, next) => {
    try {
       const { identifier } = req.params;
+      const { user } = req;
 
-      const product = await Product.findByIdAndDelete(identifier);
+      const product = await Product.findOneAndDelete({ _id: identifier, user: user._id });
 
       if (!product) {
          return res.status(404).json({ error: "Product not found" });
@@ -89,6 +92,7 @@ controller.deleteByID = async (req, res, next) => {
       return res.status(200).json({ message: "Product deleted" });
 
    } catch (error) {
+      console.log(error);
       return res.status(500).json({ error: "Internal Server Error" });
    }
 }
