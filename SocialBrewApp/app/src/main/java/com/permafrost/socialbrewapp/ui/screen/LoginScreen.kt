@@ -85,7 +85,7 @@ fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel
 
             Column(
                 modifier = Modifier
-                    .weight(1f)
+                    .weight(0.9f)
                     .fillMaxWidth(),
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -116,7 +116,7 @@ fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel
                         fontWeight = FontWeight.Normal,
                         textDecoration = TextDecoration.Underline,
                         modifier = Modifier.clickable {
-                            // navController.navigate(Screen.SignIn.route)
+                            navController.navigate(ScreenRoute.SignIn.route)
                         }
                     )
                 }
@@ -151,6 +151,7 @@ fun MailTextField(email: String, onEmailChange: (String) -> Unit) {
         },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
         shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.padding(vertical = 16.dp),
         singleLine = true,
         textStyle = TextStyle(fontSize = 22.sp, fontFamily = fontFamily),
     )
@@ -181,7 +182,7 @@ fun PasswordTextField(password: String, onPasswordChange: (String) -> Unit) {
         },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         visualTransformation = PasswordVisualTransformation(),
-        modifier = Modifier.padding(vertical = 16.dp),
+        modifier = Modifier.padding(bottom = 16.dp),
         shape = RoundedCornerShape(16.dp),
         singleLine = true,
         textStyle = TextStyle(fontSize = 22.sp, fontFamily = fontFamily),
