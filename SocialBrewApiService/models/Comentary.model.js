@@ -11,10 +11,10 @@ const ComentarySchema = new Schema({
       ref: 'User',
       required: true
    },
-   // points: {
-   //    type: Number,
-   //    required: true
-   // },
+   points: {
+      type: Number,
+      required: true
+   },
 }, { timestamps: true });
 
 module.exports = Mongoose.model('Comentary', ComentarySchema);

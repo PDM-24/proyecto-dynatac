@@ -28,10 +28,6 @@ validators.createProductValidator = [
    body('image')
       .notEmpty().withMessage('Image is required')
       .isURL().withMessage('image must be a URL'),
-
-   //Comentarios
-
-   //id_bar?
 ];
 
 validators.idInParamsValidator = [
@@ -46,6 +42,11 @@ validators.addCommentValidator = [
       .notEmpty().withMessage('text is required')
       .isString().withMessage('text must be a string')
       .isLength({ min: 5, max: 60 }).withMessage('text must be between 5 and 60 characters'),
+   
+   body('points')
+      .notEmpty().withMessage('points is required')
+      .isInt().withMessage('points must be a number')
+      .isIn([1, 2, 3, 4, 5]).withMessage('points must be between 1 and 5')
 ]
 
 

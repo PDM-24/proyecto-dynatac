@@ -110,7 +110,7 @@ controller.addComment = async (req, res, next) => {
    try {
       const { identifier } = req.params;
       const { user } = req;
-      const { text } = req.body;
+      const { text, points } = req.body;
 
       const product = await Product.findOne({ _id: identifier });
       if (!product) {
@@ -120,13 +120,17 @@ controller.addComment = async (req, res, next) => {
       const commentary = {
          text: text,
          user: user._id,
-         // points: points
+         points: points
       }
-
       product.comments.push(commentary);
+      
+      var productPoints = 0;
+      for (let i = 0; i < product.comments.length; i++) {
+         productPoints += product.comments[i].points;
+      }
+      product.points = productPoints / product.comments.length;
 
       const productSaved = await product.save();
-
       if (!productSaved) {
          return res.status(400).json({ error: "Error saving product" });
       }

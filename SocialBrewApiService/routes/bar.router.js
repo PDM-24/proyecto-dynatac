@@ -8,7 +8,7 @@ const barController = require('../controllers/Bar.controller');
 router.get('/', barController.findBar);
 
 //Create a new Bar
-router.post('/', barController.newBar);
+router.post('/register', barController.newBar);
 
 //Products from Bar
 router.get('/:identifier/products', 
