@@ -14,6 +14,7 @@ const productController = require('../controllers/Product.controller');
 //Find all products
 router.get('/', productController.findAll);
 
+
 //Create a new product
 router.post(['/', '/:identifier'],
    authentication,
@@ -38,6 +39,8 @@ router.delete('/:identifier',
    validateFields,
    productController.deleteByID
 );
+
+
 
 
 

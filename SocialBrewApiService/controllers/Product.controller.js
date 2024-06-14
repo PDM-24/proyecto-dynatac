@@ -1,5 +1,4 @@
 const Product = require('../models/Product.model');
-const Comentary = require('../models/Comentary.model');
 const debug = require('debug')('app:Product.controller');
 
 const controller = {};
@@ -59,7 +58,7 @@ controller.findAll = async (req, res, next) => {
       for (let i = 0; i < products.length; i++) {
          products[i].comments = [];
       }
-      
+
       debug(products)
       
       res.status(200).json(products);

@@ -1,15 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
-// const productRouter = require('./product.router'); // No se es q se usa
+const productRouter = require('./product.router');
 const authRouter = require('./auth.router');
+const barRouter = require('./bar.router');
 
 
 
 
 //    /api/...
 router.use('/auth', authRouter);
-router.use('/products', require('./product.router'));
+router.use('/products', productRouter);
+router.use('/bar', barRouter);
 
 
 module.exports = router; 
