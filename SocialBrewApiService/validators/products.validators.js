@@ -41,4 +41,12 @@ validators.idInParamsValidator = [
 ];
 
 
+validators.addCommentValidator = [
+   body('text')
+      .notEmpty().withMessage('text is required')
+      .isString().withMessage('text must be a string')
+      .isLength({ min: 5, max: 60 }).withMessage('text must be between 5 and 60 characters'),
+]
+
+
 module.exports = validators

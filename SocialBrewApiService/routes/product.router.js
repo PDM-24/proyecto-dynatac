@@ -4,7 +4,7 @@ const router = express.Router();
 const ROLES = require('../data/roles.constants.json');
 
 const validateFields = require('../validators/index.middleware');
-const { createProductValidator, idInParamsValidator } = require('../validators/products.validators');
+const { createProductValidator, idInParamsValidator, addCommentValidator } = require('../validators/products.validators');
 
 const { authentication, authorization } = require('../middlewares/auth.middleware')
 
@@ -38,5 +38,19 @@ router.delete('/:identifier',
    validateFields,
    productController.deleteByID
 );
+
+
+
+
+//Add a comment to a product
+router.post('/:identifier/comment',
+   authentication,
+   authorization(ROLES.USUARIO),
+   idInParamsValidator,
+   addCommentValidator,
+   validateFields,
+   productController.addComment
+
+)
 
 module.exports = router;

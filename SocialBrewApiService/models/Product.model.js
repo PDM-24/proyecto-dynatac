@@ -1,5 +1,6 @@
 const Mongoose = require('mongoose');
 const Schema = Mongoose.Schema;
+const Comentary = require('./Comentary.model');
 
 const ProductSchema = new Schema({
    name: {
@@ -13,7 +14,6 @@ const ProductSchema = new Schema({
    category: {
       type: String,
       required: true,
-      // enum: ['Alimento', 'Bebida'],
    },
    image: {
       type: String,
@@ -23,11 +23,11 @@ const ProductSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'User',
       required: true
+   },
+   comments : {
+      type: [Comentary.schema],
+      default: []
    }
-
-   //Comentarios
-
-
    }, { timestamps: true });
 
 
