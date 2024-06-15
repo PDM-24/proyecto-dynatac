@@ -1,11 +1,13 @@
 package com.permafrost.socialbrewapp.data.api
 
 import com.permafrost.socialbrewapp.util.Constants
+import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.Path
+import com.permafrost.socialbrewapp.data.api.RegisterRequest
 
 interface ApiService {
 
@@ -23,7 +25,7 @@ interface ApiService {
     //CreateNewBar
     @Headers(value = ["Content-Type: application/json"])
     @POST(value = Constants.API_PATH + Constants.BAR_PATH + Constants.REGISTER)
-    suspend fun createNewBar(): UserApi
+    suspend fun createNewBar(@Body newBarRequest: NewBarRequest): UserApi
 
     /***************************************************************************************************/
     //Auth
@@ -31,12 +33,12 @@ interface ApiService {
     //Login
     @Headers(value = ["Content-Type: application/json"])
     @POST(value = Constants.API_PATH + Constants.LOGIN + Constants.USER_LOGIN)
-    suspend fun login(): UserApi
+    suspend fun login(@Body loginRequest: LoginRequest): UserApi
 
     //Register
     @Headers(value = ["Content-Type: application/json"])
     @POST(value = Constants.API_PATH + Constants.LOGIN + Constants.REGISTER)
-    suspend fun register(): UserApi
+    suspend fun register(@Body registerRequest: RegisterRequest): UserApi
 
 
     /***************************************************************************************************/
@@ -51,7 +53,10 @@ interface ApiService {
     //CreateNewProduct
     @Headers(value = ["Content-Type: application/json"])
     @POST(value = Constants.API_PATH + Constants.PRODUCTS_PATH + "/{identifier}")
-    suspend fun createNewProduct(@Path("identifier") identifier: String): List<ProductsApi>
+    suspend fun createNewProduct(
+        @Path("identifier") identifier: String,
+        @Body newProductRequest: NewProductRequest
+    ): List<ProductsApi>
 
     //FindProductById
     @Headers(value = ["Content-Type: application/json"])
@@ -63,6 +68,7 @@ interface ApiService {
     @POST(value = Constants.API_PATH + Constants.PRODUCTS_PATH + "/{identifier}")
     suspend fun updateProduct(@Path("identifier") identifier: String): ProductsApi
 
+
     //Delete Product
     @Headers(value = ["Content-Type: application/json"])
     @DELETE(value = Constants.API_PATH + Constants.PRODUCTS_PATH + "/{identifier}")
@@ -71,6 +77,9 @@ interface ApiService {
     //Add Comment to a Product
     @Headers(value = ["Content-Type: application/json"])
     @POST(value = Constants.API_PATH + Constants.PRODUCTS_PATH + "/{identifier}" + Constants.COMMENTS_PATH)
-    suspend fun addCommentToProduct(@Path("identifier") identifier: String): ProductsApi
+    suspend fun addCommentToProduct(
+        @Path("identifier") identifier: String,
+        @Body newCommentRequest: newCommentRequest
+    ): ProductsApi
 
 }
