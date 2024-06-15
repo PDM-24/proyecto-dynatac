@@ -13,5 +13,8 @@ data class UserApi(
     @SerializedName(value = Constants.USER_SALT)
     val salt: String = "",
     @SerializedName(value = Constants.USER_TOKEN)
-    val tokens: List<String> = listOf()
+    val tokens: List<String> = listOf(),
+    @SerializedName(value = Constants.USER_ROLE)
+    val roles : List<String> = listOf()
+
     )

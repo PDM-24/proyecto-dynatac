@@ -2,6 +2,8 @@ package com.permafrost.socialbrewapp.data.api
 
 import com.google.gson.annotations.SerializedName
 import com.permafrost.socialbrewapp.util.Constants
+import java.io.Serial
+
 data class ProductsApi(
     @SerializedName(value = Constants.PRODUCT_ID)
     val id:String ="",
@@ -13,10 +15,12 @@ data class ProductsApi(
     val category:String ="",
     @SerializedName(value = Constants.PRODUCT_IMAGE)
     val image:String ="",
-    //@SerializedName(value = Constants.PRODUCT_COMMENTS)
-    //val comments:List<String> = listOf(),
-    //@SerializedName(value = Constants.ID_BAR)
-    //val id_bar:Int =""
+    @SerializedName(value = Constants.PRODUCT_USER)
+    val user:String ="",
+    @SerializedName(value = Constants.PRODUCT_COMMENTS)
+    val comments:List<ComentarySchema> = listOf(),
+    @SerializedName(value = Constants.PRODUCT_POINTS)
+    val points:Float = 0.0f
 
 
 
