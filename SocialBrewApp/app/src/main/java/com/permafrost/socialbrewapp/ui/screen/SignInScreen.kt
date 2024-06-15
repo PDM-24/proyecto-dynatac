@@ -114,7 +114,7 @@ fun SignInScreen(navController: NavHostController, signInViewModel: SignInViewMo
                         fontFamily = fontFamily,
                         fontWeight = FontWeight.Normal
                     )
-                    Text(text = "  ")
+                    Text(text = "  ")   
                     Text(
                         text = "aquí",
                         color = colorResource(id = R.color.second_red),
