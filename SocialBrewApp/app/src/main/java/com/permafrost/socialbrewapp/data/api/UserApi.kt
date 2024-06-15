@@ -8,13 +8,8 @@ data class UserApi(
     val username: String = "",
     @SerializedName(value = Constants.USER_EMAIL)
     val email: String = "",
-    @SerializedName(value = Constants.USER_HPSW)
-    val hashedPassword: String = "",
-    @SerializedName(value = Constants.USER_SALT)
-    val salt: String = "",
     @SerializedName(value = Constants.USER_TOKEN)
     val tokens: List<String> = listOf(),
     @SerializedName(value = Constants.USER_ROLE)
-    val roles : List<String> = listOf()
-
+    val roles :List<String> = listOf()
     )

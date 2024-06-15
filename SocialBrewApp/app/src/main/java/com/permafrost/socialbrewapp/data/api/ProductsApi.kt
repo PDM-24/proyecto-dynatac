@@ -25,6 +25,8 @@ data class ProductsApi(
 )
 
 data class ComentarySchema(
+    @SerializedName(value = Constants.COMMENT_ID)
+    val id: String = "",
     @SerializedName(value = Constants.COMMENT_TEXT)
     val text: String = "",
     @SerializedName(value = Constants.COMMENT_USER)

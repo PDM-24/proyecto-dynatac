@@ -45,3 +45,8 @@ data class newCommentRequest(
     @SerializedName(value= Constants.COMMENT_POINTS)
     val points: Double
 )
+
+data class LoginResponse(
+    @SerializedName(value="token")
+    val token: String
+)

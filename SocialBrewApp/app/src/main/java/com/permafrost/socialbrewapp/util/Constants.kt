@@ -26,7 +26,7 @@ object Constants {
     const val USER_ID ="_id"
     const val USER_NAME ="username"
     const val USER_EMAIL="email"
-    const val USER_HPSW="hashedPassword"
+    const val USER_HPSW="password"
     const val USER_SALT="salt"
     const val USER_TOKEN="tokens"
     const val USER_ROLE="roles"
@@ -37,4 +37,9 @@ object Constants {
     const val COMMENT_TEXT="text"
     const val COMMENT_USER="user"
     const val COMMENT_POINTS="points"
+
+    //Api response
+    //Api response
+    const val RESPONSE_SUCCESSFUL = "result"
+    const val RESPONSE_ERROR = "message"
 }
