@@ -6,23 +6,30 @@ import java.io.Serial
 
 data class ProductsApi(
     @SerializedName(value = Constants.PRODUCT_ID)
-    val id:String ="",
+    val id: String = "",
     @SerializedName(value = Constants.PRODUCT_NAME)
-    val name:String ="",
+    val name: String = "",
     @SerializedName(value = Constants.PRODUCT_PRICE)
-    val price:Double = 0.0,
+    val price: Double = 0.0,
     @SerializedName(value = Constants.PRODUCT_CATEGORY)
-    val category:String ="",
+    val category: String = "",
     @SerializedName(value = Constants.PRODUCT_IMAGE)
-    val image:String ="",
+    val image: String = "",
     @SerializedName(value = Constants.PRODUCT_USER)
-    val user:String ="",
+    val user: String = "",
     @SerializedName(value = Constants.PRODUCT_COMMENTS)
-    val comments:List<ComentarySchema> = listOf(),
+    val comments: MutableList<ComentarySchema> = arrayListOf(),
     @SerializedName(value = Constants.PRODUCT_POINTS)
-    val points:Float = 0.0f
+    val points: Float = 0.0f
 
+)
 
-
+data class ComentarySchema(
+    @SerializedName(value = Constants.COMMENT_TEXT)
+    val text: String = "",
+    @SerializedName(value = Constants.COMMENT_USER)
+    val user: String = "",
+    @SerializedName(value = Constants.COMMENT_POINTS)
+    val points: Float = 0.0f
 
 )
