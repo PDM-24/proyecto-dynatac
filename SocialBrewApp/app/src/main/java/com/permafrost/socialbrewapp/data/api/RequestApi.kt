@@ -50,3 +50,8 @@ data class LoginResponse(
     @SerializedName(value="token")
     val token: String
 )
+
+data class RegisterResponse(
+    @SerializedName("message")
+    val message: String
+)
