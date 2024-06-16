@@ -35,6 +35,7 @@ import com.permafrost.socialbrewapp.ui.screen.MailTextField
 import com.permafrost.socialbrewapp.ui.screen.PasswordTextField
 import com.permafrost.socialbrewapp.ui.theme.fontFamily
 import com.permafrost.socialbrewapp.ui.viewmodel.SignInViewModel
+import com.permafrost.socialbrewapp.ui.viewmodel.LoginViewModel
 
 @Composable
 fun SignInScreen(navController: NavHostController, signInViewModel: SignInViewModel = viewModel()) {
@@ -47,13 +48,13 @@ fun SignInScreen(navController: NavHostController, signInViewModel: SignInViewMo
         Column(modifier = Modifier.fillMaxSize()) {
             Column(
                 modifier = Modifier
-                    .weight(1.5f)
+                    .weight(1.8f)
                     .fillMaxWidth(),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = "Registrarse",
+                    text = "¡Registrate!",
                     color = Color.White,
                     fontSize = 45.sp,
                     fontFamily = fontFamily,
@@ -90,7 +91,9 @@ fun SignInScreen(navController: NavHostController, signInViewModel: SignInViewMo
                     onPasswordChange = { signInViewModel.onPasswordChange(it) }
                 )
 
-                BtnSignIn(onClick = { signInViewModel.onSignInClick(navController, context) })
+                BtnSignIn(onClick = { signInViewModel.onSignInClick(navController, context) },
+                    enabled =  signInViewModel.name.value.isNotEmpty() && signInViewModel.email.value.isNotEmpty() && signInViewModel.password.value.isNotEmpty()
+                    )
             }
 
             Column(
@@ -158,6 +161,7 @@ fun NameTextField(name: String, onNameChange: (String) -> Unit) {
                 )
             )
         },
+        modifier = Modifier.padding(bottom = 8.dp),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
         shape = RoundedCornerShape(16.dp),
         singleLine = true,
@@ -166,25 +170,29 @@ fun NameTextField(name: String, onNameChange: (String) -> Unit) {
 }
 
 @Composable
-fun BtnSignIn(onClick: () -> Unit) {
+fun BtnSignIn(onClick: () -> Unit, enabled: Boolean){
     Button(
         onClick = onClick,
+        enabled = enabled,
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier
-            .padding(vertical = 5.dp)
+            .padding(top = 16.dp)
             .height(60.dp)
             .width(280.dp)
             .clip(RoundedCornerShape(8.dp)),
-        colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.primary_red)),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = if (enabled) colorResource(id = R.color.primary_red) else colorResource(
+                id = R.color.disabled_gray)
+        )
     ) {
         Text(
-            text = "REGISTRATE",
+            text = "REGISTRARME",
             style = TextStyle(
                 fontFamily = fontFamily,
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold
             ),
-            color = Color.White,
+            color = if (enabled) Color.White else colorResource(id = R.color.disabled_gray),
             textAlign = TextAlign.Center,
         )
     }

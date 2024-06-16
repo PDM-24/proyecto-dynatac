@@ -53,19 +53,11 @@ class SignInViewModel : ViewModel() {
                 if (response.isSuccessful && response.body() != null) {
                     _isSignedIn.value = true
                     _signInStatusMessage.value = "¡Registro exitoso!"
-
-                    // Log del mensaje de éxito
-                    Log.d("SignInViewModel", "Registro exitoso: ${response.body()}")
-
                     ToastHelper.showToast(context, _signInStatusMessage.value)
-                    navController.navigate(ScreenRoute.Home.route)
+                    navController.navigate(ScreenRoute.Login.route)
                 } else {
                     _isSignedIn.value = false
                     _signInStatusMessage.value = "Registro fallido. Por favor, inténtalo de nuevo."
-
-                    // Log del mensaje de fallo
-                    Log.d("SignInViewModel", "Registro fallido: ${response.errorBody()?.string()}")
-
                     ToastHelper.showToast(context, _signInStatusMessage.value)
                 }
             } catch (e: IOException) {
