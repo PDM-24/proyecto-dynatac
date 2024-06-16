@@ -116,7 +116,7 @@ fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel
                         fontWeight = FontWeight.Normal,
                         textDecoration = TextDecoration.Underline,
                         modifier = Modifier.clickable {
-                            // navController.navigate(Screen.SignIn.route)
+                            navController.navigate(ScreenRoute.SignIn.route)
                         }
                     )
                 }

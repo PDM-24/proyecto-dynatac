@@ -41,7 +41,7 @@ interface ApiService {
     //Register
     @Headers(value = ["Content-Type: application/json"])
     @POST(value = Constants.API_PATH + Constants.LOGIN + Constants.REGISTER)
-    suspend fun register(@Body registerRequest: RegisterRequest): Response<String>
+    suspend fun register(@Body registerRequest: RegisterRequest): Response<RegisterResponse>
 
 
     /***************************************************************************************************/
