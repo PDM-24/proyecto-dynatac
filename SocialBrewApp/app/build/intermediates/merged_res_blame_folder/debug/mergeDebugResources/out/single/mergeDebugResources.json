@@ -1,98 +1,118 @@
 [
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/font_dkbold.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/font/dkbold.ttf"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\font_dksemibold.ttf.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\font\\dksemibold.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\font_dkextrabold.ttf.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\font\\dkextrabold.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/xml_data_extraction_rules.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/font_dkmedium.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/font/dkmedium.ttf"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\font_dkregular.ttf.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\font\\dkregular.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/font_dkextrabold.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/font/dkextrabold.ttf"
+        "merged": "com.permafrost.socialbrewapp-debug-54:/drawable_password.png.flat",
+        "source": "com.permafrost.socialbrewapp-main-56:/drawable/password.png"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/drawable_beer.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/drawable/beer.xml"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/font_dkblack.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/font/dkblack.ttf"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\drawable_beer.xml.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\drawable\\beer.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/xml_backup_rules.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\font_dkblack.ttf.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\font\\dkblack.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-54:/drawable_list.png.flat",
+        "source": "com.permafrost.socialbrewapp-main-56:/drawable/list.png"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\font_dklight.ttf.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\font\\dklight.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-54:/drawable_logout.png.flat",
+        "source": "com.permafrost.socialbrewapp-main-56:/drawable/logout.png"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/font_dklight.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/font/dklight.ttf"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/font_dksemibold.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/font/dksemibold.ttf"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\font_dkmedium.ttf.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\font\\dkmedium.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/font_dkregular.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/font/dkregular.ttf"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-54:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-56:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\font_dkbold.ttf.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\font\\dkbold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\drawable_nombree.png.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\drawable\\nombree.png"
+    },
+    {
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-debug-54:\\drawable_baruno.png.flat",
+        "source": "C:\\Users\\quint\\.gradle\\daemon\\8.4\\com.permafrost.socialbrewapp-main-56:\\drawable\\baruno.png"
     }
 ]
