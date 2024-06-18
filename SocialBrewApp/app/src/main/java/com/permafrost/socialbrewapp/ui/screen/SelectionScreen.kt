@@ -64,6 +64,7 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
                     title = "Los tarros",
                     onClick = { }
                 )
+
             }
         }
     )
