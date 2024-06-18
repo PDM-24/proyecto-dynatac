@@ -51,6 +51,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.runtime.livedata)
     val room_version = "2.6.1"
     val nav_version = "2.7.7"
     val lifecycle_version = "2.8.1"
