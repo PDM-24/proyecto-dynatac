@@ -46,27 +46,24 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
                 Spacer(modifier = Modifier.height(24.dp))
 
                 BarOptionWithTitle(
-                    imageRes = R.drawable.baruno, // Actualiza con el recurso de imagen correcto
+                    imageRes = R.drawable.baruno,
                     title = "Bar Malta",
-                    onClick = { /* Acción al hacer clic en Bar Malta */ }
+                    onClick = {  }
                 )
                 Spacer(modifier = Modifier.height(16.dp))
 
                 BarOptionWithTitle(
-                    imageRes = R.drawable.baruno, // Actualiza con el recurso de imagen correcto
+                    imageRes = R.drawable.baruno,
                     title = "Beerlab",
-                    onClick = { /* Acción al hacer clic en Beerlab */ }
+                    onClick = { }
                 )
                 Spacer(modifier = Modifier.height(16.dp))
 
                 BarOptionWithTitle(
-                    imageRes = R.drawable.baruno, // Actualiza con el recurso de imagen correcto
+                    imageRes = R.drawable.baruno,
                     title = "Los tarros",
-                    onClick = { /* Acción al hacer clic en Los tarros */ }
+                    onClick = { }
                 )
-
-
-
             }
         }
     )
@@ -95,7 +92,7 @@ fun BarOptionWithTitle(imageRes: Int, title: String, onClick: () -> Unit) {
 fun BarOption(imageRes: Int, onClick: () -> Unit) {
     Box(
         modifier = Modifier
-            .fillMaxWidth(0.8f)  // Ajusta este valor según sea necesario para dejar espacio a los lados
+            .fillMaxWidth(0.8f)
             .clickable(onClick = onClick)
             .background(color = colorResource(id = R.color.primary_red), shape = RoundedCornerShape(8.dp))
             .padding(16.dp),
