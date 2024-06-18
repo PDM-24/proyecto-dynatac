@@ -21,9 +21,12 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.permafrost.socialbrewapp.R
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 import com.permafrost.socialbrewapp.ui.theme.fontFamily
@@ -31,7 +34,7 @@ import com.permafrost.socialbrewapp.ui.viewmodel.LoginViewModel
 
 
 @Composable
-fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel) {
+fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel = viewModel()) {
     val context = LocalContext.current
 
     Surface(
@@ -79,13 +82,15 @@ fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel
                     password = loginViewModel.password.value,
                     onPasswordChange = { loginViewModel.onPasswordChange(it) }
                 )
-
-                BtnLogin(onClick = { loginViewModel.onLoginClick(navController, context) })
+                BtnLogin(
+                    onClick = { loginViewModel.onLoginClick(navController, context) },
+                    enabled = loginViewModel.email.value.isNotEmpty() && loginViewModel.password.value.isNotEmpty()
+                )
             }
 
             Column(
                 modifier = Modifier
-                    .weight(1f)
+                    .weight(0.9f)
                     .fillMaxWidth(),
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -116,7 +121,7 @@ fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel
                         fontWeight = FontWeight.Normal,
                         textDecoration = TextDecoration.Underline,
                         modifier = Modifier.clickable {
-                            // navController.navigate(Screen.SignIn.route)
+                            navController.navigate(ScreenRoute.SignIn.route)
                         }
                     )
                 }
@@ -149,6 +154,7 @@ fun MailTextField(email: String, onEmailChange: (String) -> Unit) {
                 )
             )
         },
+        modifier = Modifier.padding(bottom = 8.dp),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
         shape = RoundedCornerShape(16.dp),
         singleLine = true,
@@ -181,7 +187,7 @@ fun PasswordTextField(password: String, onPasswordChange: (String) -> Unit) {
         },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         visualTransformation = PasswordVisualTransformation(),
-        modifier = Modifier.padding(vertical = 16.dp),
+        modifier = Modifier.padding(bottom = 8.dp),
         shape = RoundedCornerShape(16.dp),
         singleLine = true,
         textStyle = TextStyle(fontSize = 22.sp, fontFamily = fontFamily),
@@ -189,28 +195,39 @@ fun PasswordTextField(password: String, onPasswordChange: (String) -> Unit) {
 }
 
 @Composable
-fun BtnLogin(onClick: () -> Unit) {
+fun BtnLogin(onClick: () -> Unit, enabled: Boolean) {
     Button(
         onClick = onClick,
+        enabled = enabled,
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier
-            .height(60.dp)
+            .height(80.dp)
             .width(280.dp)
+            .padding(top = 16.dp)
             .clip(RoundedCornerShape(8.dp)),
-        colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.primary_red)),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = if (enabled) colorResource(id = R.color.primary_red) else colorResource(
+                id = R.color.disabled_gray
+            )
+        )
 
 
     ) {
         Text(
-            modifier = Modifier.padding(2.dp,0.dp),
             text = "INICIAR",
             style = TextStyle(
                 fontFamily = fontFamily,
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold
             ),
-            color = Color.White,
+            color = if (enabled) Color.White else colorResource(id = R.color.disabled_gray),
             textAlign = TextAlign.Center,
         )
     }
+}
+
+@Composable
+@Preview(showBackground = true)
+fun DefaultPreview() {
+    LoginScreen(navController = rememberNavController(), loginViewModel = LoginViewModel())
 }

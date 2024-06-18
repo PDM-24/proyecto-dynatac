@@ -5,12 +5,21 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+<<<<<<< HEAD
 import com.permafrost.socialbrewapp.ui.screen.DrinksMenuScreen
 import com.permafrost.socialbrewapp.ui.screen.HomeScreen
 import com.permafrost.socialbrewapp.ui.screen.LoginScreen
 import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
+=======
+import com.permafrost.socialbrewapp.ui.screen.BarHomeScreen
+import com.permafrost.socialbrewapp.ui.screen.HomeScreen
+import com.permafrost.socialbrewapp.ui.screen.LoginScreen
+import com.permafrost.socialbrewapp.ui.screen.SignInScreen
+import com.permafrost.socialbrewapp.ui.viewmodel.BarHomeScreenViewModel
+>>>>>>> 277e7a2155c55f80a8eeda3d8a31b5b18a012fe8
 import com.permafrost.socialbrewapp.ui.viewmodel.HomeScreenViewModel
 import com.permafrost.socialbrewapp.ui.viewmodel.LoginViewModel
+import com.permafrost.socialbrewapp.ui.viewmodel.SignInViewModel
 
 @Composable
 fun Navigation(navController: NavHostController) {
@@ -28,11 +37,25 @@ fun Navigation(navController: NavHostController) {
             HomeScreen(navController = navController, homescreenViewModel = homescreenViewModel)
         }
 
+<<<<<<< HEAD
         composable(ScreenRoute.DrinksMenu.route) {
             val drinksMenuViewModel: DrinksMenuViewModel = viewModel ()
             DrinksMenuScreen( navController = navController, drinksMenuViewModel = drinksMenuViewModel)
         }
 
+=======
+        composable(ScreenRoute.SignIn.route) {
+            val signInViewModel: SignInViewModel = viewModel ()
+            SignInScreen(navController = navController, signInViewModel = signInViewModel)
+        }
+
+        composable(ScreenRoute.BarHome.route) {
+            val barhomescreenViewModel: BarHomeScreenViewModel = viewModel ()
+            BarHomeScreen(navController = navController, barhomescreenViewModel = barhomescreenViewModel)
+        }
+
+
+>>>>>>> 277e7a2155c55f80a8eeda3d8a31b5b18a012fe8
     }
 }
 

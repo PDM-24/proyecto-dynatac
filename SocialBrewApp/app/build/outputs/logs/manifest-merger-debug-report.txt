@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml:2:1-28:12
@@ -61,6 +62,66 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\pe
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\pebca\.gradle\caches\transforms-3\71f5fadefbe67e654b736075c1a18e59\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\pebca\.gradle\caches\transforms-3\2c1fe77fbbb87649426c8d42f7efbca6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\pebca\.gradle\caches\transforms-3\ede740e3aac4b6835c9a6e6819380df2\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+=======
+ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:2:1-31:12
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/macbook/.gradle/caches/transforms-3/1df7567d10853bfe0411d012d962e145/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/macbook/.gradle/caches/transforms-3/9d35bf5cc9ed56cbb47ca24878600d14/transformed/room-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common:2.7.7] /Users/macbook/.gradle/caches/transforms-3/cc084048dc28144993a47fc58c5cb8f8/transformed/navigation-common-2.7.7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] /Users/macbook/.gradle/caches/transforms-3/3c46e3b00d6a574d37de6e8355499199/transformed/navigation-runtime-2.7.7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] /Users/macbook/.gradle/caches/transforms-3/49200490f80f55e7fc6b7a956ff9db73/transformed/navigation-common-ktx-2.7.7/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] /Users/macbook/.gradle/caches/transforms-3/9df73a3886934149822559358b25e145/transformed/navigation-runtime-ktx-2.7.7/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.7] /Users/macbook/.gradle/caches/transforms-3/de21f084159a36f0bccc996c48537941/transformed/navigation-compose-2.7.7/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material3:material3:1.1.1] /Users/macbook/.gradle/caches/transforms-3/c4287fef60dbe81325a22798757883b9/transformed/material3-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/cf86a1c214391c68684fc930c10b4568/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/f0db2c97aa874f56d1757f6c9febd746/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/d1ef605394668079dbbc29d86547f0c4/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/939a994bdfa682be820350d0c2279f9e/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/f7ef2547195a20fadb5b0fd909a645ac/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/4807542cb3097f2b5b78c5f40de58bd9/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/ab8426112139e8a0b3ec1323c87cdce1/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-util-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/95e42a546d29f2c44e90c484820e6eec/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/8eaf457a4d72648c8a85757adfaac39e/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/2b878752221f9b249ae2174fb88f1b2c/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/02563014d1abd2fa18ceae4d7e1235ff/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/0057365d32258981f37cc2bf6aef4d74/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.material:material-android:1.5.0] /Users/macbook/.gradle/caches/transforms-3/46d670767551af3990aed31f9b61724f/transformed/material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] /Users/macbook/.gradle/caches/transforms-3/b22fba7a81aedb49f7ed9f15548584e0/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] /Users/macbook/.gradle/caches/transforms-3/b0c32d86b91e9a2a6882b67048c4c3cc/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/7fb5d914f0e30d43b205b4eea63af677/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.0] /Users/macbook/.gradle/caches/transforms-3/00b0c60a4177055d22918df91ee0c817/transformed/ui-test-manifest-1.6.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.activity:activity:1.9.0] /Users/macbook/.gradle/caches/transforms-3/d96618b3ae3fe0c8e4db632eabb38b4e/transformed/activity-1.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.9.0] /Users/macbook/.gradle/caches/transforms-3/1c326617894267696eb90c895349fcfb/transformed/activity-compose-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.9.0] /Users/macbook/.gradle/caches/transforms-3/db0907073f9595423614271dd8eedc5f/transformed/activity-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/macbook/.gradle/caches/transforms-3/b4ed42f873a23457e38960b89133725c/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/macbook/.gradle/caches/transforms-3/6eac01bb7174b00aa70be57cd328113e/transformed/core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/macbook/.gradle/caches/transforms-3/769d548583383fc890382a0d03234bbb/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/macbook/.gradle/caches/transforms-3/6bb0a7f0b67e150c2e46d1e0b2c719d2/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.core:core:1.13.1] /Users/macbook/.gradle/caches/transforms-3/d151f94bc70000bab7e7c3fc997d272e/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] /Users/macbook/.gradle/caches/transforms-3/96b0e1e4061be0a08775e9770a88ca9e/transformed/lifecycle-process-2.8.1/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.1] /Users/macbook/.gradle/caches/transforms-3/5795190f95105b4329a7a009c0fa86de/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.1] /Users/macbook/.gradle/caches/transforms-3/8e6193c44bcd8c1031b9e77951711097/transformed/lifecycle-livedata-core-2.8.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/macbook/.gradle/caches/transforms-3/0293403c7bf95d0b5078bb308d2895a3/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/macbook/.gradle/caches/transforms-3/2f474505148cc400616c14bcc806f8f7/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.1] /Users/macbook/.gradle/caches/transforms-3/8a7e157f66f9578d077c24a909d17157/transformed/lifecycle-viewmodel-savedstate-2.8.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.1] /Users/macbook/.gradle/caches/transforms-3/1de5da3a457e497efefc40a3d14094ed/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.1] /Users/macbook/.gradle/caches/transforms-3/3bab8316014b80b074e78caf6c6e0f85/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.1] /Users/macbook/.gradle/caches/transforms-3/2aa2466cd8ff3b49202de33624ca67ce/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1] /Users/macbook/.gradle/caches/transforms-3/f24d532a389d6215a787fb5489c9b84c/transformed/lifecycle-viewmodel-ktx-2.8.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/macbook/.gradle/caches/transforms-3/fc18d5bad6c8daaf420f5a376a6133f0/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/macbook/.gradle/caches/transforms-3/fd347818ca8838ecd4ecac63c21c2de0/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/f0a288c27e1de8f0c2b5f98b43d1beec/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/29da409c99709fb15280983ee1d8a761/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/macbook/.gradle/caches/transforms-3/c2c1444553d40656dd476715188608ab/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/macbook/.gradle/caches/transforms-3/4d1943628fd9600b95f58c025074d0d9/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/macbook/.gradle/caches/transforms-3/ab41e3fe8bbe98ed3edb9a48796f144e/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/macbook/.gradle/caches/transforms-3/b33749356c7e04981646e399b836e119/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/macbook/.gradle/caches/transforms-3/571c49033cca462b9f46eb3c1fd8e81d/transformed/profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/macbook/.gradle/caches/transforms-3/ab3766b172320df3245acca4d6995fa2/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/macbook/.gradle/caches/transforms-3/70851fae57252d722a9a7a6b805d3cfc/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+>>>>>>> 277e7a2155c55f80a8eeda3d8a31b5b18a012fe8
 	package
 		INJECTED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -70,6 +131,7 @@ MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\pebca\.gradle\caches\trans
 	android:versionCode
 		INJECTED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml
 	xmlns:android
+<<<<<<< HEAD
 		ADDED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml:2:11-69
 application
 ADDED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml:5:5-26:19
@@ -92,11 +154,40 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\pebca\.g
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\pebca\.gradle\caches\transforms-3\71f5fadefbe67e654b736075c1a18e59\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\pebca\.gradle\caches\transforms-3\2c1fe77fbbb87649426c8d42f7efbca6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\pebca\.gradle\caches\transforms-3\2c1fe77fbbb87649426c8d42f7efbca6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+=======
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:5:22-64
+application
+ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:7:5-29:19
+INJECTED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:7:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/macbook/.gradle/caches/transforms-3/1df7567d10853bfe0411d012d962e145/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/macbook/.gradle/caches/transforms-3/1df7567d10853bfe0411d012d962e145/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/0057365d32258981f37cc2bf6aef4d74/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /Users/macbook/.gradle/caches/transforms-3/0057365d32258981f37cc2bf6aef4d74/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.0] /Users/macbook/.gradle/caches/transforms-3/00b0c60a4177055d22918df91ee0c817/transformed/ui-test-manifest-1.6.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.0] /Users/macbook/.gradle/caches/transforms-3/00b0c60a4177055d22918df91ee0c817/transformed/ui-test-manifest-1.6.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/macbook/.gradle/caches/transforms-3/6bb0a7f0b67e150c2e46d1e0b2c719d2/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/macbook/.gradle/caches/transforms-3/6bb0a7f0b67e150c2e46d1e0b2c719d2/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.1] /Users/macbook/.gradle/caches/transforms-3/d151f94bc70000bab7e7c3fc997d272e/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] /Users/macbook/.gradle/caches/transforms-3/d151f94bc70000bab7e7c3fc997d272e/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] /Users/macbook/.gradle/caches/transforms-3/96b0e1e4061be0a08775e9770a88ca9e/transformed/lifecycle-process-2.8.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] /Users/macbook/.gradle/caches/transforms-3/96b0e1e4061be0a08775e9770a88ca9e/transformed/lifecycle-process-2.8.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/macbook/.gradle/caches/transforms-3/b33749356c7e04981646e399b836e119/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/macbook/.gradle/caches/transforms-3/b33749356c7e04981646e399b836e119/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/macbook/.gradle/caches/transforms-3/571c49033cca462b9f46eb3c1fd8e81d/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/macbook/.gradle/caches/transforms-3/571c49033cca462b9f46eb3c1fd8e81d/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/macbook/.gradle/caches/transforms-3/ab3766b172320df3245acca4d6995fa2/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/macbook/.gradle/caches/transforms-3/ab3766b172320df3245acca4d6995fa2/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+>>>>>>> 277e7a2155c55f80a8eeda3d8a31b5b18a012fe8
 	android:extractNativeLibs
 		INJECTED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] C:\Users\pebca\.gradle\caches\transforms-3\a7d1cd19f9b1ce3d0a5501c4d9f052f5\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 	android:supportsRtl
+<<<<<<< HEAD
 		ADDED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
 		ADDED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml:10:9-41
@@ -134,6 +225,47 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
 		ADDED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml:23:27-74
+=======
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:15:9-35
+	android:label
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:13:9-41
+	android:fullBackupContent
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:11:9-54
+	android:roundIcon
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:14:9-54
+	tools:targetApi
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:17:9-29
+	android:icon
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:16:9-51
+	android:dataExtractionRules
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:10:9-65
+	android:usesCleartextTraffic
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:8:9-44
+activity#com.permafrost.socialbrewapp.MainActivity
+ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:18:9-28:20
+	android:label
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:21:13-45
+	android:exported
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:20:13-36
+	android:theme
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:22:13-55
+	android:name
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:19:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:23:13-27:29
+action#android.intent.action.MAIN
+ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:26:27-74
+>>>>>>> 277e7a2155c55f80a8eeda3d8a31b5b18a012fe8
 uses-sdk
 INJECTED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\pebca\OneDrive\Desktop\proyecto-dynatac\SocialBrewApp\app\src\main\AndroidManifest.xml

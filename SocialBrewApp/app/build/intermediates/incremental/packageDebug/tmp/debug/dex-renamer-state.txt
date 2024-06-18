@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Tue Jun 18 13:19:03 CST 2024
 base.0=C\:\\Users\\pebca\\OneDrive\\Desktop\\proyecto-dynatac\\SocialBrewApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\pebca\\OneDrive\\Desktop\\proyecto-dynatac\\SocialBrewApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
@@ -19,6 +20,27 @@ path.6=1/classes.dex
 path.7=4/classes.dex
 path.8=5/classes.dex
 path.9=classes2.dex
+=======
+#Mon Jun 17 17:14:47 CST 2024
+base.0=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.3=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
+base.4=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
+base.5=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
+base.6=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex
+base.7=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
+base.8=/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=1/classes.dex
+path.3=12/classes.dex
+path.4=13/classes.dex
+path.5=4/classes.dex
+path.6=5/classes.dex
+path.7=6/classes.dex
+path.8=classes2.dex
+>>>>>>> 277e7a2155c55f80a8eeda3d8a31b5b18a012fe8
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.2=classes3.dex
