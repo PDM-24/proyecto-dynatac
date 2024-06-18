@@ -5,8 +5,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.permafrost.socialbrewapp.ui.screen.DrinksMenuScreen
 import com.permafrost.socialbrewapp.ui.screen.HomeScreen
 import com.permafrost.socialbrewapp.ui.screen.LoginScreen
+import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
 import com.permafrost.socialbrewapp.ui.viewmodel.HomeScreenViewModel
 import com.permafrost.socialbrewapp.ui.viewmodel.LoginViewModel
 
@@ -26,5 +28,11 @@ fun Navigation(navController: NavHostController) {
             HomeScreen(navController = navController, homescreenViewModel = homescreenViewModel)
         }
 
+        composable(ScreenRoute.DrinksMenu.route) {
+            val drinksMenuViewModel: DrinksMenuViewModel = viewModel ()
+            DrinksMenuScreen( navController = navController, drinksMenuViewModel = drinksMenuViewModel)
+        }
+
     }
 }
+
