@@ -29,6 +29,9 @@ class LoginViewModel : ViewModel() {
     private val _loginStatusMessage = mutableStateOf("")
     val loginStatusMessage: State<String> = _loginStatusMessage
 
+    private val _userRole = mutableStateOf("")
+    val userRole: State<String> = _userRole
+
     fun onEmailChange(newEmail: String) {
         _email.value = newEmail
     }
@@ -42,12 +45,19 @@ class LoginViewModel : ViewModel() {
             try {
                 val response =
                     ApiClient.apiService.login(LoginRequest(_email.value, _password.value))
-                val token = response.body()?.token
                 if (response.isSuccessful && response.body() != null) {
+                    val responseBody = response.body()!!
+                    val token = responseBody.token
+                    val roles = responseBody.role
                     _isLoggedIn.value = true
+                    _userRole.value = roles.firstOrNull() ?: ""
                     _loginStatusMessage.value = "¡Inicio de sesión exitoso!"
                     ToastHelper.showToast(context, _loginStatusMessage.value)
-                    navController.navigate(ScreenRoute.Home.route)
+                    if (_userRole.value == "Usuario") {
+                        navController.navigate(ScreenRoute.Home.route)
+                    } else if (_userRole.value == "Bar") {
+                        navController.navigate(ScreenRoute.BarHome.route)
+                    }
                     Log.d("LoginViewModel", "Token: $token")
                 } else {
                     _isLoggedIn.value = false
@@ -56,18 +66,19 @@ class LoginViewModel : ViewModel() {
                     ToastHelper.showToast(context, _loginStatusMessage.value)
                 }
             } catch (e: IOException) {
-                _loginStatusMessage.value = "Error Por favor, inténtalo de nuevo."
+                _loginStatusMessage.value = "Error de red. Por favor, inténtalo de nuevo."
                 ToastHelper.showToast(context, _loginStatusMessage.value)
             } catch (e: HttpException) {
-                _loginStatusMessage.value = "Error en el servidor. Por favor, inténtalo de nuevo."
+                _loginStatusMessage.value = "Error del servidor. Por favor, inténtalo de nuevo."
                 ToastHelper.showToast(context, _loginStatusMessage.value)
             } catch (e: Exception) {
-                _loginStatusMessage.value = "Unexpected Error"
+                _loginStatusMessage.value =
+                    "Error inesperado: ${e.message}. Por favor, inténtalo de nuevo."
                 ToastHelper.showToast(context, _loginStatusMessage.value)
             }
-
         }
     }
 }
+
 
 

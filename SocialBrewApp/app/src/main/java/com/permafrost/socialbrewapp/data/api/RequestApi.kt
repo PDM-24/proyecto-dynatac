@@ -1,5 +1,6 @@
 package com.permafrost.socialbrewapp.data.api
 
+import androidx.compose.ui.semantics.Role
 import com.google.gson.annotations.SerializedName
 import com.permafrost.socialbrewapp.util.Constants
 
@@ -9,7 +10,7 @@ data class RegisterRequest(
     @SerializedName(value= Constants.USER_EMAIL)
     val email: String,
     @SerializedName(value= Constants.USER_HPSW)
-    val password: String
+    val password: String,
 )
 
 data class LoginRequest(
@@ -48,10 +49,17 @@ data class newCommentRequest(
 
 data class LoginResponse(
     @SerializedName(value="token")
-    val token: String
+    val token: String,
+    @SerializedName(value="Roles")
+    val role: List<String>
 )
 
 data class RegisterResponse(
+    @SerializedName("message")
+    val message: String
+)
+
+data class NewBarResponse(
     @SerializedName("message")
     val message: String
 )

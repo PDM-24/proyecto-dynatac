@@ -24,6 +24,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.permafrost.socialbrewapp.R
@@ -33,7 +34,7 @@ import com.permafrost.socialbrewapp.ui.viewmodel.LoginViewModel
 
 
 @Composable
-fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel) {
+fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel = viewModel()) {
     val context = LocalContext.current
 
     Surface(
@@ -81,9 +82,10 @@ fun LoginScreen(navController: NavHostController, loginViewModel: LoginViewModel
                     password = loginViewModel.password.value,
                     onPasswordChange = { loginViewModel.onPasswordChange(it) }
                 )
-                BtnLogin(onClick = { loginViewModel.onLoginClick(navController, context) },
+                BtnLogin(
+                    onClick = { loginViewModel.onLoginClick(navController, context) },
                     enabled = loginViewModel.email.value.isNotEmpty() && loginViewModel.password.value.isNotEmpty()
-                    )
+                )
             }
 
             Column(
@@ -193,7 +195,7 @@ fun PasswordTextField(password: String, onPasswordChange: (String) -> Unit) {
 }
 
 @Composable
-fun BtnLogin(onClick: () -> Unit, enabled : Boolean) {
+fun BtnLogin(onClick: () -> Unit, enabled: Boolean) {
     Button(
         onClick = onClick,
         enabled = enabled,
@@ -205,9 +207,9 @@ fun BtnLogin(onClick: () -> Unit, enabled : Boolean) {
             .clip(RoundedCornerShape(8.dp)),
         colors = ButtonDefaults.buttonColors(
             containerColor = if (enabled) colorResource(id = R.color.primary_red) else colorResource(
-                id = R.color.disabled_gray)
+                id = R.color.disabled_gray
+            )
         )
-
 
 
     ) {

@@ -28,7 +28,7 @@ interface ApiService {
     //CreateNewBar
     @Headers(value = ["Content-Type: application/json"])
     @POST(value = Constants.API_PATH + Constants.BAR_PATH + Constants.REGISTER)
-    suspend fun createNewBar(@Body newBarRequest: NewBarRequest): Response<String>
+    suspend fun createNewBar(@Body newBarRequest: NewBarRequest): Response<NewBarResponse>
 
     /***************************************************************************************************/
     //Auth

@@ -48,7 +48,7 @@ fun SignInScreen(navController: NavHostController, signInViewModel: SignInViewMo
         Column(modifier = Modifier.fillMaxSize()) {
             Column(
                 modifier = Modifier
-                    .weight(1.8f)
+                    .weight(1f)
                     .fillMaxWidth(),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -61,14 +61,7 @@ fun SignInScreen(navController: NavHostController, signInViewModel: SignInViewMo
                     fontWeight = FontWeight.Bold
                 )
 
-                Spacer(modifier = Modifier.height(48.dp))
 
-                Image(
-                    painter = painterResource(R.drawable.beer),
-                    contentDescription = null,
-                    colorFilter = ColorFilter.tint(Color.White),
-                    modifier = Modifier.size(100.dp)
-                )
             }
 
             Column(
@@ -91,9 +84,18 @@ fun SignInScreen(navController: NavHostController, signInViewModel: SignInViewMo
                     onPasswordChange = { signInViewModel.onPasswordChange(it) }
                 )
 
-                BtnSignIn(onClick = { signInViewModel.onSignInClick(navController, context) },
-                    enabled =  signInViewModel.name.value.isNotEmpty() && signInViewModel.email.value.isNotEmpty() && signInViewModel.password.value.isNotEmpty()
-                    )
+                RoleCheckbox(
+                    roles = listOf("Cliente", "Bar"),
+                    selectedRole = signInViewModel.role.value,
+                    onRoleChange = { signInViewModel.onRoleChange(it) }
+                )
+
+                BtnSignIn(
+                    onClick = { signInViewModel.onSignInClick(navController, context) },
+                    enabled = signInViewModel.name.value.isNotEmpty() &&
+                            signInViewModel.email.value.isNotEmpty() &&
+                            signInViewModel.password.value.isNotEmpty()
+                )
             }
 
             Column(
@@ -139,6 +141,38 @@ fun SignInScreen(navController: NavHostController, signInViewModel: SignInViewMo
 }
 
 @Composable
+fun RoleCheckbox(roles: List<String>, selectedRole: String, onRoleChange: (String) -> Unit) {
+    Row {
+        roles.forEach { role ->
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .padding(top = 10.dp)
+                    .clickable { onRoleChange(role) }
+            ) {
+                Checkbox(
+                    checked = selectedRole == role,
+                    onCheckedChange = { if (it) onRoleChange(role) },
+                    colors = CheckboxDefaults.colors(
+                        checkedColor = colorResource(id = R.color.primary_red),
+                        uncheckedColor = Color.Gray
+                    )
+                )
+                Text(
+                    text = role,
+                    style = TextStyle(
+                        fontFamily = fontFamily,
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                )
+            }
+        }
+    }
+}
+
+@Composable
 fun NameTextField(name: String, onNameChange: (String) -> Unit) {
     OutlinedTextField(
         colors = OutlinedTextFieldDefaults.colors(
@@ -170,7 +204,7 @@ fun NameTextField(name: String, onNameChange: (String) -> Unit) {
 }
 
 @Composable
-fun BtnSignIn(onClick: () -> Unit, enabled: Boolean){
+fun BtnSignIn(onClick: () -> Unit, enabled: Boolean) {
     Button(
         onClick = onClick,
         enabled = enabled,
@@ -182,7 +216,8 @@ fun BtnSignIn(onClick: () -> Unit, enabled: Boolean){
             .clip(RoundedCornerShape(8.dp)),
         colors = ButtonDefaults.buttonColors(
             containerColor = if (enabled) colorResource(id = R.color.primary_red) else colorResource(
-                id = R.color.disabled_gray)
+                id = R.color.disabled_gray
+            )
         )
     ) {
         Text(
@@ -197,6 +232,7 @@ fun BtnSignIn(onClick: () -> Unit, enabled: Boolean){
         )
     }
 }
+
 
 @Composable
 @Preview
