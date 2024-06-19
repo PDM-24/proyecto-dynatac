@@ -1,3 +1,4 @@
+
 package com.permafrost.socialbrewapp.ui.component
 
 import androidx.compose.foundation.background
@@ -10,7 +11,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.permafrost.socialbrewapp.ui.theme.Ocher
+import com.permafrost.socialbrewapp.R
+
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -33,9 +36,10 @@ fun TopBar(title: String) {
         modifier = Modifier
             .fillMaxWidth()
             .height(56.dp)
-            .background(Ocher),
+            .background(color = colorResource(id = R.color.primary_red)),
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Ocher
+            containerColor = colorResource(id = R.color.primary_red)
         )
     )
 }
+

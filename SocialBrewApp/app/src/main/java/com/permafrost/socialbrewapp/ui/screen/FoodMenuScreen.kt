@@ -95,7 +95,7 @@ fun FoodMenuScreen(navController: NavHostController, drinksMenuViewModel: Drinks
 
 
 @Composable
-fun ProductCard(imageResourceId: ImageVector, productName: String) {
+private fun ProductCard(imageResourceId: ImageVector, productName: String) {
     Card(
         modifier = Modifier
             .width(150.dp)

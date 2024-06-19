@@ -11,10 +11,15 @@ color second_red
 color teal_200
 color teal_700
 color white
+drawable baruno
 drawable beer
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable list
+drawable logout
 drawable menu_icon
+drawable nombree
+drawable password
 font dkblack
 font dkbold
 font dkextrabold
