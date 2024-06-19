@@ -8,8 +8,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
+import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.navigation.Navigation
+import com.permafrost.socialbrewapp.ui.screen.DrinksMenuScreen
 import com.permafrost.socialbrewapp.ui.theme.SocialBrewAppTheme
+import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
+import com.permafrost.socialbrewapp.ui.viewmodel.HomeScreenViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

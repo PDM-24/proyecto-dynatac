@@ -13,6 +13,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.permafrost.socialbrewapp.R
 
+
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBar(title: String) {
@@ -40,3 +42,4 @@ fun TopBar(title: String) {
         )
     )
 }
+

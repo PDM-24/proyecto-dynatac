@@ -8,7 +8,12 @@ import androidx.compose.runtime.State
 import androidx.navigation.NavHostController
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 import android.content.Context
-import com.permafrost.socialbrewapp.ui.util.ToastHelper
+import android.util.Log
+import com.permafrost.socialbrewapp.data.api.ApiClient
+import com.permafrost.socialbrewapp.data.api.LoginRequest
+import com.permafrost.socialbrewapp.util.ToastHelper
+import retrofit2.HttpException
+import java.io.IOException
 
 class LoginViewModel : ViewModel() {
 
@@ -24,6 +29,9 @@ class LoginViewModel : ViewModel() {
     private val _loginStatusMessage = mutableStateOf("")
     val loginStatusMessage: State<String> = _loginStatusMessage
 
+    private val _userRole = mutableStateOf("")
+    val userRole: State<String> = _userRole
+
     fun onEmailChange(newEmail: String) {
         _email.value = newEmail
     }
@@ -34,18 +42,43 @@ class LoginViewModel : ViewModel() {
 
     fun onLoginClick(navController: NavHostController, context: Context) {
         viewModelScope.launch {
-            // Lógica de autenticación que se cambiará más tarde...
-            if (_email.value == "prueba@gmail.com" && _password.value == "12345") {
-                _isLoggedIn.value = true
-                _loginStatusMessage.value = "¡Inicio de sesión exitoso!"
+            try {
+                val response =
+                    ApiClient.apiService.login(LoginRequest(_email.value, _password.value))
+                if (response.isSuccessful && response.body() != null) {
+                    val responseBody = response.body()!!
+                    val token = responseBody.token
+                    val roles = responseBody.role
+                    _isLoggedIn.value = true
+                    _userRole.value = roles.firstOrNull() ?: ""
+                    _loginStatusMessage.value = "¡Inicio de sesión exitoso!"
+                    ToastHelper.showToast(context, _loginStatusMessage.value)
+                    if (_userRole.value == "Usuario") {
+                        navController.navigate(ScreenRoute.Home.route)
+                    } else if (_userRole.value == "Bar") {
+                        navController.navigate(ScreenRoute.BarHome.route)
+                    }
+                    Log.d("LoginViewModel", "Token: $token")
+                } else {
+                    _isLoggedIn.value = false
+                    _loginStatusMessage.value =
+                        "Credenciales incorrectas. Por favor, inténtalo de nuevo."
+                    ToastHelper.showToast(context, _loginStatusMessage.value)
+                }
+            } catch (e: IOException) {
+                _loginStatusMessage.value = "Error de red. Por favor, inténtalo de nuevo."
                 ToastHelper.showToast(context, _loginStatusMessage.value)
-                navController.navigate(ScreenRoute.Home.route)
-            } else {
-                _isLoggedIn.value = false
-                _loginStatusMessage.value = "Credenciales incorrectas. Por favor, inténtalo de nuevo."
+            } catch (e: HttpException) {
+                _loginStatusMessage.value = "Error del servidor. Por favor, inténtalo de nuevo."
+                ToastHelper.showToast(context, _loginStatusMessage.value)
+            } catch (e: Exception) {
+                _loginStatusMessage.value =
+                    "Error inesperado: ${e.message}. Por favor, inténtalo de nuevo."
                 ToastHelper.showToast(context, _loginStatusMessage.value)
             }
         }
     }
 }
+
+
 

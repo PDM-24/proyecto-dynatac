@@ -3,11 +3,14 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+<<<<<<< HEAD
         <entry key="imageWizard">
           <value>
             <PersistentState />
           </value>
         </entry>
+=======
+>>>>>>> 84fbcf09faa9e3d991dfb54adc18db14e70fb75f
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -16,6 +19,7 @@
                   <entry key="vectorAssetStep">
                     <value>
                       <PersistentState>
+<<<<<<< HEAD
                         <option name="children">
                           <map>
                             <entry key="clipartAsset">
@@ -36,6 +40,13 @@
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="outputName" value="password" />
                             <entry key="sourceFile" value="C:\Users\quint\Downloads\password.svg" />
+=======
+                        <option name="values">
+                          <map>
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="menu_icon" />
+                            <entry key="sourceFile" value="C:\Users\pebca\Downloads\menu_icon.svg" />
+>>>>>>> 84fbcf09faa9e3d991dfb54adc18db14e70fb75f
                           </map>
                         </option>
                       </PersistentState>

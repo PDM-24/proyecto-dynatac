@@ -44,6 +44,7 @@ color background
 color black
 color call_notification_answer_color
 color call_notification_decline_color
+color disabled_gray
 color notification_action_color_filter
 color notification_icon_bg_color
 color primary_red
@@ -90,6 +91,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable list
 drawable logout
+drawable menu_icon
 drawable nombree
 drawable notification_action_background
 drawable notification_bg
