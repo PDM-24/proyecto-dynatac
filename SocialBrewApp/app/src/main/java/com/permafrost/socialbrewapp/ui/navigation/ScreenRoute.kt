@@ -5,5 +5,6 @@ sealed class ScreenRoute(val route: String) {
     object Login : ScreenRoute("login")
     object Home : ScreenRoute("home")
     object Selection : ScreenRoute("selection")
+    object Cuenta : ScreenRoute("cuenta")
 
 }

@@ -11,6 +11,12 @@ import com.permafrost.socialbrewapp.ui.viewmodel.*
 
 @Composable
 fun Navigation(navController: NavHostController) {
+
+
+
+
+
+
     NavHost(
         navController = navController,
         startDestination = ScreenRoute.Login.route
@@ -27,7 +33,10 @@ fun Navigation(navController: NavHostController) {
             val selectionViewModel: SelectionViewModel = viewModel()
             SelectionScreen(navController = navController, selectionViewModel = selectionViewModel)
         }
-
+        composable(ScreenRoute.Cuenta.route) {
+            val cuentaViewModel: CuentaViewModel = viewModel()
+            CuentaScreen(navController = navController, cuentaViewModel = cuentaViewModel)
+        }
 
 
 

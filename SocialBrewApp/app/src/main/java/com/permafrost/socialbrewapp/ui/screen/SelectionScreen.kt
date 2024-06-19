@@ -1,3 +1,5 @@
+// Selection.kt
+
 package com.permafrost.socialbrewapp.ui.screen
 
 import androidx.compose.foundation.Image
@@ -19,6 +21,7 @@ import androidx.navigation.NavHostController
 import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.viewmodel.SelectionViewModel
 import com.permafrost.socialbrewapp.R
+import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 
 @Composable
@@ -27,7 +30,13 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
         topBar = {
             TopBar(title = "SocialBrew")
         },
+        bottomBar = {
+            BottomNavBar(navController = navController)
+        },
+
         content = { paddingValues ->
+
+
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -36,14 +45,14 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Top
             ) {
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(12.dp))
                 Text(
                     text = "Selecciona un bar",
                     color = Color.White,
                     fontSize = 24.sp,
                     modifier = Modifier.padding(16.dp)
                 )
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(12.dp))
 
                 BarOptionWithTitle(
                     imageRes = R.drawable.baruno,
@@ -64,7 +73,6 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
                     title = "Los tarros",
                     onClick = { }
                 )
-
             }
         }
     )

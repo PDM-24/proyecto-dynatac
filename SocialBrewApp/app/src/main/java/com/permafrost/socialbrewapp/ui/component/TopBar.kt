@@ -1,4 +1,4 @@
-// TopBar.kt
+
 package com.permafrost.socialbrewapp.ui.component
 
 import androidx.compose.foundation.background

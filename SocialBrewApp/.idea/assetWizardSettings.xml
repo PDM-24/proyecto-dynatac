@@ -33,8 +33,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="baseline_perm_identity_24" />
-                            <entry key="sourceFile" value="C:\Users\quint\OneDrive\Desktop\Proyecto\proyecto-dynatac\SocialBrewApp" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="password" />
+                            <entry key="sourceFile" value="C:\Users\quint\Downloads\password.svg" />
                           </map>
                         </option>
                       </PersistentState>
