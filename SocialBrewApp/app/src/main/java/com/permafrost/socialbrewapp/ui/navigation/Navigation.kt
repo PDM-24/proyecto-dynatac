@@ -1,4 +1,3 @@
-// Navigation.kt
 package com.permafrost.socialbrewapp.ui.navigation
 
 import androidx.compose.runtime.Composable
@@ -8,20 +7,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.permafrost.socialbrewapp.ui.screen.*
 import com.permafrost.socialbrewapp.ui.viewmodel.*
-import com.permafrost.socialbrewapp.ui.screen.DrinksMenuScreen
-import com.permafrost.socialbrewapp.ui.screen.HomeScreen
-import com.permafrost.socialbrewapp.ui.screen.LoginScreen
-import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
-import com.permafrost.socialbrewapp.ui.screen.BarHomeScreen
-import com.permafrost.socialbrewapp.ui.screen.SignInScreen
-import com.permafrost.socialbrewapp.ui.viewmodel.BarHomeScreenViewModel
-import com.permafrost.socialbrewapp.ui.viewmodel.HomeScreenViewModel
-import com.permafrost.socialbrewapp.ui.viewmodel.LoginViewModel
-import com.permafrost.socialbrewapp.ui.viewmodel.SignInViewModel
 
 @Composable
 fun Navigation(navController: NavHostController) {
-
     NavHost(
         navController = navController,
         startDestination = ScreenRoute.Login.route
@@ -43,22 +31,18 @@ fun Navigation(navController: NavHostController) {
             CuentaScreen(navController = navController, cuentaViewModel = cuentaViewModel)
         }
 
-
-
         composable(ScreenRoute.DrinksMenu.route) {
-            val drinksMenuViewModel: DrinksMenuViewModel = viewModel ()
-            DrinksMenuScreen( navController = navController, drinksMenuViewModel = drinksMenuViewModel)
+            val drinksMenuViewModel: DrinksMenuViewModel = viewModel()
+            DrinksMenuScreen(navController = navController, drinksMenuViewModel = drinksMenuViewModel)
         }
-
         composable(ScreenRoute.SignIn.route) {
-            val signInViewModel: SignInViewModel = viewModel ()
+            val signInViewModel: SignInViewModel = viewModel()
             SignInScreen(navController = navController, signInViewModel = signInViewModel)
         }
-
-        composable(ScreenRoute.BarHome.route) {
-            val barhomescreenViewModel: BarHomeScreenViewModel = viewModel ()
-            BarHomeScreen(navController = navController, barhomescreenViewModel = barhomescreenViewModel)
+        composable("${ScreenRoute.BarHome.route}/{barId}") { backStackEntry ->
+            val barId = backStackEntry.arguments?.getString("barId") ?: return@composable
+            val barHomeViewModel: BarHomeScreenViewModel = viewModel()
+            BarHomeScreen(navController = navController, barhomescreenViewModel = barHomeViewModel)
         }
-
     }
 }

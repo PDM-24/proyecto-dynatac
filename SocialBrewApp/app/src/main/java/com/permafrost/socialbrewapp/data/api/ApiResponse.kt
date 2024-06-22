@@ -12,4 +12,19 @@ data class ApiResponseError(
     val message: String
 )
 
+data class LoginResponse(
+    @SerializedName(value="token")
+    val token: String,
+    @SerializedName(value="Roles")
+    val role: List<String>
+)
 
+data class RegisterResponse(
+    @SerializedName("message")
+    val message: String
+)
+
+data class NewBarResponse(
+    @SerializedName("message")
+    val message: String
+)

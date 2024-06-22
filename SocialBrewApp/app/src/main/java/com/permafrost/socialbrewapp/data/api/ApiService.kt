@@ -15,7 +15,7 @@ interface ApiService {
     //Bar
 
     //FindProductsFromABar
-    //Identifier es el id del bar que es el usuario que tiene el rol de bar xd
+    //Identifier es el id del bar que es el usuario que tiene el rol de bar
     @Headers(value = ["Content-Type: application/json"])
     @GET(value = Constants.API_PATH + Constants.BAR_PATH + "/{identifier}" + Constants.PRODUCTS_PATH)
     suspend fun findProductsFromABar(@Path("identifier") identifier: String): List<ProductsApi>

@@ -29,6 +29,7 @@ import com.permafrost.socialbrewapp.ui.theme.Black
 import com.permafrost.socialbrewapp.ui.theme.Ocher
 import com.permafrost.socialbrewapp.ui.theme.White
 import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
+import com.permafrost.socialbrewapp.ui.component.ProductCard
 
 
 @Composable
@@ -94,22 +95,3 @@ fun FoodMenuScreen(navController: NavHostController, drinksMenuViewModel: Drinks
 }
 
 
-@Composable
-private fun ProductCard(imageResourceId: ImageVector, productName: String) {
-    Card(
-        modifier = Modifier
-            .width(150.dp)
-            .height(200.dp),
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(8.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            Icon(imageVector = Icons.Default.Build, contentDescription = null)
-            Text(text = productName, textAlign = TextAlign.Center)
-        }
-    }
-}
