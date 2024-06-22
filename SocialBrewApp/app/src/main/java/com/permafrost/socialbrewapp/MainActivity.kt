@@ -10,7 +10,12 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.navigation.Navigation
+import com.permafrost.socialbrewapp.ui.screen.ChangepassScreen
+import com.permafrost.socialbrewapp.ui.screen.CreditosScreen
+import com.permafrost.socialbrewapp.ui.screen.CuentaScreen
 import com.permafrost.socialbrewapp.ui.screen.DrinksMenuScreen
+import com.permafrost.socialbrewapp.ui.screen.RenameScreen
+import com.permafrost.socialbrewapp.ui.screen.SelectionScreen
 import com.permafrost.socialbrewapp.ui.theme.SocialBrewAppTheme
 import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
 import com.permafrost.socialbrewapp.ui.viewmodel.HomeScreenViewModel

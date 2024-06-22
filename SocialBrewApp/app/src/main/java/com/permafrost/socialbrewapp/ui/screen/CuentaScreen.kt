@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -36,139 +37,148 @@ fun CuentaScreen(navController: NavHostController, cuentaViewModel: CuentaViewMo
             TopBar(title = "Cuenta")
         },
         bottomBar = {
-            BottomNavBar(navController = navController) },
+            BottomNavBar(navController = navController)
+        },
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.Black)
-                .padding(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = colorResource(id = R.color.background)
         ) {
-            Spacer(modifier = Modifier.height(55.dp)) // Espacio adicional arriba del texto
-
-
-            Text(
-                text = "SocialBrew",
-                color = Color.White,
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(16.dp)
-            )
-
-
-            Image(
-                painter = painterResource(id = R.drawable.beer), // Actualiza con el recurso de imagen correcto
-                contentDescription = null,
-                colorFilter = ColorFilter.tint(Color.White),
-                modifier = Modifier.size(100.dp)
-            )
-
-
-            Spacer(modifier = Modifier.height(55.dp))
-
-
-            Button(
-                onClick = { /* Navigate to Change Name Screen */ },
-                colors = ButtonDefaults.buttonColors(containerColor = Color.Gray),
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth(0.8f)
-                    .padding(vertical = 8.dp)
-                    .height(48.dp)
+                    .fillMaxSize()
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth()
+                Spacer(modifier = Modifier.height(55.dp))
+
+
+                Text(
+                    text = "SocialBrew",
+                    color = Color.White,
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(16.dp)
+                )
+
+
+                Image(
+                    painter = painterResource(id = R.drawable.beer),
+                    contentDescription = null,
+                    colorFilter = ColorFilter.tint(Color.White),
+                    modifier = Modifier.size(100.dp)
+                )
+
+
+                Spacer(modifier = Modifier.height(55.dp))
+
+
+                Button(
+                    onClick = { navController.navigate("Rename") },
+                    colors = ButtonDefaults.buttonColors(containerColor = Color.Gray),
+                    modifier = Modifier
+                        .fillMaxWidth(0.8f)
+                        .padding(vertical = 8.dp)
+                        .height(48.dp)
                 ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.nombree), // Reemplaza con el ID correcto del icono
-                        contentDescription = null,
-                        tint = Color.White,
-                        modifier = Modifier.size(24.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Cambiar nombre", color = Color.White, modifier = Modifier.weight(1f))
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.nombree),
+                            contentDescription = null,
+                            tint = Color.White,
+                            modifier = Modifier.size(24.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Cambiar nombre", color = Color.White, modifier = Modifier.weight(1f))
+                    }
                 }
-            }
 
 
-            Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
 
-            Button(
-                onClick = { /* Navigate to Change Password Screen */ },
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6D0F1A)),
-                modifier = Modifier
-                    .fillMaxWidth(0.8f)
-                    .padding(vertical = 8.dp)
-                    .height(48.dp)
-            ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth()
+                Button(
+                    onClick = { navController.navigate("Changepass") },
+                    colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.primary_red)),
+                    modifier = Modifier
+                        .fillMaxWidth(0.8f)
+                        .padding(vertical = 8.dp)
+                        .height(48.dp)
                 ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.password), // Reemplaza con el ID correcto del icono
-                        contentDescription = null,
-                        tint = Color.White,
-                        modifier = Modifier.size(24.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Cambiar contraseña", color = Color.White, modifier = Modifier.weight(1f))
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.password),
+                            contentDescription = null,
+                            tint = Color.White,
+                            modifier = Modifier.size(24.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            "Cambiar contraseña",
+                            color = Color.White,
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
                 }
-            }
 
 
-            Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
 
-            Button(
-                onClick = { /* Show Credits Screen */ },
-                colors = ButtonDefaults.buttonColors(containerColor = Color.Gray),
-                modifier = Modifier
-                    .fillMaxWidth(0.8f)
-                    .padding(vertical = 8.dp)
-                    .height(48.dp)
-            ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth()
+                Button(
+                    onClick = { navController.navigate("Creditos") },
+                    colors = ButtonDefaults.buttonColors(containerColor = Color.Gray),
+                    modifier = Modifier
+                        .fillMaxWidth(0.8f)
+                        .padding(vertical = 8.dp)
+                        .height(48.dp)
                 ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.list), // Reemplaza con el ID correcto del icono
-                        contentDescription = null,
-                        tint = Color.White,
-                        modifier = Modifier.size(24.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Créditos", color = Color.White, modifier = Modifier.weight(1f))
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.list),
+                            contentDescription = null,
+                            tint = Color.White,
+                            modifier = Modifier.size(24.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Créditos", color = Color.White, modifier = Modifier.weight(1f))
+                    }
                 }
-            }
 
 
-            Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
 
-            Button(
-                onClick = { /* Log out action */ },
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6D0F1A)),
-                modifier = Modifier
-                    .fillMaxWidth(0.8f)
-                    .padding(vertical = 8.dp)
-                    .height(48.dp)
-            ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth()
+                Button(
+                    onClick = { /* Log out action */ },
+                    colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.primary_red)),
+                    modifier = Modifier
+                        .fillMaxWidth(0.8f)
+                        .padding(vertical = 8.dp)
+                        .height(48.dp)
                 ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.logout), // Reemplaza con el ID correcto del icono
-                        contentDescription = null,
-                        tint = Color.White,
-                        modifier = Modifier.size(24.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Cerrar sesión", color = Color.White, modifier = Modifier.weight(1f))
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.logout),
+                            contentDescription = null,
+                            tint = Color.White,
+                            modifier = Modifier.size(24.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Cerrar sesión", color = Color.White, modifier = Modifier.weight(1f))
+                    }
                 }
             }
         }

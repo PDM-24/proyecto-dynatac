@@ -1,5 +1,3 @@
-// Selection.kt
-
 package com.permafrost.socialbrewapp.ui.screen
 
 import androidx.compose.foundation.Image
@@ -17,6 +15,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.viewmodel.SelectionViewModel
@@ -25,7 +24,10 @@ import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 
 @Composable
-fun SelectionScreen(navController: NavHostController, selectionViewModel: SelectionViewModel) {
+fun SelectionScreen(
+    navController: NavHostController,
+    selectionViewModel: SelectionViewModel = viewModel()
+) {
     Scaffold(
         topBar = {
             TopBar(title = "SocialBrew")
@@ -35,44 +37,48 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
         },
 
         content = { paddingValues ->
-
-
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(paddingValues)
-                    .background(Color.Black),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Top
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = colorResource(id = R.color.background)
             ) {
-                Spacer(modifier = Modifier.height(12.dp))
-                Text(
-                    text = "Selecciona un bar",
-                    color = Color.White,
-                    fontSize = 24.sp,
-                    modifier = Modifier.padding(16.dp)
-                )
-                Spacer(modifier = Modifier.height(12.dp))
 
-                BarOptionWithTitle(
-                    imageRes = R.drawable.baruno,
-                    title = "Bar Malta",
-                    onClick = {  }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(paddingValues),
 
-                BarOptionWithTitle(
-                    imageRes = R.drawable.baruno,
-                    title = "Beerlab",
-                    onClick = { }
-                )
-                Spacer(modifier = Modifier.height(16.dp))
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Top
+                ) {
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text(
+                        text = "Selecciona un bar",
+                        color = Color.White,
+                        fontSize = 24.sp,
+                        modifier = Modifier.padding(16.dp)
+                    )
+                    Spacer(modifier = Modifier.height(12.dp))
 
-                BarOptionWithTitle(
-                    imageRes = R.drawable.baruno,
-                    title = "Los tarros",
-                    onClick = { }
-                )
+                    BarOptionWithTitle(
+                        imageRes = R.drawable.baruno,
+                        title = "Bar Malta",
+                        onClick = { }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    BarOptionWithTitle(
+                        imageRes = R.drawable.baruno,
+                        title = "Beerlab",
+                        onClick = { }
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    BarOptionWithTitle(
+                        imageRes = R.drawable.baruno,
+                        title = "Los tarros",
+                        onClick = { }
+                    )
+                }
             }
         }
     )
@@ -103,7 +109,10 @@ fun BarOption(imageRes: Int, onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth(0.8f)
             .clickable(onClick = onClick)
-            .background(color = colorResource(id = R.color.primary_red), shape = RoundedCornerShape(8.dp))
+            .background(
+                color = colorResource(id = R.color.primary_red),
+                shape = RoundedCornerShape(8.dp)
+            )
             .padding(16.dp),
         contentAlignment = Alignment.Center
     ) {

@@ -807,7 +807,7 @@
             "outputFile": "com.permafrost.socialbrewapp-debug-57:/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\quint\\OneDrive\\Desktop\\ProyectoFinal\\proyecto-dynatac\\SocialBrewApp\\app\\src\\main\\res\\values\\themes.xml",
+                    "source": "C:\\Users\\quint\\OneDrive\\Desktop\\PROYECTOMOVILES\\proyecto-dynatac\\SocialBrewApp\\app\\src\\main\\res\\values\\themes.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -913,6 +913,40 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\quint\\OneDrive\\Desktop\\PROYECTOMOVILES\\proyecto-dynatac\\SocialBrewApp\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "17,66",
+                        "endColumns": "47,58",
+                        "endOffsets": "60,120"
+                    },
+                    "to": {
+                        "startLines": "111,195",
+                        "startColumns": "4,4",
+                        "startOffsets": "6574,12161",
+                        "endColumns": "47,58",
+                        "endOffsets": "6617,12215"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\quint\\OneDrive\\Desktop\\PROYECTOMOVILES\\proyecto-dynatac\\SocialBrewApp\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "9,7,12,10,2,3,4,11,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "379,293,518,425,57,105,153,472,201,247,336",
+                        "endColumns": "44,41,49,45,46,46,46,44,44,44,41",
+                        "endOffsets": "419,330,563,466,99,147,195,512,241,287,373"
+                    },
+                    "to": {
+                        "startLines": "5,6,9,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "370,415,588,770,816,863,910,957,1002,1047,1092",
+                        "endColumns": "44,41,49,45,46,46,46,44,44,44,41",
+                        "endOffsets": "410,452,633,811,858,905,952,997,1042,1087,1129"
+                    }
+                },
+                {
                     "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\ca3fb5022aa1f5ee830c59a996a474f9\\transformed\\activity-1.9.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -985,23 +1019,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\quint\\OneDrive\\Desktop\\ProyectoFinal\\proyecto-dynatac\\SocialBrewApp\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "9,7,12,10,2,3,4,11,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "379,293,518,425,57,105,153,472,201,247,336",
-                        "endColumns": "44,41,49,45,46,46,46,44,44,44,41",
-                        "endOffsets": "419,330,563,466,99,147,195,512,241,287,373"
-                    },
-                    "to": {
-                        "startLines": "5,6,9,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "370,415,588,770,816,863,910,957,1002,1047,1092",
-                        "endColumns": "44,41,49,45,46,46,46,44,44,44,41",
-                        "endOffsets": "410,452,633,811,858,905,952,997,1042,1087,1129"
-                    }
-                },
-                {
                     "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\f141412a01dfa689cb02a73bd47a4b22\\transformed\\lifecycle-runtime-release\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -1035,23 +1052,6 @@
                         "endLines": "85,230,370,373",
                         "endColumns": "52,24,24,24",
                         "endOffsets": "5188,14162,19305,19420"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\quint\\OneDrive\\Desktop\\ProyectoFinal\\proyecto-dynatac\\SocialBrewApp\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,2",
-                        "startColumns": "4,4",
-                        "startOffsets": "17,66",
-                        "endColumns": "47,58",
-                        "endOffsets": "60,120"
-                    },
-                    "to": {
-                        "startLines": "111,195",
-                        "startColumns": "4,4",
-                        "startOffsets": "6574,12161",
-                        "endColumns": "47,58",
-                        "endOffsets": "6617,12215"
                     }
                 },
                 {

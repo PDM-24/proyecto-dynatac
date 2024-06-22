@@ -8,7 +8,10 @@ import com.permafrost.socialbrewapp.ui.viewmodel.BarHomeScreenViewModel
 
 
 @Composable
-fun BarHomeScreen(navController: NavHostController, barhomescreenViewModel: BarHomeScreenViewModel) {
+fun BarHomeScreen(
+    navController: NavHostController,
+    barhomescreenViewModel: BarHomeScreenViewModel
+) {
     Column {
         Text(text = "Bienvenido a Bar Screen")
 

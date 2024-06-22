@@ -17,7 +17,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable list
 drawable logout
-drawable menu_icon
+drawable menu
 drawable nombree
 drawable password
 font dkblack
