@@ -72,10 +72,6 @@
         "source": "com.permafrost.socialbrewapp-main-59:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_menu_icon.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/menu_icon.xml"
-    },
-    {
         "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "com.permafrost.socialbrewapp-main-59:/mipmap-xxxhdpi/ic_launcher.webp"
     },
@@ -86,6 +82,10 @@
     {
         "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_baruno.png.flat",
         "source": "com.permafrost.socialbrewapp-main-59:/drawable/baruno.png"
+    },
+    {
+        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_menu.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-59:/drawable/menu.xml"
     },
     {
         "merged": "com.permafrost.socialbrewapp-debug-57:/xml_backup_rules.xml.flat",

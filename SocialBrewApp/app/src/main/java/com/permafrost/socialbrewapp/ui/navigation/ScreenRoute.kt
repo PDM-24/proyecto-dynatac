@@ -12,5 +12,8 @@ sealed class ScreenRoute(val route: String) {
 
     object SignIn : ScreenRoute("sign_in")
     object BarHome : ScreenRoute("bar_home")
+    object Rename : ScreenRoute("rename")
+    object Changepass : ScreenRoute("changepass")
+    object Creditos : ScreenRoute("creditos")
 
 }

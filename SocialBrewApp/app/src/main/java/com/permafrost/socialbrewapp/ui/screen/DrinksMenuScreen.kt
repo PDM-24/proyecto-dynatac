@@ -34,7 +34,11 @@ import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
 fun DrinksMenuScreen(navController: NavHostController, drinksMenuViewModel: DrinksMenuViewModel) {
 
     Scaffold(
-        topBar = { TopBar(title = "Beerlab") })
+        topBar = { TopBar(title = "Beerlab") },
+        bottomBar = {
+            BottomNavBar(navController = navController)
+        }
+    )
     { paddingValues ->
 
         Column(

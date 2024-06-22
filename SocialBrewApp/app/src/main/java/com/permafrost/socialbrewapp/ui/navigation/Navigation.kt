@@ -43,22 +43,42 @@ fun Navigation(navController: NavHostController) {
             CuentaScreen(navController = navController, cuentaViewModel = cuentaViewModel)
         }
 
-
-
         composable(ScreenRoute.DrinksMenu.route) {
-            val drinksMenuViewModel: DrinksMenuViewModel = viewModel ()
-            DrinksMenuScreen( navController = navController, drinksMenuViewModel = drinksMenuViewModel)
+            val drinksMenuViewModel: DrinksMenuViewModel = viewModel()
+            DrinksMenuScreen(
+                navController = navController,
+                drinksMenuViewModel = drinksMenuViewModel
+            )
         }
 
         composable(ScreenRoute.SignIn.route) {
-            val signInViewModel: SignInViewModel = viewModel ()
+            val signInViewModel: SignInViewModel = viewModel()
             SignInScreen(navController = navController, signInViewModel = signInViewModel)
         }
 
         composable(ScreenRoute.BarHome.route) {
-            val barhomescreenViewModel: BarHomeScreenViewModel = viewModel ()
-            BarHomeScreen(navController = navController, barhomescreenViewModel = barhomescreenViewModel)
+            val barhomescreenViewModel: BarHomeScreenViewModel = viewModel()
+            BarHomeScreen(
+                navController = navController,
+                barhomescreenViewModel = barhomescreenViewModel
+            )
         }
+        composable(ScreenRoute.Rename.route) {
+            val renameViewModel: RenameViewModel = viewModel()
+            RenameScreen(navController = navController, renameViewModel = renameViewModel)
+        }
+        composable(ScreenRoute.Changepass.route) {
+            val changepassViewModel: ChangepassViewModel = viewModel()
+            ChangepassScreen(
+                navController = navController,
+                changepassViewModel = changepassViewModel
+            )
+        }
+        composable(ScreenRoute.Creditos.route) {
+            val creditosViewModel: CreditosViewModel = viewModel()
+            CreditosScreen(navController = navController, creditosViewModel = creditosViewModel)
+        }
+
 
     }
 }
