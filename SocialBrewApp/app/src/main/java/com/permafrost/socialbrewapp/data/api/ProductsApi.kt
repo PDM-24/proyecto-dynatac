@@ -2,7 +2,6 @@ package com.permafrost.socialbrewapp.data.api
 
 import com.google.gson.annotations.SerializedName
 import com.permafrost.socialbrewapp.util.Constants
-import java.io.Serial
 
 data class ProductsApi(
     @SerializedName(value = Constants.PRODUCT_ID)
@@ -16,12 +15,20 @@ data class ProductsApi(
     @SerializedName(value = Constants.PRODUCT_IMAGE)
     val image: String = "",
     @SerializedName(value = Constants.PRODUCT_USER)
-    val user: String = "",
+    val user: User = User(),
     @SerializedName(value = Constants.PRODUCT_COMMENTS)
     val comments: MutableList<ComentarySchema> = arrayListOf(),
     @SerializedName(value = Constants.PRODUCT_POINTS)
     val points: Float = 0.0f
+)
 
+data class User(
+    @SerializedName(value = Constants.USER_ID)
+    val id: String = "",
+    @SerializedName(value = Constants.USER_NAME)
+    val username: String = "",
+    @SerializedName(value = Constants.USER_EMAIL)
+    val email: String = ""
 )
 
 data class ComentarySchema(
@@ -33,5 +40,4 @@ data class ComentarySchema(
     val user: String = "",
     @SerializedName(value = Constants.COMMENT_POINTS)
     val points: Float = 0.0f
-
 )

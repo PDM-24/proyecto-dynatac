@@ -1,37 +1,37 @@
 package com.permafrost.socialbrewapp.ui.screen
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
-import androidx.compose.material3.Button
-import androidx.compose.material3.Card
-import androidx.compose.material3.Icon
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import com.permafrost.socialbrewapp.data.api.ProductsApi
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.theme.Black
-import com.permafrost.socialbrewapp.ui.theme.Ocher
-import com.permafrost.socialbrewapp.ui.theme.White
 import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
 
-
 @Composable
-fun DrinksMenuScreen(navController: NavHostController, drinksMenuViewModel: DrinksMenuViewModel) {
+fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenuViewModel: DrinksMenuViewModel = viewModel()) {
+    LaunchedEffect(barId) {
+        drinksMenuViewModel.loadProductsForBar(barId)
+    }
 
     Scaffold(
         topBar = { TopBar(title = "Beerlab") })
@@ -71,16 +71,17 @@ fun DrinksMenuScreen(navController: NavHostController, drinksMenuViewModel: Drin
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                drinksMenuViewModel.products.observeAsState(listOf()).value.forEach { product ->
+                drinksMenuViewModel.products.collectAsState().value.forEach { product ->
                     ProductCard(
                         imageResourceId = Icons.Default.Build,
-                        productName = product.name
+                        productName = product.name,
+                        productPrice = product.price
                     )
                 }
 
                 // Load more button
                 Button(
-                    onClick = { drinksMenuViewModel.loadMoreProducts() },
+                    onClick = { drinksMenuViewModel.loadMoreProducts(barId) },
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp)
@@ -92,9 +93,8 @@ fun DrinksMenuScreen(navController: NavHostController, drinksMenuViewModel: Drin
     }
 }
 
-
 @Composable
-private fun ProductCard(imageResourceId: ImageVector, productName: String) {
+private fun ProductCard(imageResourceId: ImageVector, productName: String, productPrice: Double) {
     Card(
         modifier = Modifier
             .width(150.dp)
@@ -109,6 +109,8 @@ private fun ProductCard(imageResourceId: ImageVector, productName: String) {
         ) {
             Icon(imageVector = Icons.Default.Build, contentDescription = null)
             Text(text = productName, textAlign = TextAlign.Center)
+            Text(text = "$productPrice $", textAlign = TextAlign.Center)
         }
     }
 }
+

@@ -73,6 +73,7 @@ fun FoodMenuScreen(navController: NavHostController, drinksMenuViewModel: Drinks
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
+                /*
                 drinksMenuViewModel.products.observeAsState(listOf()).value.forEach { product ->
                     ProductCard(
                         imageResourceId = Icons.Default.Build,
@@ -89,6 +90,8 @@ fun FoodMenuScreen(navController: NavHostController, drinksMenuViewModel: Drinks
                 ) {
                     Text("Load more")
                 }
+                */
+
             }
         }
     }

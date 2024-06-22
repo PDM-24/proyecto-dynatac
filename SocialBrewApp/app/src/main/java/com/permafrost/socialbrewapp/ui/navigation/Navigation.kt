@@ -18,10 +18,6 @@ fun Navigation(navController: NavHostController) {
             val loginViewModel: LoginViewModel = viewModel()
             LoginScreen(navController = navController, loginViewModel = loginViewModel)
         }
-        composable(ScreenRoute.Home.route) {
-            val homescreenViewModel: HomeScreenViewModel = viewModel()
-            HomeScreen(navController = navController, homescreenViewModel = homescreenViewModel)
-        }
         composable(ScreenRoute.Selection.route) {
             val selectionViewModel: SelectionViewModel = viewModel()
             SelectionScreen(navController = navController, selectionViewModel = selectionViewModel)
@@ -30,10 +26,10 @@ fun Navigation(navController: NavHostController) {
             val cuentaViewModel: CuentaViewModel = viewModel()
             CuentaScreen(navController = navController, cuentaViewModel = cuentaViewModel)
         }
-
-        composable(ScreenRoute.DrinksMenu.route) {
+        composable("${ScreenRoute.DrinksMenu.route}/{barId}") { backStackEntry ->
+            val barId = backStackEntry.arguments?.getString("barId") ?: return@composable
             val drinksMenuViewModel: DrinksMenuViewModel = viewModel()
-            DrinksMenuScreen(navController = navController, drinksMenuViewModel = drinksMenuViewModel)
+            DrinksMenuScreen(barId = barId, navController = navController, drinksMenuViewModel = drinksMenuViewModel)
         }
         composable(ScreenRoute.SignIn.route) {
             val signInViewModel: SignInViewModel = viewModel()

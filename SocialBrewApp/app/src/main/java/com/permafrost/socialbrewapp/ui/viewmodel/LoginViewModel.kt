@@ -54,7 +54,7 @@ class LoginViewModel : ViewModel() {
                     _loginStatusMessage.value = "¡Inicio de sesión exitoso!"
                     ToastHelper.showToast(context, _loginStatusMessage.value)
                     if (_userRole.value == "Usuario") {
-                        navController.navigate(ScreenRoute.Home.route)
+                        navController.navigate(ScreenRoute.Selection.route)
                     } else if (_userRole.value == "Bar") {
                         navController.navigate(ScreenRoute.BarHome.route)
                     }
@@ -66,14 +66,16 @@ class LoginViewModel : ViewModel() {
                     ToastHelper.showToast(context, _loginStatusMessage.value)
                 }
             } catch (e: IOException) {
+                Log.e("LoginViewModel", "Error de red: ${e.message}")
                 _loginStatusMessage.value = "Error de red. Por favor, inténtalo de nuevo."
                 ToastHelper.showToast(context, _loginStatusMessage.value)
             } catch (e: HttpException) {
                 _loginStatusMessage.value = "Error del servidor. Por favor, inténtalo de nuevo."
                 ToastHelper.showToast(context, _loginStatusMessage.value)
             } catch (e: Exception) {
+                Log.e("LoginViewModel", "Error inesperado: ${e.message}")
                 _loginStatusMessage.value =
-                    "Error inesperado: ${e.message}. Por favor, inténtalo de nuevo."
+                    "Error inesperado: Por favor, inténtalo de nuevo."
                 ToastHelper.showToast(context, _loginStatusMessage.value)
             }
         }
