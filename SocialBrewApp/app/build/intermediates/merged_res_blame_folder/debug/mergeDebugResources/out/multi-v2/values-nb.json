@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-nb/values-nb.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-nb/values-nb.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\1caa1e7bccbf2c0e0d28251a147740c4\\transformed\\foundation-release\\res\\values-nb\\values-nb.xml",
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\c4632bfc928cc4aaeceaf8d9e30fff50\\transformed\\ui-release\\res\\values-nb\\values-nb.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,145",
-                        "endColumns": "89,87",
-                        "endOffsets": "140,228"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,198,279,376,476,564,640,728,817,899,963,1027,1107,1189,1259,1336,1403",
+                        "endColumns": "92,80,96,99,87,75,87,88,81,63,63,79,81,69,76,66,119",
+                        "endOffsets": "193,274,371,471,559,635,723,812,894,958,1022,1102,1184,1254,1331,1398,1518"
                     },
                     "to": {
-                        "startLines": "80,81",
-                        "startColumns": "4,4",
-                        "startOffsets": "7847,7937",
-                        "endColumns": "89,87",
-                        "endOffsets": "7932,8020"
+                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1267,1360,4983,5080,5256,5417,5493,5581,5670,5752,5816,5880,5960,6122,6480,6557,6624",
+                        "endColumns": "92,80,96,99,87,75,87,88,81,63,63,79,81,69,76,66,119",
+                        "endOffsets": "1355,1436,5075,5175,5339,5488,5576,5665,5747,5811,5875,5955,6037,6187,6552,6619,6739"
                     }
                 },
                 {
@@ -55,20 +55,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\6b98141c685145050f2f61f0447362c1\\transformed\\ui-release\\res\\values-nb\\values-nb.xml",
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\47eadd835a75fe5cdb62a30cfeb04c4c\\transformed\\foundation-release\\res\\values-nb\\values-nb.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,198,279,376,476,564,640,728,817,899,963,1027,1107,1189,1259,1336,1403",
-                        "endColumns": "92,80,96,99,87,75,87,88,81,63,63,79,81,69,76,66,119",
-                        "endOffsets": "193,274,371,471,559,635,723,812,894,958,1022,1102,1184,1254,1331,1398,1518"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,145",
+                        "endColumns": "89,87",
+                        "endOffsets": "140,228"
                     },
                     "to": {
-                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1267,1360,4983,5080,5256,5417,5493,5581,5670,5752,5816,5880,5960,6122,6480,6557,6624",
-                        "endColumns": "92,80,96,99,87,75,87,88,81,63,63,79,81,69,76,66,119",
-                        "endOffsets": "1355,1436,5075,5175,5339,5488,5576,5665,5747,5811,5875,5955,6037,6187,6552,6619,6739"
+                        "startLines": "80,81",
+                        "startColumns": "4,4",
+                        "startOffsets": "7847,7937",
+                        "endColumns": "89,87",
+                        "endOffsets": "7932,8020"
                     }
                 }
             ]

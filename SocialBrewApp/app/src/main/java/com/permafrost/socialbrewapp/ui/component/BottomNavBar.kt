@@ -49,6 +49,7 @@ fun BottomNavBar(navController: NavHostController) {
             }
             Toast.makeText(context, "Ha ingresado a la pantalla de Selección", Toast.LENGTH_SHORT)
                 .show()
+
         }, modifier = Modifier.weight(1f)) {
             Icon(
                 painter = painterResource(id = R.drawable.beer),
@@ -64,8 +65,10 @@ fun BottomNavBar(navController: NavHostController) {
                 launchSingleTop = true
                 restoreState = true
             }
+
             Toast.makeText(context, "Ha ingresado a la pantalla de su Usuario", Toast.LENGTH_SHORT)
                 .show()
+
         }, modifier = Modifier.weight(1f)) {
             Icon(
                 Icons.Default.Person,

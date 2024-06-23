@@ -18,7 +18,6 @@ import com.permafrost.socialbrewapp.ui.screen.RenameScreen
 import com.permafrost.socialbrewapp.ui.screen.SelectionScreen
 import com.permafrost.socialbrewapp.ui.theme.SocialBrewAppTheme
 import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
-import com.permafrost.socialbrewapp.ui.viewmodel.HomeScreenViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\6b98141c685145050f2f61f0447362c1\\transformed\\ui-release\\res\\values-fr-rCA\\values-fr-rCA.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,204,292,390,496,583,663,757,849,936,1007,1075,1156,1241,1317,1396,1465",
-                        "endColumns": "98,87,97,105,86,79,93,91,86,70,67,80,84,75,78,68,121",
-                        "endOffsets": "199,287,385,491,578,658,752,844,931,1002,1070,1151,1236,1312,1391,1460,1582"
-                    },
-                    "to": {
-                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1374,1473,5308,5406,5586,5750,5830,5924,6016,6103,6174,6242,6323,6494,6856,6935,7004",
-                        "endColumns": "98,87,97,105,86,79,93,91,86,70,67,80,84,75,78,68,121",
-                        "endOffsets": "1468,1556,5401,5507,5668,5825,5919,6011,6098,6169,6237,6318,6403,6565,6930,6999,7121"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\1caa1e7bccbf2c0e0d28251a147740c4\\transformed\\foundation-release\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\47eadd835a75fe5cdb62a30cfeb04c4c\\transformed\\foundation-release\\res\\values-fr-rCA\\values-fr-rCA.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -69,6 +52,23 @@
                         "startOffsets": "651,749,851,950,1052,1156,1260,6652",
                         "endColumns": "97,101,98,101,103,103,113,100",
                         "endOffsets": "744,846,945,1047,1151,1255,1369,6748"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\c4632bfc928cc4aaeceaf8d9e30fff50\\transformed\\ui-release\\res\\values-fr-rCA\\values-fr-rCA.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,204,292,390,496,583,663,757,849,936,1007,1075,1156,1241,1317,1396,1465",
+                        "endColumns": "98,87,97,105,86,79,93,91,86,70,67,80,84,75,78,68,121",
+                        "endOffsets": "199,287,385,491,578,658,752,844,931,1002,1070,1151,1236,1312,1391,1460,1582"
+                    },
+                    "to": {
+                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1374,1473,5308,5406,5586,5750,5830,5924,6016,6103,6174,6242,6323,6494,6856,6935,7004",
+                        "endColumns": "98,87,97,105,86,79,93,91,86,70,67,80,84,75,78,68,121",
+                        "endOffsets": "1468,1556,5401,5507,5668,5825,5919,6011,6098,6169,6237,6318,6403,6565,6930,6999,7121"
                     }
                 }
             ]

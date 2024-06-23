@@ -4,9 +4,12 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -17,17 +20,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.component.TopBar
+import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 import com.permafrost.socialbrewapp.ui.viewmodel.SelectionViewModel
 import com.permafrost.socialbrewapp.R
-import com.permafrost.socialbrewapp.ui.component.BottomNavBar
-import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 
 @Composable
-fun SelectionScreen(
-    navController: NavHostController,
-    selectionViewModel: SelectionViewModel = viewModel()
-) {
+fun SelectionScreen(navController: NavHostController, selectionViewModel: SelectionViewModel = viewModel()) {
+    val barAccounts by selectionViewModel.barAccounts.collectAsState()
+
     Scaffold(
         topBar = {
             TopBar(title = "SocialBrew")
@@ -35,49 +37,32 @@ fun SelectionScreen(
         bottomBar = {
             BottomNavBar(navController = navController)
         },
-
         content = { paddingValues ->
-            Surface(
-                modifier = Modifier.fillMaxSize(),
-                color = colorResource(id = R.color.background)
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues)
+                    .background(Color.Black),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Top
             ) {
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(
+                    text = "Selecciona un bar",
+                    color = Color.White,
+                    fontSize = 24.sp,
+                    modifier = Modifier.padding(16.dp)
+                )
+                Spacer(modifier = Modifier.height(12.dp))
 
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(paddingValues),
-
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Top
-                ) {
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Text(
-                        text = "Selecciona un bar",
-                        color = Color.White,
-                        fontSize = 24.sp,
-                        modifier = Modifier.padding(16.dp)
-                    )
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    BarOptionWithTitle(
-                        imageRes = R.drawable.baruno,
-                        title = "Bar Malta",
-                        onClick = { }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-
-                    BarOptionWithTitle(
-                        imageRes = R.drawable.baruno,
-                        title = "Beerlab",
-                        onClick = { }
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-
-                    BarOptionWithTitle(
-                        imageRes = R.drawable.baruno,
-                        title = "Los tarros",
-                        onClick = { }
-                    )
+                LazyColumn {
+                    items(barAccounts) { bar ->
+                        BarOptionWithTitle(
+                            title = bar.username,
+                            onClick = { navController.navigate("${ScreenRoute.DrinksMenu.route}/${bar.id}") }
+                        )
+                        Spacer(modifier = Modifier.height(16.dp))
+                    }
                 }
             }
         }
@@ -85,13 +70,12 @@ fun SelectionScreen(
 }
 
 @Composable
-fun BarOptionWithTitle(imageRes: Int, title: String, onClick: () -> Unit) {
+fun BarOptionWithTitle(title: String, onClick: () -> Unit) {
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         BarOption(
-            imageRes = imageRes,
             onClick = onClick
         )
         Text(
@@ -104,20 +88,17 @@ fun BarOptionWithTitle(imageRes: Int, title: String, onClick: () -> Unit) {
 }
 
 @Composable
-fun BarOption(imageRes: Int, onClick: () -> Unit) {
+fun BarOption(onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth(0.8f)
             .clickable(onClick = onClick)
-            .background(
-                color = colorResource(id = R.color.primary_red),
-                shape = RoundedCornerShape(8.dp)
-            )
+            .background(color = colorResource(id = R.color.primary_red))
             .padding(16.dp),
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = imageRes),
+            painter = painterResource(id = R.drawable.beer), // Puedes cambiar esto a la imagen que necesites
             contentDescription = null,
             modifier = Modifier.size(100.dp),
             contentScale = ContentScale.Crop

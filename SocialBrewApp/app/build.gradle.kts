@@ -57,6 +57,8 @@ dependencies {
     val lifecycle_version = "2.8.1"
     val retrofit_version = "2.11.0"
 
+    implementation("io.coil-kt:coil-compose:2.6.0")
+
     //Retrofit
     implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
     implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")

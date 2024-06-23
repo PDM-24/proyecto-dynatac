@@ -1,122 +1,122 @@
 [
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/font_dklight.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/font/dklight.ttf"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/font_dkblack.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/font/dkblack.ttf"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/xml_data_extraction_rules.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/font_dksemibold.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/font/dksemibold.ttf"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/font_dkextrabold.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/font/dkextrabold.ttf"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_password.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/password.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_logout.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/logout.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_baruno.png.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/baruno.png"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_nombree.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/nombree.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_logout.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/logout.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/font_dkregular.ttf.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/font/dkregular.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_list.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/list.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/ic_launcher_background.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_menu.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/menu.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/font_dklight.ttf.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/font/dklight.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_list.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/list.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/font_dkmedium.ttf.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/font/dkmedium.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/xml_data_extraction_rules.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/xml/data_extraction_rules.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/font_dkblack.ttf.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/font/dkblack.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_beer.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/beer.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/font_dkextrabold.ttf.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/font/dkextrabold.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/font_dkbold.ttf.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/font/dkbold.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/font_dksemibold.ttf.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/font/dksemibold.ttf"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_baruno.png.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/baruno.png"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_menu.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/menu.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_nombree.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/nombree.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/xml_backup_rules.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/xml/backup_rules.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/font_dkbold.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/font/dkbold.ttf"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/xml_backup_rules.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/drawable_password.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/drawable/password.xml"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/font_dkregular.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/font/dkregular.ttf"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/font_dkmedium.ttf.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/font/dkmedium.ttf"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_beer.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/beer.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-57:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.permafrost.socialbrewapp-main-59:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/mipmap-anydpi-v26/ic_launcher_round.xml"
     }
 ]

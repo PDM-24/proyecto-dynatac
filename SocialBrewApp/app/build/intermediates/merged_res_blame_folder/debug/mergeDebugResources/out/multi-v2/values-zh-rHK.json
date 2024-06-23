@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-zh-rHK/values-zh-rHK.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\6b98141c685145050f2f61f0447362c1\\transformed\\ui-release\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\c4632bfc928cc4aaeceaf8d9e30fff50\\transformed\\ui-release\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -18,6 +18,23 @@
                         "startOffsets": "1163,1239,4405,4493,4653,4802,4876,4953,5031,5105,5168,5231,5304,5457,5787,5862,5927",
                         "endColumns": "75,73,87,90,77,73,76,77,73,62,62,72,74,66,74,64,115",
                         "endOffsets": "1234,1308,4488,4579,4726,4871,4948,5026,5100,5163,5226,5299,5374,5519,5857,5922,6038"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\47eadd835a75fe5cdb62a30cfeb04c4c\\transformed\\foundation-release\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,136",
+                        "endColumns": "80,76",
+                        "endOffsets": "131,208"
+                    },
+                    "to": {
+                        "startLines": "80,81",
+                        "startColumns": "4,4",
+                        "startOffsets": "7092,7173",
+                        "endColumns": "80,76",
+                        "endOffsets": "7168,7245"
                     }
                 },
                 {
@@ -52,23 +69,6 @@
                         "startOffsets": "105,205,304,404,1313,1385,1470,1572,1673,1774,1886,1964,2056,2136,2220,2321,2430,2527,2631,2733,2837,2949,3050,3148,3250,3353,3434,3525,3626,3731,3817,3915,4009,4113,4223,4319,4584,4731,5379,5524,5702,6043,6119,6197,6290,6380,6469,6558,6638,6730,6822,6912,7016,7250,7338",
                         "endColumns": "99,98,99,97,71,84,101,100,100,111,77,91,79,83,100,108,96,103,101,103,111,100,97,101,102,80,90,100,104,85,97,93,103,109,95,85,68,70,77,76,84,75,77,92,89,88,88,79,91,91,89,103,75,87,85",
                         "endOffsets": "200,299,399,497,1380,1465,1567,1668,1769,1881,1959,2051,2131,2215,2316,2425,2522,2626,2728,2832,2944,3045,3143,3245,3348,3429,3520,3621,3726,3812,3910,4004,4108,4218,4314,4400,4648,4797,5452,5596,5782,6114,6192,6285,6375,6464,6553,6633,6725,6817,6907,7011,7087,7333,7419"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\1caa1e7bccbf2c0e0d28251a147740c4\\transformed\\foundation-release\\res\\values-zh-rHK\\values-zh-rHK.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,136",
-                        "endColumns": "80,76",
-                        "endOffsets": "131,208"
-                    },
-                    "to": {
-                        "startLines": "80,81",
-                        "startColumns": "4,4",
-                        "startOffsets": "7092,7173",
-                        "endColumns": "80,76",
-                        "endOffsets": "7168,7245"
                     }
                 }
             ]

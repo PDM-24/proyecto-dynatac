@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-lt/values-lt.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-lt/values-lt.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\1caa1e7bccbf2c0e0d28251a147740c4\\transformed\\foundation-release\\res\\values-lt\\values-lt.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,143",
-                        "endColumns": "87,87",
-                        "endOffsets": "138,226"
-                    },
-                    "to": {
-                        "startLines": "80,81",
-                        "startColumns": "4,4",
-                        "startOffsets": "8126,8214",
-                        "endColumns": "87,87",
-                        "endOffsets": "8209,8297"
-                    }
-                },
                 {
                     "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\a7d1cd19f9b1ce3d0a5501c4d9f052f5\\transformed\\core-1.13.1\\res\\values-lt\\values-lt.xml",
                     "from": {
@@ -35,6 +18,23 @@
                         "startOffsets": "563,661,771,870,973,1084,1194,6487",
                         "endColumns": "97,109,98,102,110,109,119,100",
                         "endOffsets": "656,766,865,968,1079,1189,1309,6583"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\c4632bfc928cc4aaeceaf8d9e30fff50\\transformed\\ui-release\\res\\values-lt\\values-lt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,198,282,380,485,580,657,748,835,919,989,1058,1144,1232,1307,1387,1470",
+                        "endColumns": "92,83,97,104,94,76,90,86,83,69,68,85,87,74,79,82,121",
+                        "endOffsets": "193,277,375,480,575,652,743,830,914,984,1053,1139,1227,1302,1382,1465,1587"
+                    },
+                    "to": {
+                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1314,1407,5134,5232,5417,5590,5667,5758,5845,5929,5999,6068,6154,6326,6695,6775,6858",
+                        "endColumns": "92,83,97,104,94,76,90,86,83,69,68,85,87,74,79,82,121",
+                        "endOffsets": "1402,1486,5227,5332,5507,5662,5753,5840,5924,5994,6063,6149,6237,6396,6770,6853,6975"
                     }
                 },
                 {
@@ -55,20 +55,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\6b98141c685145050f2f61f0447362c1\\transformed\\ui-release\\res\\values-lt\\values-lt.xml",
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\47eadd835a75fe5cdb62a30cfeb04c4c\\transformed\\foundation-release\\res\\values-lt\\values-lt.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,198,282,380,485,580,657,748,835,919,989,1058,1144,1232,1307,1387,1470",
-                        "endColumns": "92,83,97,104,94,76,90,86,83,69,68,85,87,74,79,82,121",
-                        "endOffsets": "193,277,375,480,575,652,743,830,914,984,1053,1139,1227,1302,1382,1465,1587"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,143",
+                        "endColumns": "87,87",
+                        "endOffsets": "138,226"
                     },
                     "to": {
-                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1314,1407,5134,5232,5417,5590,5667,5758,5845,5929,5999,6068,6154,6326,6695,6775,6858",
-                        "endColumns": "92,83,97,104,94,76,90,86,83,69,68,85,87,74,79,82,121",
-                        "endOffsets": "1402,1486,5227,5332,5507,5662,5753,5840,5924,5994,6063,6149,6237,6396,6770,6853,6975"
+                        "startLines": "80,81",
+                        "startColumns": "4,4",
+                        "startOffsets": "8126,8214",
+                        "endColumns": "87,87",
+                        "endOffsets": "8209,8297"
                     }
                 }
             ]

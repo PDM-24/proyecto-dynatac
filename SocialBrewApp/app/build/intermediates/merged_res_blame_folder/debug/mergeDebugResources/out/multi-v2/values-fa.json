@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-fa/values-fa.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-fa/values-fa.xml",
             "map": [
                 {
                     "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\a7d1cd19f9b1ce3d0a5501c4d9f052f5\\transformed\\core-1.13.1\\res\\values-fa\\values-fa.xml",
@@ -18,6 +18,23 @@
                         "startOffsets": "552,651,753,852,952,1053,1159,6296",
                         "endColumns": "98,101,98,99,100,105,116,100",
                         "endOffsets": "646,748,847,947,1048,1154,1271,6392"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\47eadd835a75fe5cdb62a30cfeb04c4c\\transformed\\foundation-release\\res\\values-fa\\values-fa.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,144",
+                        "endColumns": "88,88",
+                        "endOffsets": "139,228"
+                    },
+                    "to": {
+                        "startLines": "80,81",
+                        "startColumns": "4,4",
+                        "startOffsets": "7863,7952",
+                        "endColumns": "88,88",
+                        "endOffsets": "7947,8036"
                     }
                 },
                 {
@@ -38,24 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\1caa1e7bccbf2c0e0d28251a147740c4\\transformed\\foundation-release\\res\\values-fa\\values-fa.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,144",
-                        "endColumns": "88,88",
-                        "endOffsets": "139,228"
-                    },
-                    "to": {
-                        "startLines": "80,81",
-                        "startColumns": "4,4",
-                        "startOffsets": "7863,7952",
-                        "endColumns": "88,88",
-                        "endOffsets": "7947,8036"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\6b98141c685145050f2f61f0447362c1\\transformed\\ui-release\\res\\values-fa\\values-fa.xml",
+                    "source": "C:\\Users\\quint\\.gradle\\caches\\transforms-3\\c4632bfc928cc4aaeceaf8d9e30fff50\\transformed\\ui-release\\res\\values-fa\\values-fa.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
