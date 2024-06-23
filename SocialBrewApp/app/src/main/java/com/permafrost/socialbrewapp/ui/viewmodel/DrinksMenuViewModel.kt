@@ -1,5 +1,6 @@
 package com.permafrost.socialbrewapp.ui.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.permafrost.socialbrewapp.data.api.ApiClient
@@ -15,11 +16,12 @@ class DrinksMenuViewModel : ViewModel() {
     fun loadProductsForBar(barId: String) {
         viewModelScope.launch {
             try {
-                val response = ApiClient.apiService.findAllProducts()
-                val newProducts = response.filter { it.category == "Bebida" }
-                _products.value = newProducts
+                Log.d("DrinksMenuViewModel", "Fetching products for barId: $barId")
+                val productsResponse = ApiClient.apiService.findProductsFromABar(barId)
+                _products.value = productsResponse
+                Log.d("DrinksMenuViewModel", "Products: $productsResponse")
             } catch (e: Exception) {
-                // Handle the error
+                Log.e("DrinksMenuViewModel", "Error fetching products: ${e.message}")
             }
         }
     }
@@ -27,11 +29,11 @@ class DrinksMenuViewModel : ViewModel() {
     fun loadMoreProducts(barId: String) {
         viewModelScope.launch {
             try {
-                val response = ApiClient.apiService.findAllProducts()
-                val newProducts = response.filter { it.category == "Bebida" }
-                _products.value = _products.value.union(newProducts).toList()
+                val productsResponse = ApiClient.apiService.findProductsFromABar(barId)
+                _products.value += productsResponse
+                Log.d("DrinksMenuViewModel", "More products: $productsResponse")
             } catch (e: Exception) {
-                // Handle the error
+                Log.e("DrinksMenuViewModel", "Error loading more products: ${e.message}")
             }
         }
     }

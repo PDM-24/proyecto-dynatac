@@ -20,6 +20,7 @@ interface ApiService {
     @GET(value = Constants.API_PATH + Constants.BAR_PATH + "/{identifier}" + Constants.PRODUCTS_PATH)
     suspend fun findProductsFromABar(@Path("identifier") identifier: String): List<ProductsApi>
 
+
     //FindAllBars
     @Headers(value = ["Content-Type: application/json"])
     @GET(value = Constants.API_PATH + Constants.BAR_PATH + "/")

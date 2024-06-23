@@ -35,10 +35,6 @@ fun Navigation(navController: NavHostController) {
             val signInViewModel: SignInViewModel = viewModel()
             SignInScreen(navController = navController, signInViewModel = signInViewModel)
         }
-        composable("${ScreenRoute.BarHome.route}/{barId}") { backStackEntry ->
-            val barId = backStackEntry.arguments?.getString("barId") ?: return@composable
-            val barHomeViewModel: BarHomeScreenViewModel = viewModel()
-            BarHomeScreen(navController = navController, barhomescreenViewModel = barHomeViewModel)
-        }
     }
 }
+

@@ -59,7 +59,7 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
                     items(barAccounts) { bar ->
                         BarOptionWithTitle(
                             title = bar.username,
-                            onClick = { navController.navigate("${ScreenRoute.DrinksMenu.route}/${bar.username}") }
+                            onClick = { navController.navigate("${ScreenRoute.DrinksMenu.route}/${bar.id}") }
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                     }
