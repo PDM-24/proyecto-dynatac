@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-sk/values-sk.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-sk/values-sk.xml",
             "map": [
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/6b98141c685145050f2f61f0447362c1/transformed/ui-release/res/values-sk/values-sk.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/47eadd835a75fe5cdb62a30cfeb04c4c/transformed/foundation-release/res/values-sk/values-sk.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,200,284,379,482,574,653,747,837,918,987,1056,1139,1226,1298,1376,1444",
-                        "endColumns": "94,83,94,102,91,78,93,89,80,68,68,82,86,71,77,67,113",
-                        "endOffsets": "195,279,374,477,569,648,742,832,913,982,1051,1134,1221,1293,1371,1439,1553"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,139",
+                        "endColumns": "83,86",
+                        "endOffsets": "134,221"
                     },
                     "to": {
-                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1281,1376,5053,5148,5331,5500,5579,5673,5763,5844,5913,5982,6065,6241,6594,6672,6740",
-                        "endColumns": "94,83,94,102,91,78,93,89,80,68,68,82,86,71,77,67,113",
-                        "endOffsets": "1371,1455,5143,5246,5418,5574,5668,5758,5839,5908,5977,6060,6147,6308,6667,6735,6849"
+                        "startLines": "80,81",
+                        "startColumns": "4,4",
+                        "startOffsets": "7950,8034",
+                        "endColumns": "83,86",
+                        "endOffsets": "8029,8116"
                     }
                 },
                 {
@@ -55,20 +55,20 @@
                     }
                 },
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/1caa1e7bccbf2c0e0d28251a147740c4/transformed/foundation-release/res/values-sk/values-sk.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/c4632bfc928cc4aaeceaf8d9e30fff50/transformed/ui-release/res/values-sk/values-sk.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,139",
-                        "endColumns": "83,86",
-                        "endOffsets": "134,221"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,200,284,379,482,574,653,747,837,918,987,1056,1139,1226,1298,1376,1444",
+                        "endColumns": "94,83,94,102,91,78,93,89,80,68,68,82,86,71,77,67,113",
+                        "endOffsets": "195,279,374,477,569,648,742,832,913,982,1051,1134,1221,1293,1371,1439,1553"
                     },
                     "to": {
-                        "startLines": "80,81",
-                        "startColumns": "4,4",
-                        "startOffsets": "7950,8034",
-                        "endColumns": "83,86",
-                        "endOffsets": "8029,8116"
+                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1281,1376,5053,5148,5331,5500,5579,5673,5763,5844,5913,5982,6065,6241,6594,6672,6740",
+                        "endColumns": "94,83,94,102,91,78,93,89,80,68,68,82,86,71,77,67,113",
+                        "endOffsets": "1371,1455,5143,5246,5418,5574,5668,5758,5839,5908,5977,6060,6147,6308,6667,6735,6849"
                     }
                 }
             ]

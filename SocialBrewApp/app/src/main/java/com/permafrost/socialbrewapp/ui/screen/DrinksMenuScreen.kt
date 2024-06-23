@@ -1,11 +1,10 @@
 package com.permafrost.socialbrewapp.ui.screen
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Build
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -15,14 +14,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import coil.compose.rememberAsyncImagePainter
+import coil.compose.rememberImagePainter
 import com.permafrost.socialbrewapp.data.api.ProductsApi
-import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.theme.Black
 import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
@@ -34,19 +33,15 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
     }
 
     Scaffold(
-        topBar = { TopBar(title = "Beerlab") })
-    { paddingValues ->
-
+        topBar = { TopBar(title = "Beerlab") }
+    ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
                 .background(Black)
-                .verticalScroll(
-                    rememberScrollState(),
-                )
+                .verticalScroll(rememberScrollState())
         ) {
-
             // Tabs
             Row(
                 modifier = Modifier
@@ -71,11 +66,10 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                drinksMenuViewModel.products.collectAsState().value.forEach { product ->
+                val products by drinksMenuViewModel.products.collectAsState()
+                products.forEach { product ->
                     ProductCard(
-                        imageResourceId = Icons.Default.Build,
-                        productName = product.name,
-                        productPrice = product.price
+                        product = product
                     )
                 }
 
@@ -94,7 +88,7 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
 }
 
 @Composable
-private fun ProductCard(imageResourceId: ImageVector, productName: String, productPrice: Double) {
+private fun ProductCard(product: ProductsApi) {
     Card(
         modifier = Modifier
             .width(150.dp)
@@ -107,10 +101,16 @@ private fun ProductCard(imageResourceId: ImageVector, productName: String, produ
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Icon(imageVector = Icons.Default.Build, contentDescription = null)
-            Text(text = productName, textAlign = TextAlign.Center)
-            Text(text = "$productPrice $", textAlign = TextAlign.Center)
+            Image(
+                painter = rememberAsyncImagePainter(product.image),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(100.dp)
+                    .padding(4.dp),
+                contentScale = ContentScale.Crop
+            )
+            Text(text = product.name, textAlign = TextAlign.Center)
+            Text(text = "$${product.price}", textAlign = TextAlign.Center)
         }
     }
 }
-

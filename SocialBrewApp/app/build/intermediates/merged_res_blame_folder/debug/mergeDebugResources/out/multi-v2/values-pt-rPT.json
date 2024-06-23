@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-pt-rPT/values-pt-rPT.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-pt-rPT/values-pt-rPT.xml",
             "map": [
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/6b98141c685145050f2f61f0447362c1/transformed/ui-release/res/values-pt-rPT/values-pt-rPT.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,200,283,380,479,565,644,741,832,919,991,1060,1145,1235,1311,1387,1459",
-                        "endColumns": "94,82,96,98,85,78,96,90,86,71,68,84,89,75,75,71,121",
-                        "endOffsets": "195,278,375,474,560,639,736,827,914,986,1055,1140,1230,1306,1382,1454,1576"
-                    },
-                    "to": {
-                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1305,1400,5209,5306,5487,5650,5729,5826,5917,6004,6076,6145,6230,6406,6763,6839,6911",
-                        "endColumns": "94,82,96,98,85,78,96,90,86,71,68,84,89,75,75,71,121",
-                        "endOffsets": "1395,1478,5301,5400,5568,5724,5821,5912,5999,6071,6140,6225,6315,6477,6834,6906,7028"
-                    }
-                },
-                {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/1caa1e7bccbf2c0e0d28251a147740c4/transformed/foundation-release/res/values-pt-rPT/values-pt-rPT.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/47eadd835a75fe5cdb62a30cfeb04c4c/transformed/foundation-release/res/values-pt-rPT/values-pt-rPT.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -35,6 +18,23 @@
                         "startOffsets": "8153,8240",
                         "endColumns": "86,88",
                         "endOffsets": "8235,8324"
+                    }
+                },
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/c4632bfc928cc4aaeceaf8d9e30fff50/transformed/ui-release/res/values-pt-rPT/values-pt-rPT.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,200,283,380,479,565,644,741,832,919,991,1060,1145,1235,1311,1387,1459",
+                        "endColumns": "94,82,96,98,85,78,96,90,86,71,68,84,89,75,75,71,121",
+                        "endOffsets": "195,278,375,474,560,639,736,827,914,986,1055,1140,1230,1306,1382,1454,1576"
+                    },
+                    "to": {
+                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1305,1400,5209,5306,5487,5650,5729,5826,5917,6004,6076,6145,6230,6406,6763,6839,6911",
+                        "endColumns": "94,82,96,98,85,78,96,90,86,71,68,84,89,75,75,71,121",
+                        "endOffsets": "1395,1478,5301,5400,5568,5724,5821,5912,5999,6071,6140,6225,6315,6477,6834,6906,7028"
                     }
                 },
                 {

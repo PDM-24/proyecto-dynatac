@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-hi/values-hi.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-hi/values-hi.xml",
             "map": [
                 {
                     "source": "/Users/macbook/.gradle/caches/transforms-3/a7d1cd19f9b1ce3d0a5501c4d9f052f5/transformed/core-1.13.1/res/values-hi/values-hi.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "565,663,766,871,972,1085,1191,6474",
                         "endColumns": "97,102,104,100,112,105,126,100",
                         "endOffsets": "658,761,866,967,1080,1186,1313,6570"
-                    }
-                },
-                {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/6b98141c685145050f2f61f0447362c1/transformed/ui-release/res/values-hi/values-hi.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,200,283,376,474,563,641,738,827,912,980,1049,1130,1215,1288,1369,1435",
-                        "endColumns": "94,82,92,97,88,77,96,88,84,67,68,80,84,72,80,65,119",
-                        "endOffsets": "195,278,371,469,558,636,733,822,907,975,1044,1125,1210,1283,1364,1430,1550"
-                    },
-                    "to": {
-                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1318,1413,5148,5241,5411,5581,5659,5756,5845,5930,5998,6067,6148,6315,6676,6757,6823",
-                        "endColumns": "94,82,92,97,88,77,96,88,84,67,68,80,84,72,80,65,119",
-                        "endOffsets": "1408,1491,5236,5334,5495,5654,5751,5840,5925,5993,6062,6143,6228,6383,6752,6818,6938"
                     }
                 },
                 {
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/1caa1e7bccbf2c0e0d28251a147740c4/transformed/foundation-release/res/values-hi/values-hi.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/47eadd835a75fe5cdb62a30cfeb04c4c/transformed/foundation-release/res/values-hi/values-hi.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -69,6 +52,23 @@
                         "startOffsets": "8040,8125",
                         "endColumns": "84,85",
                         "endOffsets": "8120,8206"
+                    }
+                },
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/c4632bfc928cc4aaeceaf8d9e30fff50/transformed/ui-release/res/values-hi/values-hi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,200,283,376,474,563,641,738,827,912,980,1049,1130,1215,1288,1369,1435",
+                        "endColumns": "94,82,92,97,88,77,96,88,84,67,68,80,84,72,80,65,119",
+                        "endOffsets": "195,278,371,469,558,636,733,822,907,975,1044,1125,1210,1283,1364,1430,1550"
+                    },
+                    "to": {
+                        "startLines": "13,14,47,48,50,52,53,54,55,56,57,58,59,61,65,66,67",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1318,1413,5148,5241,5411,5581,5659,5756,5845,5930,5998,6067,6148,6315,6676,6757,6823",
+                        "endColumns": "94,82,92,97,88,77,96,88,84,67,68,80,84,72,80,65,119",
+                        "endOffsets": "1408,1491,5236,5334,5495,5654,5751,5840,5925,5993,6062,6143,6228,6383,6752,6818,6938"
                     }
                 }
             ]

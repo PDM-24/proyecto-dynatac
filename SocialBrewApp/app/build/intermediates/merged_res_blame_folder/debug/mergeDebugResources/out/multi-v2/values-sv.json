@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-sv/values-sv.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-sv/values-sv.xml",
             "map": [
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/47eadd835a75fe5cdb62a30cfeb04c4c/transformed/foundation-release/res/values-sv/values-sv.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,145",
+                        "endColumns": "89,88",
+                        "endOffsets": "140,229"
+                    },
+                    "to": {
+                        "startLines": "80,81",
+                        "startColumns": "4,4",
+                        "startOffsets": "7979,8069",
+                        "endColumns": "89,88",
+                        "endOffsets": "8064,8153"
+                    }
+                },
                 {
                     "source": "/Users/macbook/.gradle/caches/transforms-3/a7d1cd19f9b1ce3d0a5501c4d9f052f5/transformed/core-1.13.1/res/values-sv/values-sv.xml",
                     "from": {
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/6b98141c685145050f2f61f0447362c1/transformed/ui-release/res/values-sv/values-sv.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/c4632bfc928cc4aaeceaf8d9e30fff50/transformed/ui-release/res/values-sv/values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -52,23 +69,6 @@
                         "startOffsets": "105,240,369,472,1509,1589,1681,1791,1931,2051,2202,2283,2379,2465,2555,2665,2783,2884,3013,3136,3267,3435,3559,3673,3796,3913,4000,4094,4208,4343,4435,4539,4638,4766,4905,5007,5294,5458,6170,6319,6501,6863,6939,7020,7118,7214,7309,7406,7489,7589,7686,7785,7903,8158,8258",
                         "endColumns": "134,128,102,127,79,91,109,139,119,150,80,95,85,89,109,117,100,128,122,130,167,123,113,122,116,86,93,113,134,91,103,98,127,138,101,91,75,73,79,80,96,75,80,97,95,94,96,82,99,96,98,117,75,99,94",
                         "endOffsets": "235,364,467,595,1584,1676,1786,1926,2046,2197,2278,2374,2460,2550,2660,2778,2879,3008,3131,3262,3430,3554,3668,3791,3908,3995,4089,4203,4338,4430,4534,4633,4761,4900,5002,5094,5365,5527,6245,6395,6593,6934,7015,7113,7209,7304,7401,7484,7584,7681,7780,7898,7974,8253,8348"
-                    }
-                },
-                {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/1caa1e7bccbf2c0e0d28251a147740c4/transformed/foundation-release/res/values-sv/values-sv.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,145",
-                        "endColumns": "89,88",
-                        "endOffsets": "140,229"
-                    },
-                    "to": {
-                        "startLines": "80,81",
-                        "startColumns": "4,4",
-                        "startOffsets": "7979,8069",
-                        "endColumns": "89,88",
-                        "endOffsets": "8064,8153"
                     }
                 }
             ]

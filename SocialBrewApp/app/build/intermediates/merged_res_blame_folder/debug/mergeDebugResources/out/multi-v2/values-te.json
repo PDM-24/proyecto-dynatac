@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-te/values-te.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-te/values-te.xml",
             "map": [
-                {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/1caa1e7bccbf2c0e0d28251a147740c4/transformed/foundation-release/res/values-te/values-te.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,143",
-                        "endColumns": "87,94",
-                        "endOffsets": "138,233"
-                    },
-                    "to": {
-                        "startLines": "80,81",
-                        "startColumns": "4,4",
-                        "startOffsets": "8209,8297",
-                        "endColumns": "87,94",
-                        "endOffsets": "8292,8387"
-                    }
-                },
                 {
                     "source": "/Users/macbook/.gradle/caches/transforms-3/a7d1cd19f9b1ce3d0a5501c4d9f052f5/transformed/core-1.13.1/res/values-te/values-te.xml",
                     "from": {
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/6b98141c685145050f2f61f0447362c1/transformed/ui-release/res/values-te/values-te.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/c4632bfc928cc4aaeceaf8d9e30fff50/transformed/ui-release/res/values-te/values-te.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -52,6 +35,23 @@
                         "startOffsets": "1343,1439,5244,5341,5513,5685,5774,5870,5958,6042,6115,6188,6272,6452,6821,6898,6967",
                         "endColumns": "95,86,96,99,88,88,95,87,83,72,72,83,89,76,76,68,116",
                         "endOffsets": "1434,1521,5336,5436,5597,5769,5865,5953,6037,6110,6183,6267,6357,6524,6893,6962,7079"
+                    }
+                },
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/47eadd835a75fe5cdb62a30cfeb04c4c/transformed/foundation-release/res/values-te/values-te.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,143",
+                        "endColumns": "87,94",
+                        "endOffsets": "138,233"
+                    },
+                    "to": {
+                        "startLines": "80,81",
+                        "startColumns": "4,4",
+                        "startOffsets": "8209,8297",
+                        "endColumns": "87,94",
+                        "endOffsets": "8292,8387"
                     }
                 },
                 {

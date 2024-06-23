@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-55:/values-zh-rHK/values-zh-rHK.xml",
+            "outputFile": "com.permafrost.socialbrewapp-mergeDebugResources-57:/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/6b98141c685145050f2f61f0447362c1/transformed/ui-release/res/values-zh-rHK/values-zh-rHK.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/c4632bfc928cc4aaeceaf8d9e30fff50/transformed/ui-release/res/values-zh-rHK/values-zh-rHK.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -18,6 +18,23 @@
                         "startOffsets": "1163,1239,4405,4493,4653,4802,4876,4953,5031,5105,5168,5231,5304,5457,5787,5862,5927",
                         "endColumns": "75,73,87,90,77,73,76,77,73,62,62,72,74,66,74,64,115",
                         "endOffsets": "1234,1308,4488,4579,4726,4871,4948,5026,5100,5163,5226,5299,5374,5519,5857,5922,6038"
+                    }
+                },
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-3/47eadd835a75fe5cdb62a30cfeb04c4c/transformed/foundation-release/res/values-zh-rHK/values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,136",
+                        "endColumns": "80,76",
+                        "endOffsets": "131,208"
+                    },
+                    "to": {
+                        "startLines": "80,81",
+                        "startColumns": "4,4",
+                        "startOffsets": "7092,7173",
+                        "endColumns": "80,76",
+                        "endOffsets": "7168,7245"
                     }
                 },
                 {
@@ -52,23 +69,6 @@
                         "startOffsets": "502,594,693,787,881,974,1067,5601",
                         "endColumns": "91,98,93,93,92,92,95,100",
                         "endOffsets": "589,688,782,876,969,1062,1158,5697"
-                    }
-                },
-                {
-                    "source": "/Users/macbook/.gradle/caches/transforms-3/1caa1e7bccbf2c0e0d28251a147740c4/transformed/foundation-release/res/values-zh-rHK/values-zh-rHK.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,136",
-                        "endColumns": "80,76",
-                        "endOffsets": "131,208"
-                    },
-                    "to": {
-                        "startLines": "80,81",
-                        "startColumns": "4,4",
-                        "startOffsets": "7092,7173",
-                        "endColumns": "80,76",
-                        "endOffsets": "7168,7245"
                     }
                 }
             ]
