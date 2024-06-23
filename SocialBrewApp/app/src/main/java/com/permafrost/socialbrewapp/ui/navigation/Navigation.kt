@@ -25,20 +25,46 @@ fun Navigation(navController: NavHostController) {
             val cuentaViewModel: CuentaViewModel = viewModel()
             CuentaScreen(navController = navController, cuentaViewModel = cuentaViewModel)
         }
+
         composable("${ScreenRoute.DrinksMenu.route}/{barId}") { backStackEntry ->
             val barId = backStackEntry.arguments?.getString("barId") ?: return@composable
             val drinksMenuViewModel: DrinksMenuViewModel = viewModel()
             DrinksMenuScreen(barId = barId, navController = navController, drinksMenuViewModel = drinksMenuViewModel)
+
+
+
         }
         composable(ScreenRoute.SignIn.route) {
             val signInViewModel: SignInViewModel = viewModel()
             SignInScreen(navController = navController, signInViewModel = signInViewModel)
         }
+
         composable("${ScreenRoute.BarManagement.route}/{barId}") { backStackEntry ->
             val barId = backStackEntry.arguments?.getString("barId") ?: return@composable
             val barManagementViewModel: BarManagementViewModel = viewModel()
             BarManagementScreen(navController = navController, barId = barId, barManagementViewModel = barManagementViewModel)
         }
+
+
+
+
+
+        composable(ScreenRoute.Rename.route) {
+            val renameViewModel: RenameViewModel = viewModel()
+            RenameScreen(navController = navController, renameViewModel = renameViewModel)
+        }
+        composable(ScreenRoute.Changepass.route) {
+            val changepassViewModel: ChangepassViewModel = viewModel()
+            ChangepassScreen(
+                navController = navController,
+                changepassViewModel = changepassViewModel
+            )
+        }
+        composable(ScreenRoute.Creditos.route) {
+            val creditosViewModel: CreditosViewModel = viewModel()
+            CreditosScreen(navController = navController, creditosViewModel = creditosViewModel)
+        }
+
     }
 }
 

@@ -27,11 +27,28 @@ fun BottomNavBar(navController: NavHostController) {
         containerColor = Color.Gray
     ) {
         IconButton(onClick = {
+            navController.navigate(ScreenRoute.DrinksMenu.route) {
+                popUpTo(navController.graph.startDestinationId) { saveState = true }
+                launchSingleTop = true
+                restoreState = true
+            }
+            Toast.makeText(context, "Ha ingresado a la pantalla de Menu", Toast.LENGTH_SHORT).show()
+        }, modifier = Modifier.weight(1f)) {
+            Icon(
+                painter = painterResource(id = R.drawable.menu),
+                contentDescription = null,
+                modifier = Modifier.size(26.dp),
+                tint = if (currentRoute == ScreenRoute.DrinksMenu.route) Color.Black else Color.White
+            )
+        }
+        IconButton(onClick = {
             navController.navigate(ScreenRoute.Selection.route) {
                 popUpTo(navController.graph.startDestinationId) { saveState = true }
                 launchSingleTop = true
                 restoreState = true
             }
+            Toast.makeText(context, "Ha ingresado a la pantalla de Selección", Toast.LENGTH_SHORT)
+                .show()
 
         }, modifier = Modifier.weight(1f)) {
             Icon(
@@ -48,6 +65,9 @@ fun BottomNavBar(navController: NavHostController) {
                 launchSingleTop = true
                 restoreState = true
             }
+
+            Toast.makeText(context, "Ha ingresado a la pantalla de su Usuario", Toast.LENGTH_SHORT)
+                .show()
 
         }, modifier = Modifier.weight(1f)) {
             Icon(

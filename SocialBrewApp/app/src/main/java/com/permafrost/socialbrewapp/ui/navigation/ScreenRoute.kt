@@ -7,5 +7,9 @@ sealed class ScreenRoute(val route: String) {
     object DrinksMenu : ScreenRoute("drinksmenu")
     object SignIn : ScreenRoute("sign_in")
     object BarManagement : ScreenRoute("bar_management")
+    object Rename : ScreenRoute("rename")
+    object Changepass : ScreenRoute("changepass")
+    object Creditos : ScreenRoute("creditos")
+
 }
 

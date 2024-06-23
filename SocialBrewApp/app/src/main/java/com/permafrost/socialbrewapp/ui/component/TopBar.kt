@@ -1,4 +1,3 @@
-
 package com.permafrost.socialbrewapp.ui.component
 
 import androidx.compose.foundation.background
@@ -12,7 +11,6 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.permafrost.socialbrewapp.R
-
 
 
 @OptIn(ExperimentalMaterial3Api::class)

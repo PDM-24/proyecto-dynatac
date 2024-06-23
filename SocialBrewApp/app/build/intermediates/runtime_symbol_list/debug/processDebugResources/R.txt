@@ -91,7 +91,7 @@ int drawable ic_launcher_background 0x7f04000a
 int drawable ic_launcher_foreground 0x7f04000b
 int drawable list 0x7f04000c
 int drawable logout 0x7f04000d
-int drawable menu_icon 0x7f04000e
+int drawable menu 0x7f04000e
 int drawable nombree 0x7f04000f
 int drawable notification_action_background 0x7f040010
 int drawable notification_bg 0x7f040011

@@ -32,10 +32,6 @@
         "source": "com.permafrost.socialbrewapp-main-61:/drawable/logout.xml"
     },
     {
-        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_menu_icon.xml.flat",
-        "source": "com.permafrost.socialbrewapp-main-61:/drawable/menu_icon.xml"
-    },
-    {
         "merged": "com.permafrost.socialbrewapp-debug-59:/font_dkregular.ttf.flat",
         "source": "com.permafrost.socialbrewapp-main-61:/font/dkregular.ttf"
     },
@@ -46,6 +42,10 @@
     {
         "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "com.permafrost.socialbrewapp-main-61:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.permafrost.socialbrewapp-debug-59:/drawable_menu.xml.flat",
+        "source": "com.permafrost.socialbrewapp-main-61:/drawable/menu.xml"
     },
     {
         "merged": "com.permafrost.socialbrewapp-debug-59:/mipmap-xxhdpi_ic_launcher_round.webp.flat",

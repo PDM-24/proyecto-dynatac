@@ -52,7 +52,7 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
                 Button(onClick = { /*TODO*/ }) {
                     Text(text = "Bebidas")
                 }
-                Button(onClick = { /*TODO*/ }) {
+                Button(onClick = { /*TODO*/}) {
                     Text(text = "Alimentos")
                 }
             }
@@ -117,4 +117,3 @@ private fun ProductCard(product: ProductsApi) {
         }
     }
 }
-
