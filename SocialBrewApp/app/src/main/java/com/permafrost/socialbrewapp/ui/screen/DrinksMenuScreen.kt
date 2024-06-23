@@ -73,7 +73,7 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
                     )
                 }
 
-                // Load more button
+                /*
                 Button(
                     onClick = { drinksMenuViewModel.loadMoreProducts(barId) },
                     modifier = Modifier
@@ -82,6 +82,9 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
                 ) {
                     Text("Load more")
                 }
+
+                 */
+
             }
         }
     }

@@ -26,6 +26,9 @@ interface ApiService {
     @GET(value = Constants.API_PATH + Constants.BAR_PATH + "/")
     suspend fun findAllBars(): List<UserApi>
 
+
+
+
     //CreateNewBar
     @Headers(value = ["Content-Type: application/json"])
     @POST(value = Constants.API_PATH + Constants.BAR_PATH + Constants.REGISTER)

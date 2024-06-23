@@ -16,8 +16,11 @@ data class LoginResponse(
     @SerializedName(value="token")
     val token: String,
     @SerializedName(value="Roles")
-    val role: List<String>
+    val role: List<String>,
+    @SerializedName(value="id")
+    val id: String
 )
+
 
 data class RegisterResponse(
     @SerializedName("message")

@@ -7,7 +7,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.permafrost.socialbrewapp.ui.screen.*
 import com.permafrost.socialbrewapp.ui.viewmodel.*
-
 @Composable
 fun Navigation(navController: NavHostController) {
     NavHost(
@@ -35,6 +34,14 @@ fun Navigation(navController: NavHostController) {
             val signInViewModel: SignInViewModel = viewModel()
             SignInScreen(navController = navController, signInViewModel = signInViewModel)
         }
+        composable("${ScreenRoute.BarManagement.route}/{barId}") { backStackEntry ->
+            val barId = backStackEntry.arguments?.getString("barId") ?: return@composable
+            val barManagementViewModel: BarManagementViewModel = viewModel()
+            BarManagementScreen(navController = navController, barId = barId, barManagementViewModel = barManagementViewModel)
+        }
     }
 }
+
+
+
 

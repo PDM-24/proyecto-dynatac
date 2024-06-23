@@ -15,7 +15,7 @@ data class ProductsApi(
     @SerializedName(value = Constants.PRODUCT_IMAGE)
     val image: String = "",
     @SerializedName(value = Constants.PRODUCT_USER)
-    val user: String = "", // Change to String if it's a user ID
+    val user: String = "",
     @SerializedName(value = Constants.PRODUCT_COMMENTS)
     val comments: MutableList<ComentarySchema> = arrayListOf(),
     @SerializedName(value = Constants.PRODUCT_POINTS)
