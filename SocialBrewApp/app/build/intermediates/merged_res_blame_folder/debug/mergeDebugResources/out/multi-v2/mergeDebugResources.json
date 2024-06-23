@@ -3438,7 +3438,7 @@
                     }
                 },
                 {
-                    "source": "/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/res/values/strings.xml",
+                    "source": "/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "1,2",
                         "startColumns": "4,4",
@@ -3455,7 +3455,7 @@
                     }
                 },
                 {
-                    "source": "/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/res/values/themes.xml",
+                    "source": "/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/res/values/themes.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -3542,23 +3542,6 @@
                     }
                 },
                 {
-                    "source": "/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "9,7,12,10,2,3,4,11,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "370,286,506,415,55,102,149,461,196,241,328",
-                        "endColumns": "44,41,49,45,46,46,46,44,44,44,41",
-                        "endOffsets": "410,323,551,456,97,144,191,501,236,281,365"
-                    },
-                    "to": {
-                        "startLines": "5,6,9,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "370,415,588,770,816,863,910,957,1002,1047,1092",
-                        "endColumns": "44,41,49,45,46,46,46,44,44,44,41",
-                        "endOffsets": "410,452,633,811,858,905,952,997,1042,1087,1129"
-                    }
-                },
-                {
                     "source": "/Users/macbook/.gradle/caches/transforms-3/fe13bdb06c888d274c8049c3572f726f/transformed/lifecycle-viewmodel-release/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -3624,6 +3607,23 @@
                         "startOffsets": "5066,5243",
                         "endColumns": "53,66",
                         "endOffsets": "5115,5305"
+                    }
+                },
+                {
+                    "source": "/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "9,7,12,10,2,3,4,11,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "370,286,506,415,55,102,149,461,196,241,328",
+                        "endColumns": "44,41,49,45,46,46,46,44,44,44,41",
+                        "endOffsets": "410,323,551,456,97,144,191,501,236,281,365"
+                    },
+                    "to": {
+                        "startLines": "5,6,9,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "370,415,588,770,816,863,910,957,1002,1047,1092",
+                        "endColumns": "44,41,49,45,46,46,46,44,44,44,41",
+                        "endOffsets": "410,452,633,811,858,905,952,997,1042,1087,1129"
                     }
                 },
                 {

@@ -9,8 +9,8 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:5:5-67
-11-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:5:22-64
+11-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:5:22-64
 12
 13    <permission
 13-->[androidx.core:core:1.13.1] /Users/macbook/.gradle/caches/transforms-3/a7d1cd19f9b1ce3d0a5501c4d9f052f5/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
@@ -24,49 +24,49 @@
 17-->[androidx.core:core:1.13.1] /Users/macbook/.gradle/caches/transforms-3/a7d1cd19f9b1ce3d0a5501c4d9f052f5/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:7:5-29:19
+19-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:7:5-29:19
 20        android:allowBackup="true"
-20-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:9:9-35
+20-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:9:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 21-->[androidx.core:core:1.13.1] /Users/macbook/.gradle/caches/transforms-3/a7d1cd19f9b1ce3d0a5501c4d9f052f5/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:10:9-65
+22-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:10:9-65
 23        android:debuggable="true"
 24        android:extractNativeLibs="false"
 25        android:fullBackupContent="@xml/backup_rules"
-25-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:11:9-54
+25-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:11:9-54
 26        android:icon="@mipmap/ic_launcher"
-26-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:12:9-43
+26-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:12:9-43
 27        android:label="@string/app_name"
-27-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:13:9-41
+27-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:13:9-41
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:14:9-54
+28-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:14:9-54
 29        android:supportsRtl="true"
-29-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:15:9-35
+29-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:15:9-35
 30        android:testOnly="true"
 31        android:theme="@style/Theme.SocialBrewApp"
-31-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:16:9-51
+31-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:16:9-51
 32        android:usesCleartextTraffic="true" >
-32-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:8:9-44
+32-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:8:9-44
 33        <activity
-33-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:18:9-28:20
+33-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:18:9-28:20
 34            android:name="com.permafrost.socialbrewapp.MainActivity"
-34-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:19:13-41
+34-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:19:13-41
 35            android:exported="true"
-35-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:20:13-36
+35-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:20:13-36
 36            android:label="@string/app_name"
-36-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:21:13-45
+36-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:21:13-45
 37            android:theme="@style/Theme.SocialBrewApp" >
-37-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:22:13-55
+37-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:22:13-55
 38            <intent-filter>
-38-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:23:13-27:29
+38-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:23:13-27:29
 39                <action android:name="android.intent.action.MAIN" />
-39-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:24:17-69
-39-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:24:25-66
+39-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:24:17-69
+39-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:24:25-66
 40
 41                <category android:name="android.intent.category.LAUNCHER" />
-41-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:26:17-77
-41-->/Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/AndroidManifest.xml:26:27-74
+41-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:26:17-77
+41-->/Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/AndroidManifest.xml:26:27-74
 42            </intent-filter>
 43        </activity>
 44        <activity

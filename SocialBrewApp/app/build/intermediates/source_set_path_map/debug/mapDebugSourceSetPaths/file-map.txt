@@ -53,9 +53,9 @@ com.permafrost.socialbrewapp-lifecycle-runtime-release-51 /Users/macbook/.gradle
 com.permafrost.socialbrewapp-appcompat-resources-1.6.1-52 /Users/macbook/.gradle/caches/transforms-3/f7a768a9009520add85df5e9adda1cac/transformed/appcompat-resources-1.6.1/res
 com.permafrost.socialbrewapp-savedstate-ktx-1.2.1-53 /Users/macbook/.gradle/caches/transforms-3/fceed625638cd3a6032a5952bf64baa1/transformed/savedstate-ktx-1.2.1/res
 com.permafrost.socialbrewapp-lifecycle-viewmodel-release-54 /Users/macbook/.gradle/caches/transforms-3/fe13bdb06c888d274c8049c3572f726f/transformed/lifecycle-viewmodel-release/res
-com.permafrost.socialbrewapp-resValues-55 /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/generated/res/resValues/debug
-com.permafrost.socialbrewapp-packageDebugResources-56 /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.permafrost.socialbrewapp-packageDebugResources-57 /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.permafrost.socialbrewapp-debug-58 /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/build/intermediates/merged_res/debug/mergeDebugResources
-com.permafrost.socialbrewapp-debug-59 /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/debug/res
-com.permafrost.socialbrewapp-main-60 /Users/macbook/Desktop/proyecto-dynatac/SocialBrewApp/app/src/main/res
+com.permafrost.socialbrewapp-resValues-55 /Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/build/generated/res/resValues/debug
+com.permafrost.socialbrewapp-packageDebugResources-56 /Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.permafrost.socialbrewapp-packageDebugResources-57 /Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.permafrost.socialbrewapp-debug-58 /Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.permafrost.socialbrewapp-debug-59 /Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/debug/res
+com.permafrost.socialbrewapp-main-60 /Users/macbook/Desktop/proyecto-dynatac-Details-2/SocialBrewApp/app/src/main/res
