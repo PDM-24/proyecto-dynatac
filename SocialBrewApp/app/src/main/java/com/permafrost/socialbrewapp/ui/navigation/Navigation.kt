@@ -65,6 +65,18 @@ fun Navigation(navController: NavHostController) {
             CreditosScreen(navController = navController, creditosViewModel = creditosViewModel)
         }
 
+        composable("${ScreenRoute.CommentRating.route}/{productId}") { backStackEntry ->
+            val productId = backStackEntry.arguments?.getString("productId") ?: return@composable
+            val commentViewModel: CommentViewModel = viewModel()
+            val productDetailViewModel: ProductDetailViewModel = viewModel()
+            CommentRatingScreen(
+                productId = productId,
+                navController = navController,
+                commentViewModel = commentViewModel,
+                productDetailViewModel = productDetailViewModel
+            )
+        }
+
     }
 }
 

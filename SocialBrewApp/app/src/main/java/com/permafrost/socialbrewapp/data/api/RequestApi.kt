@@ -1,6 +1,5 @@
 package com.permafrost.socialbrewapp.data.api
 
-import androidx.compose.ui.semantics.Role
 import com.google.gson.annotations.SerializedName
 import com.permafrost.socialbrewapp.util.Constants
 
@@ -40,7 +39,7 @@ data class NewProductRequest(
     val image: String
 )
 
-data class newCommentRequest(
+data class NewCommentRequest(
     @SerializedName(value= Constants.COMMENT_TEXT)
     val text: String,
     @SerializedName(value= Constants.COMMENT_POINTS)

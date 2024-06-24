@@ -31,8 +31,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navController = rememberNavController()
-                  //  Navigation(navController)
-                    CommentRatingScreen()
+                   Navigation(navController)
+
                 }
             }
         }

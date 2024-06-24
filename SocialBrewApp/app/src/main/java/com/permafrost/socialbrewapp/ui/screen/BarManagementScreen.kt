@@ -44,10 +44,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import coil.compose.rememberAsyncImagePainter
 import com.permafrost.socialbrewapp.data.api.NewProductRequest
-import com.permafrost.socialbrewapp.data.api.ProductsApi
+import com.permafrost.socialbrewapp.data.api.ProductsApiWithStringUser
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.viewmodel.BarManagementViewModel
+
 
 @Composable
 fun BarManagementScreen(
@@ -152,7 +153,7 @@ fun BarManagementScreen(
 }
 
 @Composable
-fun ProductItem(product: ProductsApi, onClick: () -> Unit, onDeleteClick: (() -> Unit)?) {
+fun ProductItem(product: ProductsApiWithStringUser, onClick: () -> Unit, onDeleteClick: (() -> Unit)?) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
