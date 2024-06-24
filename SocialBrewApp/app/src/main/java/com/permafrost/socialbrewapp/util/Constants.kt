@@ -2,7 +2,7 @@ package com.permafrost.socialbrewapp.util
 
 object Constants {
     //Api Services
-    const val BASE_URL="http://192.168.0.2:3000"//Localhost puede variar con nuestra ip asignada en esa ruta
+    const val BASE_URL="http://192.168.1.18:3000"//Localhost puede variar con nuestra ip asignada en esa ruta
     const val API_PATH="/api"
     const val BAR_PATH="/bar"
 
