@@ -13,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -34,9 +35,7 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
         topBar = {
             TopBar(title = "SocialBrew")
         },
-        bottomBar = {
-            BottomNavBar(navController = navController)
-        },
+
         content = { paddingValues ->
             Column(
                 modifier = Modifier
@@ -98,10 +97,12 @@ fun BarOption(onClick: () -> Unit) {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = R.drawable.beer), // Puedes cambiar esto a la imagen que necesites
+            painter = painterResource(id = R.drawable.beer),
             contentDescription = null,
             modifier = Modifier.size(100.dp),
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Crop,
+            colorFilter = ColorFilter.tint(Color.White)
+
         )
     }
 }

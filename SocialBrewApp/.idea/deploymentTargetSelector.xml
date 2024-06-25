@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="MainActivity">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-06-24T18:49:40.055856Z">
+        <DropdownSelection timestamp="2024-06-24T22:21:00.450486Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=/Users/macbook/.android/avd/Pixel_3a_API_34_extension_level_7_arm64-v8a.avd" />

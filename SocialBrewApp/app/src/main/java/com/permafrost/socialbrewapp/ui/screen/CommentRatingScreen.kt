@@ -1,5 +1,6 @@
 package com.permafrost.socialbrewapp.ui.screen
 
+import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -14,6 +15,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.FavoriteBorder
@@ -86,106 +89,109 @@ fun CommentRatingScreen(
             modifier = Modifier.fillMaxSize(),
             color = colorResource(id = R.color.background)
         ) {
-            Column(
+            LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(innerPadding),
-                verticalArrangement = Arrangement.Center
+                    .padding(innerPadding)
             ) {
-                product?.let { product ->
-                    Image(
-                        painter = rememberAsyncImagePainter(product.image),
-                        contentDescription = "Beer",
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(200.dp)
-                            .padding(16.dp)
-                    )
+                item {
+                    product?.let { product ->
+                        Image(
+                            painter = rememberAsyncImagePainter(product.image),
+                            contentDescription = "Beer",
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(200.dp)
+                                .padding(16.dp)
+                        )
 
-                    Row(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Box(
-                            modifier = Modifier.padding(8.dp),
-                            contentAlignment = Alignment.CenterEnd
+                        Row(
+                            modifier = Modifier
+                                .padding(16.dp)
+                                .fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween
                         ) {
-                            Column {
-                                Text(
-                                    text = product.name,
-                                    color = White,
-                                    fontSize = 32.sp,
-                                    fontFamily = FontFamily.Default,
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Text(
-                                    text = "$${product.price}",
-                                    color = White,
-                                    fontSize = 32.sp,
-                                    fontFamily = FontFamily.Default,
-                                    fontWeight = FontWeight.Bold
-                                )
+                            Box(
+                                modifier = Modifier.padding(8.dp),
+                                contentAlignment = Alignment.CenterEnd
+                            ) {
+                                Column {
+                                    Text(
+                                        text = product.name,
+                                        color = White,
+                                        fontSize = 32.sp,
+                                        fontFamily = FontFamily.Default,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                    Text(
+                                        text = "$${product.price}",
+                                        color = White,
+                                        fontSize = 32.sp,
+                                        fontFamily = FontFamily.Default,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
                             }
                         }
-                    }
 
-                    Row(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceAround
-                    ) {
-                        Rating(rating = rating) { newRating ->
-                            rating = newRating
+                        Row(
+                            modifier = Modifier
+                                .padding(16.dp)
+                                .fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceAround
+                        ) {
+                            Rating(rating = rating) { newRating ->
+                                rating = newRating
+                            }
                         }
-                    }
 
-                    TextField(
-                        value = commentText,
-                        onValueChange = { commentText = it },
-                        label = { Text("Escribe tu reseña") },
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .fillMaxWidth(),
-                        colors = OutlinedTextFieldDefaults.colors(
-                            focusedBorderColor = Color.White,
-                            unfocusedBorderColor = Color.Gray,
-                            unfocusedTextColor = Color.White,
-                            unfocusedLabelColor = Color.White,
-                            focusedTextColor = Color.White,
-                            focusedLabelColor = Color.White,
+                        TextField(
+                            value = commentText,
+                            onValueChange = { commentText = it },
+                            label = { Text("Escribe tu reseña") },
+                            modifier = Modifier
+                                .padding(16.dp)
+                                .fillMaxWidth(),
+                            colors = OutlinedTextFieldDefaults.colors(
+                                focusedBorderColor = Color.White,
+                                unfocusedBorderColor = Color.Gray,
+                                unfocusedTextColor = Color.White,
+                                unfocusedLabelColor = Color.White,
+                                focusedTextColor = Color.White,
+                                focusedLabelColor = Color.White,
+                            )
                         )
-                    )
 
-                    Button(
-                        onClick = {
-                            val newComment = NewCommentRequest(text = commentText, points = rating.toDouble())
-                            commentViewModel.addComment(product.id, newComment)
-                        },
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .fillMaxWidth()
-                    ) {
-                        Text("Enviar Reseña")
-                    }
+                        Button(
+                            onClick = {
+                                val newComment =
+                                    NewCommentRequest(text = commentText, points = rating.toDouble())
+                                commentViewModel.addComment(product.id, newComment)
 
-                    Text(
-                        text = "Reseñas:",
-                        modifier = Modifier.padding(16.dp, 0.dp),
-                        color = White,
-                        fontSize = 25.sp,
-                        fontFamily = FontFamily.Default,
-                        fontWeight = FontWeight.Bold,
-                        textAlign = TextAlign.Start
-                    )
 
-                    LazyColumn {
-                        items(product.comments) { comment ->
-                            CommentCard(comment)
+
+                            },
+                            modifier = Modifier
+                                .padding(16.dp)
+                                .fillMaxWidth()
+                        ) {
+                            Text("Enviar Reseña")
                         }
+
+                        Text(
+                            text = "Reseñas:",
+                            modifier = Modifier.padding(16.dp, 0.dp),
+                            color = White,
+                            fontSize = 25.sp,
+                            fontFamily = FontFamily.Default,
+                            fontWeight = FontWeight.Bold,
+                            textAlign = TextAlign.Start
+                        )
                     }
+                }
+
+                items(product?.comments ?: emptyList()) { comment ->
+                    CommentCard(comment)
                 }
             }
         }
@@ -197,7 +203,9 @@ fun Rating(rating: Int, onRatingChange: (Int) -> Unit) {
     Row {
         repeat(rating) {
             Icon(
-                modifier = Modifier.size(40.dp).clickable { onRatingChange(it + 1) },
+                modifier = Modifier
+                    .size(40.dp)
+                    .clickable { onRatingChange(it + 1) },
                 imageVector = Icons.Filled.Star,
                 contentDescription = "Star",
                 tint = Color.Red
@@ -205,7 +213,9 @@ fun Rating(rating: Int, onRatingChange: (Int) -> Unit) {
         }
         repeat(5 - rating) {
             Icon(
-                modifier = Modifier.size(40.dp).clickable { onRatingChange(rating + it + 1) },
+                modifier = Modifier
+                    .size(40.dp)
+                    .clickable { onRatingChange(rating + it + 1) },
                 imageVector = Icons.Filled.Star,
                 contentDescription = "Star",
                 tint = Color.Gray
@@ -215,7 +225,7 @@ fun Rating(rating: Int, onRatingChange: (Int) -> Unit) {
 }
 
 @Composable
-fun CommentCard(comment: CommentarySchemaWithObjectUser){
+fun CommentCard(comment: CommentarySchemaWithObjectUser) {
     Card(
         modifier = Modifier
             .padding(16.dp)
@@ -243,6 +253,9 @@ fun CommentCard(comment: CommentarySchemaWithObjectUser){
                 fontFamily = FontFamily.Default,
                 letterSpacing = 2.sp
             )
+            Rating(rating = comment.points.toInt()) { }
         }
     }
 }
+
+

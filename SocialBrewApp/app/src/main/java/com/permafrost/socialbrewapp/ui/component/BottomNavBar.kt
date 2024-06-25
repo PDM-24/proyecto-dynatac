@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -18,27 +19,33 @@ import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 
 @Composable
 fun BottomNavBar(navController: NavHostController) {
-    val context = LocalContext.current
 
     val navBackStackEntry = navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry.value?.destination?.route
 
     BottomAppBar(
-        containerColor = Color.Gray
+        containerColor = colorResource(id = R.color.navbar_gray)
     ) {
-        IconButton(onClick = {
+        IconButton(
+            onClick = {
             navController.navigate(ScreenRoute.DrinksMenu.route) {
                 popUpTo(navController.graph.startDestinationId) { saveState = true }
                 launchSingleTop = true
                 restoreState = true
             }
-            Toast.makeText(context, "Ha ingresado a la pantalla de Menu", Toast.LENGTH_SHORT).show()
-        }, modifier = Modifier.weight(1f)) {
+
+
+        }, modifier = Modifier.weight(1f),
+            enabled = currentRoute != ScreenRoute.DrinksMenu.route
+
+        )
+
+        {
             Icon(
                 painter = painterResource(id = R.drawable.menu),
                 contentDescription = null,
                 modifier = Modifier.size(26.dp),
-                tint = if (currentRoute == ScreenRoute.DrinksMenu.route) Color.Black else Color.White
+                tint = if (currentRoute == ScreenRoute.DrinksMenu.route) Color.White else Color.Black
             )
         }
         IconButton(onClick = {
@@ -47,15 +54,14 @@ fun BottomNavBar(navController: NavHostController) {
                 launchSingleTop = true
                 restoreState = true
             }
-            Toast.makeText(context, "Ha ingresado a la pantalla de Selección", Toast.LENGTH_SHORT)
-                .show()
+
 
         }, modifier = Modifier.weight(1f)) {
             Icon(
                 painter = painterResource(id = R.drawable.beer),
                 contentDescription = null,
                 modifier = Modifier.size(26.dp),
-                tint = if (currentRoute == ScreenRoute.Selection.route) Color.Black else Color.White
+                tint = if (currentRoute == ScreenRoute.Selection.route) Color.White else Color.Black
             )
         }
 
@@ -66,15 +72,14 @@ fun BottomNavBar(navController: NavHostController) {
                 restoreState = true
             }
 
-            Toast.makeText(context, "Ha ingresado a la pantalla de su Usuario", Toast.LENGTH_SHORT)
-                .show()
+
 
         }, modifier = Modifier.weight(1f)) {
             Icon(
                 Icons.Default.Person,
                 contentDescription = null,
                 modifier = Modifier.size(26.dp),
-                tint = if (currentRoute == ScreenRoute.Cuenta.route) Color.Black else Color.White
+                tint = if (currentRoute == ScreenRoute.Cuenta.route) Color.White else Color.Black
             )
         }
     }

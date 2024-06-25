@@ -13,8 +13,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.AlertDialog
@@ -36,8 +38,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -68,45 +72,45 @@ fun BarManagementScreen(
     }
 
     Scaffold(
-        topBar = { TopBar(title = "Manage Bar") },
+        topBar = { TopBar(title = "Administración de bar") },
         bottomBar = { BottomNavBar(navController = navController) }
     ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .background(Color.Black)
+                .background(colorResource(id = com.permafrost.socialbrewapp.R.color.background))
         ) {
             Button(onClick = { showDialog = true }) {
-                Text("Add Product")
+                Text("Agregar producto")
             }
 
             if (showDialog) {
                 AlertDialog(
                     onDismissRequest = { showDialog = false },
-                    title = { Text(text = "Add Product") },
+                    title = { Text(text = "Agregar producto") },
                     text = {
                         Column {
                             TextField(
                                 value = newProductName,
                                 onValueChange = { newProductName = it },
-                                label = { Text("Product Name") }
+                                label = { Text("Nombre") }
                             )
                             TextField(
                                 value = newProductPrice,
                                 onValueChange = { newProductPrice = it },
-                                label = { Text("Product Price") },
+                                label = { Text("Precio") },
                                 keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number)
                             )
                             TextField(
                                 value = newProductCategory,
                                 onValueChange = { newProductCategory = it },
-                                label = { Text("Product Category") }
+                                label = { Text("Categoría") }
                             )
                             TextField(
                                 value = newProductImage,
                                 onValueChange = { newProductImage = it },
-                                label = { Text("Product Image URL") }
+                                label = { Text("URL") }
                             )
                         }
                     },
@@ -123,12 +127,12 @@ fun BarManagementScreen(
                                 showDialog = false
                             }
                         ) {
-                            Text("Add")
+                            Text("Agregar")
                         }
                     },
                     dismissButton = {
                         Button(onClick = { showDialog = false }) {
-                            Text("Cancel")
+                            Text("Cancelar")
                         }
                     }
                 )
@@ -139,7 +143,6 @@ fun BarManagementScreen(
                     ProductItem(
                         product = product,
                         onClick = {
-                            // Handle product click if needed
                         },
                         onDeleteClick = {
                             barManagementViewModel.deleteProduct(product.id)
@@ -159,6 +162,7 @@ fun ProductItem(product: ProductsApiWithStringUser, onClick: () -> Unit, onDelet
             .fillMaxWidth()
             .clickable(onClick = onClick)
             .padding(8.dp),
+
         shape = RoundedCornerShape(8.dp),
     ) {
         Row(
@@ -181,9 +185,26 @@ fun ProductItem(product: ProductsApiWithStringUser, onClick: () -> Unit, onDelet
             }
             onDeleteClick?.let {
                 IconButton(onClick = it) {
-                    Icon(imageVector = Icons.Default.Delete, contentDescription = "Delete")
+                    Icon(imageVector = Icons.Default.Delete, contentDescription = "Borrar")
                 }
             }
         }
     }
+}
+
+@Composable
+@Preview
+fun ProductItemPreview() {
+    ProductItem(
+        product = ProductsApiWithStringUser(
+            id = "1",
+            name = "Cerveza",
+            price = 2.5,
+            category = "Bebida",
+            image = "https://www.cervezasyria.com/wp-content/uploads/2020/06/cerveza-syria-1.jpg",
+            user = "1"
+        ),
+        onClick = {},
+        onDeleteClick = {}
+    )
 }

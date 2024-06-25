@@ -8,6 +8,7 @@
     <color name="call_notification_answer_color">#1d873b</color>
     <color name="call_notification_decline_color">#d93025</color>
     <color name="disabled_gray">#FFB0B0B0</color>
+    <color name="navbar_gray">#3D3D3F</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="primary_red">#6F2232</color>

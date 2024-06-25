@@ -23,6 +23,7 @@ import androidx.navigation.NavHostController
 import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
 import com.permafrost.socialbrewapp.data.api.ProductsApiWithStringUser
+import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 
 import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
@@ -36,7 +37,12 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
     }
 
     Scaffold(
-        topBar = { TopBar(title = "Beerlab") }
+        topBar = {
+            TopBar(title = "Beerlab")
+        },
+        bottomBar = {
+            BottomNavBar(navController = navController)
+        }
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -45,20 +51,6 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
                 .background(Black)
                 .verticalScroll(rememberScrollState())
         ) {
-            // Tabs
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(8.dp),
-                horizontalArrangement = Arrangement.SpaceAround
-            ) {
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "Bebidas")
-                }
-                Button(onClick = { /*TODO*/}) {
-                    Text(text = "Alimentos")
-                }
-            }
 
             // Content
             Column(
