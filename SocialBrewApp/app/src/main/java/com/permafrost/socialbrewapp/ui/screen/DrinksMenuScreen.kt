@@ -38,7 +38,7 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
 
     Scaffold(
         topBar = {
-            TopBar(title = "Beerlab")
+            TopBar(title = "SocialBrew")
         },
         bottomBar = {
             BottomNavBar(navController = navController)

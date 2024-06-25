@@ -21,6 +21,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -47,6 +48,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import coil.compose.rememberAsyncImagePainter
+import com.permafrost.socialbrewapp.R
 import com.permafrost.socialbrewapp.data.api.NewProductRequest
 import com.permafrost.socialbrewapp.data.api.ProductsApiWithStringUser
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
@@ -125,7 +127,8 @@ fun BarManagementScreen(
                                 )
                                 barManagementViewModel.addProduct(barId, product)
                                 showDialog = false
-                            }
+                            },
+                            colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.primary_red))
                         ) {
                             Text("Agregar")
                         }

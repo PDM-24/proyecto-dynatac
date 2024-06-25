@@ -21,6 +21,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -56,6 +57,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import coil.compose.rememberAsyncImagePainter
 import com.permafrost.socialbrewapp.R
+import com.permafrost.socialbrewapp.data.api.ApiClient
 import com.permafrost.socialbrewapp.data.api.CommentarySchemaWithObjectUser
 import com.permafrost.socialbrewapp.data.api.NewCommentRequest
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
@@ -82,7 +84,7 @@ fun CommentRatingScreen(
     }
 
     Scaffold(
-        topBar = { TopBar(title = product?.name ?: "BeerLab") },
+        topBar = { TopBar(title = product?.name ?: "SocialBrew") },
         bottomBar = { BottomNavBar(navController = navController) }
     ) { innerPadding ->
         Surface(
@@ -167,6 +169,7 @@ fun CommentRatingScreen(
                                 val newComment =
                                     NewCommentRequest(text = commentText, points = rating.toDouble())
                                 commentViewModel.addComment(product.id, newComment)
+                                productDetailViewModel.loadProduct(productId)
 
 
 
@@ -174,6 +177,7 @@ fun CommentRatingScreen(
                             modifier = Modifier
                                 .padding(16.dp)
                                 .fillMaxWidth()
+                            , colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.second_red))
                         ) {
                             Text("Enviar Reseña")
                         }
@@ -208,7 +212,7 @@ fun Rating(rating: Int, onRatingChange: (Int) -> Unit) {
                     .clickable { onRatingChange(it + 1) },
                 imageVector = Icons.Filled.Star,
                 contentDescription = "Star",
-                tint = Color.Red
+                tint = colorResource(id = R.color.second_red)
             )
         }
         repeat(5 - rating) {
