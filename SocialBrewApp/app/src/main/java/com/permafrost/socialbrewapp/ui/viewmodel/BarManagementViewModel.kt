@@ -5,14 +5,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.permafrost.socialbrewapp.data.api.ApiClient
 import com.permafrost.socialbrewapp.data.api.NewProductRequest
-import com.permafrost.socialbrewapp.data.api.ProductsApi
+import com.permafrost.socialbrewapp.data.api.ProductsApiWithStringUser
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class BarManagementViewModel : ViewModel() {
-    private val _products = MutableStateFlow<List<ProductsApi>>(emptyList())
-    val products: StateFlow<List<ProductsApi>> = _products
+    private val _products = MutableStateFlow<List<ProductsApiWithStringUser>>(emptyList())
+    val products: StateFlow<List<ProductsApiWithStringUser>> = _products
 
     fun loadProductsForBar(barId: String) {
         viewModelScope.launch {

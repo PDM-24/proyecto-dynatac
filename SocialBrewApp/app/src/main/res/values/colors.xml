@@ -11,5 +11,6 @@
     <color name="primary_red">#6F2232</color>
     <color name="second_red">#C3073F</color>
     <color name="disabled_gray">#FFB0B0B0</color>
+    <color name="navbar_gray">#3D3D3F</color>
 
 </resources>

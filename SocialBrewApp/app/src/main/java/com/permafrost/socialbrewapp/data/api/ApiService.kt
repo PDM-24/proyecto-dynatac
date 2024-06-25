@@ -18,7 +18,7 @@ interface ApiService {
     //Identifier es el id del bar que es el usuario que tiene el rol de bar
     @Headers(value = ["Content-Type: application/json"])
     @GET(value = Constants.API_PATH + Constants.BAR_PATH + "/{identifier}" + Constants.PRODUCTS_PATH)
-    suspend fun findProductsFromABar(@Path("identifier") identifier: String): List<ProductsApi>
+    suspend fun findProductsFromABar(@Path("identifier") identifier: String): List<ProductsApiWithStringUser>
 
 
     //FindAllBars
@@ -54,7 +54,7 @@ interface ApiService {
     //FindAllProducts
     @Headers(value = ["Content-Type: application/json"])
     @GET(value = Constants.API_PATH + Constants.PRODUCTS_PATH + "/")
-    suspend fun findAllProducts(): List<ProductsApi>
+    suspend fun findAllProducts(): List<ProductsApiWithStringUser>
 
 
     //CreateNewProduct
@@ -63,17 +63,17 @@ interface ApiService {
     suspend fun createNewProduct(
         @Path("identifier") identifier: String,
         @Body newProductRequest: NewProductRequest
-    ): ProductsApi
+    ): ProductsApiWithStringUser
 
     //FindProductById
     @Headers(value = ["Content-Type: application/json"])
     @GET(value = Constants.API_PATH + Constants.PRODUCTS_PATH + "/{identifier}")
-    suspend fun findProductById(@Path("identifier") identifier: String): ProductsApi
+    suspend fun findProductById(@Path("identifier") identifier: String): ProductsApiWithObjectUser
 
     //UpdateProduct
     @Headers(value = ["Content-Type: application/json"])
     @POST(value = Constants.API_PATH + Constants.PRODUCTS_PATH + "/{identifier}")
-    suspend fun updateProduct(@Path("identifier") identifier: String): ProductsApi
+    suspend fun updateProduct(@Path("identifier") identifier: String): ProductsApiWithStringUser
 
 
     //Delete Product
@@ -86,7 +86,7 @@ interface ApiService {
     @POST(value = Constants.API_PATH + Constants.PRODUCTS_PATH + "/{identifier}" + Constants.COMMENTS_PATH)
     suspend fun addCommentToProduct(
         @Path("identifier") identifier: String,
-        @Body newCommentRequest: newCommentRequest
-    ): ProductsApi
+        @Body newCommentRequest: NewCommentRequest
+    ): ProductsApiWithStringUser
 
 }

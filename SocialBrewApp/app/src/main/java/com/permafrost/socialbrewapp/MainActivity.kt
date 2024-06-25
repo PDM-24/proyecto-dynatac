@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.navigation.Navigation
 import com.permafrost.socialbrewapp.ui.screen.ChangepassScreen
+import com.permafrost.socialbrewapp.ui.screen.CommentRatingScreen
 import com.permafrost.socialbrewapp.ui.screen.CreditosScreen
 import com.permafrost.socialbrewapp.ui.screen.CuentaScreen
 import com.permafrost.socialbrewapp.ui.screen.DrinksMenuScreen
@@ -30,7 +31,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navController = rememberNavController()
-                    Navigation(navController)
+                   Navigation(navController)
+
                 }
             }
         }

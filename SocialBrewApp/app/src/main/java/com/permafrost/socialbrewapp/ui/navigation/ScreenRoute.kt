@@ -10,6 +10,7 @@ sealed class ScreenRoute(val route: String) {
     object Rename : ScreenRoute("rename")
     object Changepass : ScreenRoute("changepass")
     object Creditos : ScreenRoute("creditos")
+    object CommentRating : ScreenRoute("comment_rating")
 
 }
 

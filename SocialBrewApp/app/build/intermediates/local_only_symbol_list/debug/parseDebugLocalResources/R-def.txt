@@ -3,6 +3,7 @@ local
 color background
 color black
 color disabled_gray
+color navbar_gray
 color primary_red
 color purple_200
 color purple_500

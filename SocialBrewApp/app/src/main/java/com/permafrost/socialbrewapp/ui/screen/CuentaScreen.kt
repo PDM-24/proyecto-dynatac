@@ -16,6 +16,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -24,6 +25,7 @@ import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.viewmodel.CuentaViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
+import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -75,7 +77,7 @@ fun CuentaScreen(navController: NavHostController, cuentaViewModel: CuentaViewMo
 
                 Button(
                     onClick = { navController.navigate("Rename") },
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.Gray),
+                    colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.navbar_gray)),
                     modifier = Modifier
                         .fillMaxWidth(0.8f)
                         .padding(vertical = 8.dp)
@@ -133,7 +135,7 @@ fun CuentaScreen(navController: NavHostController, cuentaViewModel: CuentaViewMo
 
                 Button(
                     onClick = { navController.navigate("Creditos") },
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.Gray),
+                    colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.navbar_gray)),
                     modifier = Modifier
                         .fillMaxWidth(0.8f)
                         .padding(vertical = 8.dp)
@@ -157,9 +159,8 @@ fun CuentaScreen(navController: NavHostController, cuentaViewModel: CuentaViewMo
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-
                 Button(
-                    onClick = { /* Log out action */ },
+                    onClick = { navController.navigate(route = ScreenRoute.Login.route){popUpTo(ScreenRoute.Login.route){inclusive = true} } },
                     colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.primary_red)),
                     modifier = Modifier
                         .fillMaxWidth(0.8f)
@@ -183,4 +184,10 @@ fun CuentaScreen(navController: NavHostController, cuentaViewModel: CuentaViewMo
             }
         }
     }
+}
+
+@Composable
+@Preview
+fun CuentaScreenPreview() {
+    CuentaScreen(navController = NavHostController(LocalContext.current))
 }

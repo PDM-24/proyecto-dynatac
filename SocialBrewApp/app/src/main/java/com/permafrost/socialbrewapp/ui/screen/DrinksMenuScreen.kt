@@ -2,6 +2,7 @@ package com.permafrost.socialbrewapp.ui.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -21,8 +22,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
-import com.permafrost.socialbrewapp.data.api.ProductsApi
+import com.permafrost.socialbrewapp.data.api.ProductsApiWithStringUser
+import com.permafrost.socialbrewapp.ui.component.BottomNavBar
+
 import com.permafrost.socialbrewapp.ui.component.TopBar
+import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 import com.permafrost.socialbrewapp.ui.theme.Black
 import com.permafrost.socialbrewapp.ui.viewmodel.DrinksMenuViewModel
 
@@ -33,7 +37,12 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
     }
 
     Scaffold(
-        topBar = { TopBar(title = "Beerlab") }
+        topBar = {
+            TopBar(title = "SocialBrew")
+        },
+        bottomBar = {
+            BottomNavBar(navController = navController)
+        }
     ) { paddingValues ->
         Column(
             modifier = Modifier
@@ -42,20 +51,6 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
                 .background(Black)
                 .verticalScroll(rememberScrollState())
         ) {
-            // Tabs
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(8.dp),
-                horizontalArrangement = Arrangement.SpaceAround
-            ) {
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "Bebidas")
-                }
-                Button(onClick = { /*TODO*/}) {
-                    Text(text = "Alimentos")
-                }
-            }
 
             // Content
             Column(
@@ -69,21 +64,10 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
                 val products by drinksMenuViewModel.products.collectAsState()
                 products.forEach { product ->
                     ProductCard(
-                        product = product
+                        product = product,
+                        onClick = { navController.navigate("${ScreenRoute.CommentRating.route}/${product.id}") }
                     )
                 }
-
-                /*
-                Button(
-                    onClick = { drinksMenuViewModel.loadMoreProducts(barId) },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp)
-                ) {
-                    Text("Load more")
-                }
-
-                 */
 
             }
         }
@@ -91,11 +75,12 @@ fun DrinksMenuScreen(barId: String, navController: NavHostController, drinksMenu
 }
 
 @Composable
-private fun ProductCard(product: ProductsApi) {
+private fun ProductCard(product: ProductsApiWithStringUser, onClick: () -> Unit) {
     Card(
         modifier = Modifier
             .width(150.dp)
-            .height(200.dp),
+            .height(200.dp)
+            .clickable(onClick = onClick),
     ) {
         Column(
             modifier = Modifier

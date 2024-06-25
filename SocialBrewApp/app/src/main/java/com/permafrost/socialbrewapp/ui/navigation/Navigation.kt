@@ -31,8 +31,6 @@ fun Navigation(navController: NavHostController) {
             val drinksMenuViewModel: DrinksMenuViewModel = viewModel()
             DrinksMenuScreen(barId = barId, navController = navController, drinksMenuViewModel = drinksMenuViewModel)
 
-
-
         }
         composable(ScreenRoute.SignIn.route) {
             val signInViewModel: SignInViewModel = viewModel()
@@ -44,10 +42,6 @@ fun Navigation(navController: NavHostController) {
             val barManagementViewModel: BarManagementViewModel = viewModel()
             BarManagementScreen(navController = navController, barId = barId, barManagementViewModel = barManagementViewModel)
         }
-
-
-
-
 
         composable(ScreenRoute.Rename.route) {
             val renameViewModel: RenameViewModel = viewModel()
@@ -63,6 +57,18 @@ fun Navigation(navController: NavHostController) {
         composable(ScreenRoute.Creditos.route) {
             val creditosViewModel: CreditosViewModel = viewModel()
             CreditosScreen(navController = navController, creditosViewModel = creditosViewModel)
+        }
+
+        composable("${ScreenRoute.CommentRating.route}/{productId}") { backStackEntry ->
+            val productId = backStackEntry.arguments?.getString("productId") ?: return@composable
+            val commentViewModel: CommentViewModel = viewModel()
+            val productDetailViewModel: ProductDetailViewModel = viewModel()
+            CommentRatingScreen(
+                productId = productId,
+                navController = navController,
+                commentViewModel = commentViewModel,
+                productDetailViewModel = productDetailViewModel
+            )
         }
 
     }
