@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -25,6 +26,7 @@ import androidx.navigation.NavHostController
 import com.permafrost.socialbrewapp.R
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.component.TopBarCuenta
+import com.permafrost.socialbrewapp.ui.theme.fontFamily
 import com.permafrost.socialbrewapp.ui.viewmodel.ChangepassViewModel
 
 
@@ -65,6 +67,7 @@ fun ChangepassScreen(
                     style = TextStyle(
                         fontSize = 22.sp,
                         fontWeight = FontWeight.Bold,
+                        fontFamily = FontFamily.Default,
                         color = Color.White
                     ),
                     modifier = Modifier.padding(bottom = 16.dp)
@@ -75,7 +78,8 @@ fun ChangepassScreen(
                     placeholder = {
                         Text(
                             "*****",
-                            style = TextStyle(color = Color.Gray)
+                            style = TextStyle(color = Color.Gray),
+                            fontFamily = fontFamily
                         )
                     },
                     visualTransformation = PasswordVisualTransformation(),
@@ -101,7 +105,8 @@ fun ChangepassScreen(
                     style = TextStyle(
                         fontSize = 22.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color.White
+                        color = Color.White,
+                        fontFamily = fontFamily
                     ),
                     modifier = Modifier.padding(bottom = 16.dp)
                 )
@@ -111,6 +116,7 @@ fun ChangepassScreen(
                     placeholder = {
                         Text(
                             "*****",
+                            fontFamily = fontFamily,
                             style = TextStyle(color = Color.Gray)
                         )
                     },
@@ -146,6 +152,7 @@ fun ChangepassScreen(
                     Text(
                         modifier = Modifier.padding(2.dp, 0.dp),
                         text = "CONFIRMAR",
+                        fontFamily = fontFamily,
                         style = TextStyle(
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,

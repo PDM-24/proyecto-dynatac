@@ -11,9 +11,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.permafrost.socialbrewapp.R
+import com.permafrost.socialbrewapp.ui.theme.fontFamily
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -30,7 +33,10 @@ fun TopBarCuenta(title: String, onBackClick: () -> Unit) {
                 Text(
                     text = title,
                     color = Color.White,
-                    textAlign = TextAlign.Center
+                    textAlign = TextAlign.Center,
+                    fontFamily = fontFamily,
+                    fontSize = 32.sp,
+                    fontWeight = FontWeight.Bold
                 )
             }
         }, navigationIcon = {

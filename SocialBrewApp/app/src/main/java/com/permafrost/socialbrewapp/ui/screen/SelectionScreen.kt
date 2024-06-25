@@ -2,10 +2,12 @@ package com.permafrost.socialbrewapp.ui.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -26,14 +28,20 @@ import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 import com.permafrost.socialbrewapp.ui.viewmodel.SelectionViewModel
 import com.permafrost.socialbrewapp.R
+import com.permafrost.socialbrewapp.ui.component.TopBarCuenta
+import com.permafrost.socialbrewapp.ui.theme.fontFamily
 
 @Composable
-fun SelectionScreen(navController: NavHostController, selectionViewModel: SelectionViewModel = viewModel()) {
+fun SelectionScreen(navController: NavHostController, selectionViewModel: SelectionViewModel = viewModel(), fromBeer: Boolean) {
     val barAccounts by selectionViewModel.barAccounts.collectAsState()
 
     Scaffold(
         topBar = {
-            TopBar(title = "SocialBrew")
+            if (fromBeer) {
+                TopBarCuenta(title = "Selecciona un bar", onBackClick = { navController.popBackStack() })
+            } else {
+                TopBar(title = "SocialBrew")
+            }
         },
 
         content = { paddingValues ->
@@ -48,8 +56,9 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
                 Spacer(modifier = Modifier.height(12.dp))
                 Text(
                     text = "Selecciona un bar",
+                    fontFamily = fontFamily,
                     color = Color.White,
-                    fontSize = 24.sp,
+                    fontSize = 30.sp,
                     modifier = Modifier.padding(16.dp)
                 )
                 Spacer(modifier = Modifier.height(12.dp))
@@ -58,7 +67,11 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
                     items(barAccounts) { bar ->
                         BarOptionWithTitle(
                             title = bar.username,
-                            onClick = { navController.navigate("${ScreenRoute.DrinksMenu.route}/${bar.id}") }
+                            onClick = { navController.navigate("${ScreenRoute.DrinksMenu.route}/${bar.id}")
+                            {
+                                popUpTo(navController.graph.startDestinationId) { inclusive = true }
+                            }}
+
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                     }
@@ -80,7 +93,8 @@ fun BarOptionWithTitle(title: String, onClick: () -> Unit) {
         Text(
             text = title,
             color = Color.White,
-            fontSize = 18.sp,
+            fontFamily = fontFamily,
+            fontSize = 25.sp,
             modifier = Modifier.padding(top = 8.dp)
         )
     }
@@ -92,7 +106,7 @@ fun BarOption(onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth(0.8f)
             .clickable(onClick = onClick)
-            .background(color = colorResource(id = R.color.primary_red))
+            .background(color = colorResource(id = R.color.primary_red), shape = RoundedCornerShape(8.dp))
             .padding(16.dp),
         contentAlignment = Alignment.Center
     ) {

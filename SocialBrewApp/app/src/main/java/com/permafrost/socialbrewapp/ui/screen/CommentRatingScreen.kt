@@ -62,8 +62,10 @@ import com.permafrost.socialbrewapp.data.api.CommentarySchemaWithObjectUser
 import com.permafrost.socialbrewapp.data.api.NewCommentRequest
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.component.TopBar
+import com.permafrost.socialbrewapp.ui.component.TopBarCuenta
 import com.permafrost.socialbrewapp.ui.theme.Black
 import com.permafrost.socialbrewapp.ui.theme.White
+import com.permafrost.socialbrewapp.ui.theme.fontFamily
 import com.permafrost.socialbrewapp.ui.viewmodel.CommentViewModel
 import com.permafrost.socialbrewapp.ui.viewmodel.ProductDetailViewModel
 
@@ -84,7 +86,8 @@ fun CommentRatingScreen(
     }
 
     Scaffold(
-        topBar = { TopBar(title = product?.name ?: "SocialBrew") },
+        //topBar = { TopBar(title = product?.name ?: "SocialBrew") },
+        topBar = { TopBarCuenta(title = product?.name ?: "SocialBrew", onBackClick = { navController.popBackStack() }) },
         bottomBar = { BottomNavBar(navController = navController) }
     ) { innerPadding ->
         Surface(
@@ -122,14 +125,14 @@ fun CommentRatingScreen(
                                         text = product.name,
                                         color = White,
                                         fontSize = 32.sp,
-                                        fontFamily = FontFamily.Default,
+                                        fontFamily = fontFamily,
                                         fontWeight = FontWeight.Bold
                                     )
                                     Text(
                                         text = "$${product.price}",
                                         color = White,
                                         fontSize = 32.sp,
-                                        fontFamily = FontFamily.Default,
+                                        fontFamily = fontFamily,
                                         fontWeight = FontWeight.Bold
                                     )
                                 }
@@ -150,7 +153,10 @@ fun CommentRatingScreen(
                         TextField(
                             value = commentText,
                             onValueChange = { commentText = it },
-                            label = { Text("Escribe tu reseña") },
+                            label = { Text("Escribe tu reseña",
+                                fontFamily = fontFamily,
+                                fontSize = 20.sp
+                                ) },
                             modifier = Modifier
                                 .padding(16.dp)
                                 .fillMaxWidth(),
@@ -168,26 +174,28 @@ fun CommentRatingScreen(
                             onClick = {
                                 val newComment =
                                     NewCommentRequest(text = commentText, points = rating.toDouble())
-                                commentViewModel.addComment(product.id, newComment)
-                                productDetailViewModel.loadProduct(productId)
-
-
-
+                                commentViewModel.addComment(product.id, newComment, productDetailViewModel)
+                                commentText = ""
+                                rating = 0
                             },
                             modifier = Modifier
                                 .padding(16.dp)
                                 .fillMaxWidth()
                             , colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.second_red))
                         ) {
-                            Text("Enviar Reseña")
+                            Text("Enviar Reseña",
+                                color = colorResource(id = R.color.white),
+                                fontSize = 23.sp,
+                                fontFamily = fontFamily
+                                )
                         }
 
                         Text(
                             text = "Reseñas:",
                             modifier = Modifier.padding(16.dp, 0.dp),
                             color = White,
-                            fontSize = 25.sp,
-                            fontFamily = FontFamily.Default,
+                            fontSize = 30.sp,
+                            fontFamily = fontFamily,
                             fontWeight = FontWeight.Bold,
                             textAlign = TextAlign.Start
                         )
@@ -244,17 +252,17 @@ fun CommentCard(comment: CommentarySchemaWithObjectUser) {
                     .padding(0.dp, 8.dp),
                 textAlign = TextAlign.Start,
                 color = White,
-                fontSize = 16.sp,
-                fontFamily = FontFamily.Default,
+                fontSize = 20.sp,
+                fontFamily = fontFamily,
                 fontWeight = FontWeight.Bold
             )
             Text(
                 text = comment.text,
                 color = White,
-                fontSize = 16.sp,
+                fontSize = 20.sp,
                 modifier = Modifier
                     .padding(0.dp, 0.dp, 32.dp, 0.dp),
-                fontFamily = FontFamily.Default,
+                fontFamily = fontFamily,
                 letterSpacing = 2.sp
             )
             Rating(rating = comment.points.toInt()) { }

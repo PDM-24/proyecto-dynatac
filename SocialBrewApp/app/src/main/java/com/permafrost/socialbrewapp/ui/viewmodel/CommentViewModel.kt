@@ -15,14 +15,16 @@ class CommentViewModel : ViewModel() {
     private val _product = MutableStateFlow<ProductsApiWithStringUser?>(null)
     val product: StateFlow<ProductsApiWithStringUser?> = _product
 
-    fun addComment(productId: String, newComment: NewCommentRequest) {
+    fun addComment(productId: String, newComment: NewCommentRequest, productDetailViewModel: ProductDetailViewModel) {
         viewModelScope.launch {
             try {
                 val updatedProduct = ApiClient.apiService.addCommentToProduct(productId, newComment)
                 _product.value = updatedProduct
+                productDetailViewModel.loadProduct(productId) // Actualizar el producto después de añadir el comentario
             } catch (e: Exception) {
                 Log.e("CommentViewModel", "Error adding comment: ${e.message}")
             }
         }
     }
 }
+
