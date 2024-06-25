@@ -1,7 +1,6 @@
 # proyecto-dynatac
 proyecto-dynatac created by GitHub Classroom
 
-
 # SocialBrew 🍻
 
 SocialBrew es una aplicación móvil diseñada para conectar bares 🍹 y sus clientes 🧑‍🤝‍🧑 de una manera única y social. Permite a los bares gestionar sus productos 🍽️ y ofrece a los clientes una plataforma para interactuar con estos establecimientos a través de puntuaciones y comentarios 💬.
@@ -36,3 +35,4 @@ Para más información y soporte, por favor contacta a:
 - 00190622 Castellón Cerritos Pablo Esteban 📧
 
 ¡Gracias por ser parte de la comunidad SocialBrew! ❤️
+
