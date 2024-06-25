@@ -62,6 +62,7 @@ import com.permafrost.socialbrewapp.data.api.CommentarySchemaWithObjectUser
 import com.permafrost.socialbrewapp.data.api.NewCommentRequest
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.component.TopBar
+import com.permafrost.socialbrewapp.ui.component.TopBarCuenta
 import com.permafrost.socialbrewapp.ui.theme.Black
 import com.permafrost.socialbrewapp.ui.theme.White
 import com.permafrost.socialbrewapp.ui.theme.fontFamily
@@ -85,7 +86,8 @@ fun CommentRatingScreen(
     }
 
     Scaffold(
-        topBar = { TopBar(title = product?.name ?: "SocialBrew") },
+        //topBar = { TopBar(title = product?.name ?: "SocialBrew") },
+        topBar = { TopBarCuenta(title = product?.name ?: "SocialBrew", onBackClick = { navController.popBackStack() }) },
         bottomBar = { BottomNavBar(navController = navController) }
     ) { innerPadding ->
         Surface(

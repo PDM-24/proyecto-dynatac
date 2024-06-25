@@ -28,15 +28,20 @@ import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 import com.permafrost.socialbrewapp.ui.viewmodel.SelectionViewModel
 import com.permafrost.socialbrewapp.R
+import com.permafrost.socialbrewapp.ui.component.TopBarCuenta
 import com.permafrost.socialbrewapp.ui.theme.fontFamily
 
 @Composable
-fun SelectionScreen(navController: NavHostController, selectionViewModel: SelectionViewModel = viewModel()) {
+fun SelectionScreen(navController: NavHostController, selectionViewModel: SelectionViewModel = viewModel(), fromBeer: Boolean) {
     val barAccounts by selectionViewModel.barAccounts.collectAsState()
 
     Scaffold(
         topBar = {
-            TopBar(title = "SocialBrew")
+            if (fromBeer) {
+                TopBarCuenta(title = "Selecciona un bar", onBackClick = { navController.popBackStack() })
+            } else {
+                TopBar(title = "SocialBrew")
+            }
         },
 
         content = { paddingValues ->
@@ -62,7 +67,11 @@ fun SelectionScreen(navController: NavHostController, selectionViewModel: Select
                     items(barAccounts) { bar ->
                         BarOptionWithTitle(
                             title = bar.username,
-                            onClick = { navController.navigate("${ScreenRoute.DrinksMenu.route}/${bar.id}") }
+                            onClick = { navController.navigate("${ScreenRoute.DrinksMenu.route}/${bar.id}")
+                            {
+                                popUpTo(navController.graph.startDestinationId) { inclusive = true }
+                            }}
+
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                     }

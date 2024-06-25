@@ -1,5 +1,3 @@
-
-
 package com.permafrost.socialbrewapp.ui.component
 
 import android.widget.Toast
@@ -19,46 +17,24 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import com.permafrost.socialbrewapp.R
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 
+
 @Composable
 fun BottomNavBar(navController: NavHostController) {
-
     val navBackStackEntry = navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry.value?.destination?.route
 
-    BottomAppBar(
-        containerColor = colorResource(id = R.color.navbar_gray)
-    ) {
+    BottomAppBar(containerColor = colorResource(id = R.color.navbar_gray)) {
         IconButton(
             onClick = {
-            navController.navigate(ScreenRoute.DrinksMenu.route) {
-                popUpTo(navController.graph.startDestinationId) { saveState = true }
-                launchSingleTop = true
-                restoreState = true
-            }
-
-
-        }, modifier = Modifier.weight(1f),
-            enabled = currentRoute != ScreenRoute.DrinksMenu.route
-
-        )
-
-        {
-            Icon(
-                painter = painterResource(id = R.drawable.menu),
-                contentDescription = null,
-                modifier = Modifier.size(26.dp),
-                tint = if (currentRoute == ScreenRoute.DrinksMenu.route) Color.White else Color.Black
-            )
-        }
-        IconButton(onClick = {
-            navController.navigate(ScreenRoute.Selection.route) {
-                popUpTo(navController.graph.startDestinationId) { saveState = true }
-                launchSingleTop = true
-                restoreState = true
-            }
-
-
-        }, modifier = Modifier.weight(1f)) {
+                navController.navigate(ScreenRoute.Selection.route + "?fromBeer=true") {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            },
+            modifier = Modifier.weight(1f),
+            enabled = currentRoute != ScreenRoute.Selection.route
+        ) {
             Icon(
                 painter = painterResource(id = R.drawable.beer),
                 contentDescription = null,
@@ -66,19 +42,19 @@ fun BottomNavBar(navController: NavHostController) {
                 tint = if (currentRoute == ScreenRoute.Selection.route) Color.White else Color.Black
             )
         }
-
-        IconButton(onClick = {
-            navController.navigate(ScreenRoute.Cuenta.route) {
-                popUpTo(navController.graph.startDestinationId) { saveState = true }
-                launchSingleTop = true
-                restoreState = true
-            }
-
-
-
-        }, modifier = Modifier.weight(1f)) {
+        IconButton(
+            onClick = {
+                navController.navigate(ScreenRoute.Cuenta.route) {
+                    popUpTo(navController.graph.startDestinationId) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+            },
+            modifier = Modifier.weight(1f),
+            enabled = currentRoute != ScreenRoute.Cuenta.route
+        ) {
             Icon(
-                Icons.Default.Person,
+                imageVector = Icons.Default.Person,
                 contentDescription = null,
                 modifier = Modifier.size(26.dp),
                 tint = if (currentRoute == ScreenRoute.Cuenta.route) Color.White else Color.Black

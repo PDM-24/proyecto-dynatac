@@ -25,6 +25,7 @@ import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.viewmodel.CuentaViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
+import com.permafrost.socialbrewapp.ui.component.TopBarCuenta
 import com.permafrost.socialbrewapp.ui.navigation.ScreenRoute
 import com.permafrost.socialbrewapp.ui.theme.fontFamily
 
@@ -37,7 +38,7 @@ fun CuentaScreen(navController: NavHostController, cuentaViewModel: CuentaViewMo
 
     Scaffold(
         topBar = {
-            TopBar(title = "Cuenta")
+            TopBarCuenta(title = "Cuenta", onBackClick = { navController.popBackStack() })
         },
         bottomBar = {
             BottomNavBar(navController = navController)
