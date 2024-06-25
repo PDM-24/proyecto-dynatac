@@ -26,6 +26,8 @@ import androidx.navigation.NavHostController
 import com.permafrost.socialbrewapp.R
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.component.TopBarCuenta
+import com.permafrost.socialbrewapp.ui.theme.White
+import com.permafrost.socialbrewapp.ui.theme.fontFamily
 import com.permafrost.socialbrewapp.ui.viewmodel.RenameViewModel
 
 
@@ -60,7 +62,8 @@ fun RenameScreen(navController: NavHostController, renameViewModel: RenameViewMo
                     style = TextStyle(
                         fontSize = 22.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color.White
+                        fontFamily = fontFamily,
+                        color = White
                     ),
                     modifier = Modifier
                         .padding(bottom = 16.dp)
@@ -71,6 +74,7 @@ fun RenameScreen(navController: NavHostController, renameViewModel: RenameViewMo
                     placeholder = {
                         Text(
                             "Ej. Cristiano Ronaldo",
+                            fontFamily = fontFamily,
                             style = TextStyle(
                                 color = Color.Gray
                             )
@@ -107,6 +111,7 @@ fun RenameScreen(navController: NavHostController, renameViewModel: RenameViewMo
                     Text(
                         modifier = Modifier.padding(2.dp, 0.dp),
                         text = "CONFIRMAR",
+                        fontFamily = fontFamily,
                         style = TextStyle(
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,

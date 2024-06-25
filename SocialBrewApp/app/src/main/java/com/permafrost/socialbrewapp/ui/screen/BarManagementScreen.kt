@@ -3,6 +3,7 @@ package com.permafrost.socialbrewapp.ui.screen
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -11,18 +12,19 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -40,6 +42,7 @@ import androidx.compose.ui.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
@@ -53,6 +56,8 @@ import com.permafrost.socialbrewapp.data.api.NewProductRequest
 import com.permafrost.socialbrewapp.data.api.ProductsApiWithStringUser
 import com.permafrost.socialbrewapp.ui.component.BottomNavBar
 import com.permafrost.socialbrewapp.ui.component.TopBar
+import com.permafrost.socialbrewapp.ui.theme.Black
+import com.permafrost.socialbrewapp.ui.theme.fontFamily
 import com.permafrost.socialbrewapp.ui.viewmodel.BarManagementViewModel
 
 
@@ -75,17 +80,27 @@ fun BarManagementScreen(
 
     Scaffold(
         topBar = { TopBar(title = "Administración de bar") },
-        bottomBar = { BottomNavBar(navController = navController) }
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = { showDialog = true },
+                containerColor = colorResource(id = R.color.primary_red)
+            ) {
+                Icon(imageVector = Icons.Default.Add, contentDescription = "Agregar producto", tint = colorResource(
+                    id = R.color.white
+                ))
+            }
+        }
     ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .background(colorResource(id = com.permafrost.socialbrewapp.R.color.background))
+                .background(colorResource(id = R.color.background))
         ) {
-            Button(onClick = { showDialog = true }) {
-                Text("Agregar producto")
-            }
+           /* Button(onClick = { showDialog = true }) {
+                Text("Agregar producto",
+                    fontFamily = fontFamily)
+            }*/
 
             if (showDialog) {
                 AlertDialog(
@@ -96,23 +111,27 @@ fun BarManagementScreen(
                             TextField(
                                 value = newProductName,
                                 onValueChange = { newProductName = it },
-                                label = { Text("Nombre") }
+                                label = { Text("Nombre",
+                                    fontFamily = fontFamily) }
                             )
                             TextField(
                                 value = newProductPrice,
                                 onValueChange = { newProductPrice = it },
-                                label = { Text("Precio") },
+                                label = { Text("Precio",
+                                    fontFamily = fontFamily) },
                                 keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Number)
                             )
                             TextField(
                                 value = newProductCategory,
                                 onValueChange = { newProductCategory = it },
-                                label = { Text("Categoría") }
+                                label = { Text("Categoría",
+                                    fontFamily = fontFamily) }
                             )
                             TextField(
                                 value = newProductImage,
                                 onValueChange = { newProductImage = it },
-                                label = { Text("URL") }
+                                label = { Text("URL",
+                                    fontFamily = fontFamily) }
                             )
                         }
                     },
@@ -130,12 +149,14 @@ fun BarManagementScreen(
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.primary_red))
                         ) {
-                            Text("Agregar")
+                            Text("Agregar",
+                                fontFamily = fontFamily)
                         }
                     },
                     dismissButton = {
                         Button(onClick = { showDialog = false }) {
-                            Text("Cancelar")
+                            Text("Cancelar",
+                                fontFamily = fontFamily)
                         }
                     }
                 )
@@ -164,31 +185,39 @@ fun ProductItem(product: ProductsApiWithStringUser, onClick: () -> Unit, onDelet
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(8.dp),
+            .padding(28.dp, 8.dp),
 
         shape = RoundedCornerShape(8.dp),
     ) {
         Row(
             modifier = Modifier.padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Start
         ) {
             Column(
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
+                    .wrapContentWidth()
             ) {
-                Image(
-                    painter = rememberAsyncImagePainter(product.image),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(100.dp)
-                        .padding(4.dp),
-                    contentScale = ContentScale.Crop
-                )
-                Text(text = product.name, fontSize = 20.sp, color = MaterialTheme.colorScheme.onSurface)
-                Text(text = "${product.price} $", fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f))
+
+                Text(text = product.name, fontSize = 28.sp, color = MaterialTheme.colorScheme.onSurface,
+                    fontFamily = fontFamily, fontWeight = FontWeight.Bold)
+                Text(text = "$ ${product.price}", fontSize = 24.sp,
+                    fontFamily = fontFamily, fontWeight = FontWeight.Bold , color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f))
             }
+
+            Image(
+                painter = rememberAsyncImagePainter(product.image),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(120.dp)
+                    .padding(4.dp),
+                contentScale = ContentScale.Crop
+            )
+
             onDeleteClick?.let {
                 IconButton(onClick = it) {
-                    Icon(imageVector = Icons.Default.Delete, contentDescription = "Borrar")
+                    Icon( modifier = Modifier.size(35.dp) ,imageVector = Icons.Default.Delete, contentDescription = "Borrar")
                 }
             }
         }
