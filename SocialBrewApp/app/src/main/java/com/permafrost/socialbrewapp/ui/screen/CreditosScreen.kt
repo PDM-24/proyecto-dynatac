@@ -28,6 +28,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -79,7 +80,7 @@ fun CreditosScreen(
                 Text(
                     text = "SocialBrew",
                     color = Color.White,
-                    fontSize = 32.sp,
+                    fontSize = 40.sp,
                     fontFamily = fontFamily,
                     fontWeight = FontWeight.Bold
                 )
@@ -107,7 +108,7 @@ fun CreditosScreen(
                             Text(
                                 text = "SocialBrew es una aplicación desarrollada por cinco estudiantes de la Universidad Centroamericana José Simeón Cañas",
                                 color = Color.White,
-                                fontSize = 18.sp,
+                                fontSize = 23.sp,
                                 fontFamily = fontFamily,
                                 fontWeight = FontWeight.Normal,
                                 textAlign = TextAlign.Center
@@ -122,13 +123,13 @@ fun CreditosScreen(
                                 "Sofía Ramirez (Frontend)",
                                 "Alberto Mijango (Backend)",
                                 "Miguel Campos (Backend)",
-                                "Pablo Castellón (Backend)"
+                                "Pablo Castellón (Frontend)"
                             )
                             developers.forEach { developer ->
                                 Text(
                                     text = developer,
                                     color = Color.White,
-                                    fontSize = 16.sp,
+                                    fontSize = 22.sp,
                                     fontFamily = fontFamily,
                                     fontWeight = FontWeight.Normal,
                                     textAlign = TextAlign.Center
@@ -141,4 +142,10 @@ fun CreditosScreen(
             }
         }
     }
+}
+
+@Preview
+@Composable
+fun CreditosPreview() {
+    CreditosScreen(navController = NavHostController(LocalContext.current))
 }

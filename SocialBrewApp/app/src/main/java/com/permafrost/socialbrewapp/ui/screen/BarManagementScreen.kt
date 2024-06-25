@@ -1,5 +1,6 @@
 package com.permafrost.socialbrewapp.ui.screen
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -41,6 +42,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -59,6 +61,7 @@ import com.permafrost.socialbrewapp.ui.component.TopBar
 import com.permafrost.socialbrewapp.ui.theme.Black
 import com.permafrost.socialbrewapp.ui.theme.fontFamily
 import com.permafrost.socialbrewapp.ui.viewmodel.BarManagementViewModel
+import com.permafrost.socialbrewapp.util.ToastHelper
 
 
 @Composable
@@ -73,6 +76,7 @@ fun BarManagementScreen(
     var newProductPrice by remember { mutableStateOf(TextFieldValue()) }
     var newProductCategory by remember { mutableStateOf(TextFieldValue()) }
     var newProductImage by remember { mutableStateOf(TextFieldValue()) }
+    val context = LocalContext.current
 
     LaunchedEffect(barId) {
         barManagementViewModel.loadProductsForBar(barId)
@@ -170,6 +174,7 @@ fun BarManagementScreen(
                         },
                         onDeleteClick = {
                             barManagementViewModel.deleteProduct(product.id)
+                            ToastHelper.showToast(context, "Producto Eliminado")
                         }
                     )
                     Spacer(modifier = Modifier.height(16.dp))
